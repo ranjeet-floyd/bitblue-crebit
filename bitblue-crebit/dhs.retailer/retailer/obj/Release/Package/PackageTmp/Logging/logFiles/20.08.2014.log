@@ -1,0 +1,20 @@
+2014-08-20 01:09:24,696 : [ERROR] - Got BalanceUseSummary req.
+2014-08-20 01:09:47,153 : [ERROR] - Process req. | UserId :7506260128 UserType : 4
+2014-08-20 01:09:58,923 : [INFO ] - Inside GetDataSet Method
+2014-08-20 01:09:59,362 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-08-20 01:10:00,984 : [INFO ] - Params : @UserId value :7506260128
+2014-08-20 01:10:02,373 : [INFO ] - Params : @UserType value :4
+2014-08-20 01:10:03,384 : [INFO ] - Params : @FromDate value :01/09/1998
+2014-08-20 01:10:04,351 : [INFO ] - Params : @ToDate value :01/08/2011
+2014-08-20 01:10:08,141 : [INFO ] - Now Fill SqlDataAdapter
+2014-08-20 01:26:25,989 : [INFO ] - Return Ds
+2014-08-20 01:26:28,708 : [ERROR] - Got BalanceUseSummary req.
+2014-08-20 01:26:30,518 : [ERROR] - Process req. | UserId :7506260128 UserType : 4
+2014-08-20 01:26:30,518 : [INFO ] - Inside GetDataSet Method
+2014-08-20 01:26:30,518 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-08-20 01:26:30,519 : [INFO ] - Params : @UserId value :7506260128
+2014-08-20 01:26:30,519 : [INFO ] - Params : @UserType value :4
+2014-08-20 01:26:30,519 : [INFO ] - Params : @FromDate value :01/09/1998
+2014-08-20 01:26:30,520 : [INFO ] - Params : @ToDate value :01/08/2011
+2014-08-20 01:26:30,520 : [INFO ] - Now Fill SqlDataAdapter
+2014-08-20 01:26:30,833 : [INFO ] - Return Ds

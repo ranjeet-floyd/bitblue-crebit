@@ -1,0 +1,591 @@
+2014-07-13 14:27:33,147 : [INFO ] - CalledService api
+2014-07-13 14:27:34,808 : [INFO ] - Params | UserId : ret23UserType :4 TransactionType : postpaid Source :androidOperatorId : 234 Number: 7506260128 InsuranceDob : Amount :50
+2014-07-13 14:27:34,809 : [INFO ] - Going to Process
+2014-07-13 14:27:34,818 : [INFO ] - Inside Service method.
+2014-07-13 14:27:34,821 : [INFO ] - Check Balance in the account 
+2014-07-13 14:27:34,822 : [INFO ] - Param => userId : ret23 UserType : 4
+2014-07-13 14:27:34,827 : [INFO ] - Inside GetDataSet Method
+2014-07-13 14:27:34,829 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 14:27:34,864 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 14:27:34,865 : [INFO ] - Params : @UserType value :4
+2014-07-13 14:27:34,865 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 14:27:36,688 : [INFO ] - Return Ds
+2014-07-13 14:27:36,690 : [INFO ] - Got Data from Db
+2014-07-13 14:27:36,692 : [INFO ] - Avaialable balance : 8432 Service Status : true
+2014-07-13 14:27:36,693 : [INFO ] - Going to process the Transaction.
+2014-07-13 14:27:39,832 : [INFO ] - Inside Process request Method.
+2014-07-13 14:27:39,844 : [INFO ] - Session : WvzLmmXLOusMFA526eP0
+2014-07-13 14:27:39,862 : [INFO ] - SD : 105539 |AP : 175413 |OP : 175447 |Mobile : 7506260128
+2014-07-13 14:27:44,297 : [INFO ] - reqStr : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3dWvzLmmXLOusMFA526eP0%0d%0aNUMBER%3d7506260128%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCSggBAfieA%2f0YKYTXUHe7%2fzhYRpQll76YWx49n%2bqimCNCCCjv%0d%0a7ARd67CbrAdBMzm%2bXSqBWxaHHxNtcP1%2b4Pj6VEcwQiAX3N3iEv%2fyMgvpdNLk3zDK%0d%0aKsB5Zhf%2focT%2b8%2bfwNIgLkj2B3dy7rz2tyE2kHd7jdB9LqtZi7h%2bnfXpP%2bZok3U9P%0d%0aCdcxHbABxw%3d%3d%0d%0a%3dwqzi%0d%0aEND+SIGNATURE
+2014-07-13 14:27:44,300 : [INFO ] - Done
+2014-07-13 14:27:44,302 : [INFO ] - inputMessageforValidateNumber : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3dWvzLmmXLOusMFA526eP0%0d%0aNUMBER%3d7506260128%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCSggBAfieA%2f0YKYTXUHe7%2fzhYRpQll76YWx49n%2bqimCNCCCjv%0d%0a7ARd67CbrAdBMzm%2bXSqBWxaHHxNtcP1%2b4Pj6VEcwQiAX3N3iEv%2fyMgvpdNLk3zDK%0d%0aKsB5Zhf%2focT%2b8%2bfwNIgLkj2B3dy7rz2tyE2kHd7jdB9LqtZi7h%2bnfXpP%2bZok3U9P%0d%0aCdcxHbABxw%3d%3d%0d%0a%3dwqzi%0d%0aEND+SIGNATURE
+2014-07-13 14:27:45,627 : [INFO ] - Inside the Process Method.
+2014-07-13 14:27:45,629 : [INFO ] -  URL : https://in.cyberplat.com/cgi-bin/bu/bu_pay_check.cgi/234
+2014-07-13 14:27:49,989 : [INFO ] - Response str : 0000041901SM000000660000006600000217
+inist_in            00000040
+                    00000000
+BEGIN
+DATE=13.07.2014 14:27:50
+SESSION=
+ERROR=32
+RESULT=1
+TRANSID=
+
+END
+BEGIN SIGNATURE
+iQCRAwkBAAAAKFPCSg4BARNmA/4mbW/umuAZMCvKyTMwOK9QY8OAwlBI/fCMIGCL
+bOOUrb+Yke92O2uvUytF2ZWIlRqIgVvfStyPaZa+Er8VDQHAwogi3UA1bz1hr5DD
+dLMh/E4MoJjl/fVeD5uxBo+3zExcd+jAmgknk1qRZ5oOeHKKCeONGH/i650NBS+O
+DBTqJLABxw==
+=IMFb
+END SIGNATURE
+2014-07-13 14:27:49,991 : [INFO ] - ValidateResponse : 0000041901SM000000660000006600000217
+inist_in            00000040
+                    00000000
+BEGIN
+DATE=13.07.2014 14:27:50
+SESSION=
+ERROR=32
+RESULT=1
+TRANSID=
+
+END
+BEGIN SIGNATURE
+iQCRAwkBAAAAKFPCSg4BARNmA/4mbW/umuAZMCvKyTMwOK9QY8OAwlBI/fCMIGCL
+bOOUrb+Yke92O2uvUytF2ZWIlRqIgVvfStyPaZa+Er8VDQHAwogi3UA1bz1hr5DD
+dLMh/E4MoJjl/fVeD5uxBo+3zExcd+jAmgknk1qRZ5oOeHKKCeONGH/i650NBS+O
+DBTqJLABxw==
+=IMFb
+END SIGNATURE
+2014-07-13 14:27:49,995 : [ERROR] - Error Message  : Try after one hour
+2014-07-13 14:27:49,997 : [WARN ] - cyber-plate error : Validation Error- Try after one hour
+2014-07-13 14:27:49,998 : [INFO ] - Inside GetDataSet Method
+2014-07-13 14:27:49,999 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 14:27:50,000 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 14:27:50,000 : [INFO ] - Params : @UserType value :4
+2014-07-13 14:27:50,000 : [INFO ] - Params : @Number value :7506260128
+2014-07-13 14:27:50,001 : [INFO ] - Params : @Amount value :50
+2014-07-13 14:27:50,001 : [INFO ] - Params : @ServiceCharge value :
+2014-07-13 14:27:50,002 : [INFO ] - Params : @TransactionType value :postpaid
+2014-07-13 14:27:50,002 : [INFO ] - Params : @InsuranceDob value :
+2014-07-13 14:27:50,002 : [INFO ] - Params : @TransactionId value :
+2014-07-13 14:27:50,003 : [INFO ] - Params : @OperaterId value :234
+2014-07-13 14:27:50,003 : [INFO ] - Params : @Status value :0
+2014-07-13 14:27:50,003 : [INFO ] - Params : @Source value :android
+2014-07-13 14:27:50,004 : [INFO ] - Params : @ApiId value :CyberPate
+2014-07-13 14:27:50,004 : [INFO ] - Params : @BillRecieptId value :
+2014-07-13 14:27:50,005 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 14:28:03,705 : [INFO ] - CalledService api
+2014-07-13 14:28:09,139 : [INFO ] - Params | UserId : ret23UserType :4 TransactionType : postpaid Source :androidOperatorId : 234 Number: 7506260128 InsuranceDob : Amount :50
+2014-07-13 14:28:09,149 : [INFO ] - Going to Process
+2014-07-13 14:28:09,160 : [INFO ] - Inside Service method.
+2014-07-13 14:28:09,162 : [INFO ] - Check Balance in the account 
+2014-07-13 14:28:09,163 : [INFO ] - Param => userId : ret23 UserType : 4
+2014-07-13 14:28:09,168 : [INFO ] - Inside GetDataSet Method
+2014-07-13 14:28:09,169 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 14:28:09,170 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 14:28:09,171 : [INFO ] - Params : @UserType value :4
+2014-07-13 14:28:09,171 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 14:28:09,727 : [INFO ] - Return Ds
+2014-07-13 14:28:09,729 : [INFO ] - Got Data from Db
+2014-07-13 14:28:09,730 : [INFO ] - Avaialable balance : 8432 Service Status : true
+2014-07-13 14:28:09,730 : [INFO ] - Going to process the Transaction.
+2014-07-13 14:28:12,639 : [INFO ] - Inside Process request Method.
+2014-07-13 14:28:13,769 : [INFO ] - Session : fn9qpM3IpRles9D5DHn2
+2014-07-13 14:28:16,730 : [INFO ] - SD : 105539 |AP : 175413 |OP : 175447 |Mobile : 7506260128
+2014-07-13 14:28:33,425 : [INFO ] - reqStr : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3dfn9qpM3IpRles9D5DHn2%0d%0aNUMBER%3d7506260128%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCSjgBAVKRA%2f43MFo0Q77wnzq8bVU97Sa9tBYux%2fBNO%2bjTDOpi%0d%0amIXZrcfb%2byacEEGKwpXFFz2HpuRT5ifSUc1n8ET69DixluIUkWeTfK8Gjm%2fnLPQB%0d%0aflED8rAEwUB%2fZQ6Ys6BK%2bQOBmwpV8KED1lnZGbJ7GqzmdRfUdxHH2VXH3iPxdLpM%0d%0alSB6pbABxw%3d%3d%0d%0a%3dSC1o%0d%0aEND+SIGNATURE
+2014-07-13 14:28:34,997 : [INFO ] - Done
+2014-07-13 14:28:36,437 : [INFO ] - inputMessageforValidateNumber : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3dfn9qpM3IpRles9D5DHn2%0d%0aNUMBER%3d7506260128%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCSjgBAVKRA%2f43MFo0Q77wnzq8bVU97Sa9tBYux%2fBNO%2bjTDOpi%0d%0amIXZrcfb%2byacEEGKwpXFFz2HpuRT5ifSUc1n8ET69DixluIUkWeTfK8Gjm%2fnLPQB%0d%0aflED8rAEwUB%2fZQ6Ys6BK%2bQOBmwpV8KED1lnZGbJ7GqzmdRfUdxHH2VXH3iPxdLpM%0d%0alSB6pbABxw%3d%3d%0d%0a%3dSC1o%0d%0aEND+SIGNATURE
+2014-07-13 14:28:37,274 : [INFO ] - Inside the Process Method.
+2014-07-13 14:28:38,414 : [INFO ] -  URL : https://in.cyberplat.com/cgi-bin/bu/bu_pay_check.cgi/234
+2014-07-13 14:29:22,388 : [INFO ] - Response str : 0000041901SM000000660000006600000217
+inist_in            00000040
+                    00000000
+BEGIN
+DATE=13.07.2014 14:28:41
+SESSION=
+ERROR=32
+RESULT=1
+TRANSID=
+
+END
+BEGIN SIGNATURE
+iQCRAwkBAAAAKFPCSkEBAXcABACRAgZhmzFZMvVd0yvpCzv5P8Az+lJCyzGPpIVM
+X020C/cSt7dYRNxr5jk6By5N9xgWvAmRFR340ZfAxAeETDj5/MamrAFsMs6wHTsG
+78Odrvrh3Ol5kGw54OYUgxGOxkAqvdjy2bxT3PHoZFMs9VPVpecJatTvr9IBqjdE
++MfD4bABxw==
+=rP1b
+END SIGNATURE
+2014-07-13 14:29:27,534 : [INFO ] - ValidateResponse : 0000041901SM000000660000006600000217
+inist_in            00000040
+                    00000000
+BEGIN
+DATE=13.07.2014 14:28:41
+SESSION=
+ERROR=32
+RESULT=1
+TRANSID=
+
+END
+BEGIN SIGNATURE
+iQCRAwkBAAAAKFPCSkEBAXcABACRAgZhmzFZMvVd0yvpCzv5P8Az+lJCyzGPpIVM
+X020C/cSt7dYRNxr5jk6By5N9xgWvAmRFR340ZfAxAeETDj5/MamrAFsMs6wHTsG
+78Odrvrh3Ol5kGw54OYUgxGOxkAqvdjy2bxT3PHoZFMs9VPVpecJatTvr9IBqjdE
++MfD4bABxw==
+=rP1b
+END SIGNATURE
+2014-07-13 14:29:30,387 : [ERROR] - Error Message  : Try after one hour
+2014-07-13 14:29:31,944 : [WARN ] - cyber-plate error : Validation Error- Try after one hour
+2014-07-13 14:30:09,340 : [INFO ] - Inside GetDataSet Method
+2014-07-13 14:30:09,341 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 14:30:09,345 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 14:30:09,345 : [INFO ] - Params : @UserType value :4
+2014-07-13 14:30:09,346 : [INFO ] - Params : @Number value :7506260128
+2014-07-13 14:30:09,346 : [INFO ] - Params : @Amount value :50
+2014-07-13 14:30:09,347 : [INFO ] - Params : @ServiceCharge value :
+2014-07-13 14:30:09,347 : [INFO ] - Params : @TransactionType value :postpaid
+2014-07-13 14:30:09,347 : [INFO ] - Params : @InsuranceDob value :
+2014-07-13 14:30:09,348 : [INFO ] - Params : @TransactionId value :
+2014-07-13 14:30:09,349 : [INFO ] - Params : @OperaterId value :234
+2014-07-13 14:30:09,349 : [INFO ] - Params : @Status value :0
+2014-07-13 14:30:09,349 : [INFO ] - Params : @Source value :android
+2014-07-13 14:30:09,350 : [INFO ] - Params : @ApiId value :CyberPate
+2014-07-13 14:30:09,350 : [INFO ] - Params : @BillRecieptId value :
+2014-07-13 14:30:09,351 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 14:35:41,640 : [INFO ] - CalledService api
+2014-07-13 14:35:41,671 : [INFO ] - Params | UserId : ret23UserType :4 TransactionType : postpaid Source :androidOperatorId : 234 Number: 7506260128 InsuranceDob : Amount :50
+2014-07-13 14:35:41,672 : [INFO ] - Going to Process
+2014-07-13 14:35:41,682 : [INFO ] - Inside Service method.
+2014-07-13 14:35:41,685 : [INFO ] - Check Balance in the account 
+2014-07-13 14:35:41,686 : [INFO ] - Param => userId : ret23 UserType : 4
+2014-07-13 14:35:41,691 : [INFO ] - Inside GetDataSet Method
+2014-07-13 14:35:41,693 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 14:35:41,705 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 14:35:41,706 : [INFO ] - Params : @UserType value :4
+2014-07-13 14:35:41,707 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 14:35:44,949 : [INFO ] - Return Ds
+2014-07-13 14:35:44,950 : [INFO ] - Got Data from Db
+2014-07-13 14:35:44,951 : [INFO ] - Avaialable balance : 8432 Service Status : true
+2014-07-13 14:35:44,952 : [INFO ] - Going to process the Transaction.
+2014-07-13 14:35:50,490 : [INFO ] - Inside Process request Method.
+2014-07-13 14:35:57,320 : [INFO ] - Session : EQT5mUYKQv15YXiHr1Oa
+2014-07-13 14:36:04,509 : [INFO ] - SD : 105539 |AP : 175413 |OP : 175447 |Mobile : 7506260128
+2014-07-13 14:36:19,808 : [INFO ] - reqStr : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3dEQT5mUYKQv15YXiHr1Oa%0d%0aNUMBER%3d7506260128%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCTAoBATXRBACjNGsU5d3GKTGwsI95EDXUFmBeahIHxosmIOlB%0d%0a3Qbp9pd4FagCZgsXvpuogXrfcFYcdk4Y9HQUhmeKy31lFigzZh%2fK9lZN7cwZ4l01%0d%0anD%2bDHyKyrGyMNEMNN8j%2fpgRAsUYYxRZK5L7u4XhTPnhxhOyWzF%2fHJterTLAh2jA%2b%0d%0aK3pET7ABxw%3d%3d%0d%0a%3dybHd%0d%0aEND+SIGNATURE
+2014-07-13 14:36:21,505 : [INFO ] - Done
+2014-07-13 14:36:22,889 : [INFO ] - inputMessageforValidateNumber : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3dEQT5mUYKQv15YXiHr1Oa%0d%0aNUMBER%3d7506260128%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCTAoBATXRBACjNGsU5d3GKTGwsI95EDXUFmBeahIHxosmIOlB%0d%0a3Qbp9pd4FagCZgsXvpuogXrfcFYcdk4Y9HQUhmeKy31lFigzZh%2fK9lZN7cwZ4l01%0d%0anD%2bDHyKyrGyMNEMNN8j%2fpgRAsUYYxRZK5L7u4XhTPnhxhOyWzF%2fHJterTLAh2jA%2b%0d%0aK3pET7ABxw%3d%3d%0d%0a%3dybHd%0d%0aEND+SIGNATURE
+2014-07-13 14:36:23,639 : [INFO ] - Inside the Process Method.
+2014-07-13 14:36:24,796 : [INFO ] -  URL : https://in.cyberplat.com/cgi-bin/bu/bu_pay_check.cgi/234
+2014-07-13 14:36:41,078 : [INFO ] - Response str : 0000041901SM000000660000006600000217
+inist_in            00000040
+                    00000000
+BEGIN
+DATE=13.07.2014 14:36:32
+SESSION=
+ERROR=32
+RESULT=1
+TRANSID=
+
+END
+BEGIN SIGNATURE
+iQCRAwkBAAAAKFPCTBgBAaCHBACVQDmZYcCHxkGjSec1xa8DRctwF+zm2B8xNOCh
+NMRoTzQDvwtWJBSH8JpuCm8XLHCxdtKwjWnoJJ3mg4oZfMV4erh33NZVQ/6tIuAL
+VWqS6qcTZw48z3nDrKb2BEvVZ1UccMYLozBXu8Xu9+E4ccC2I6e8qZ8I0cAaIFrY
+8JbHIbABxw==
+=nIwm
+END SIGNATURE
+2014-07-13 14:36:43,963 : [INFO ] - ValidateResponse : 0000041901SM000000660000006600000217
+inist_in            00000040
+                    00000000
+BEGIN
+DATE=13.07.2014 14:36:32
+SESSION=
+ERROR=32
+RESULT=1
+TRANSID=
+
+END
+BEGIN SIGNATURE
+iQCRAwkBAAAAKFPCTBgBAaCHBACVQDmZYcCHxkGjSec1xa8DRctwF+zm2B8xNOCh
+NMRoTzQDvwtWJBSH8JpuCm8XLHCxdtKwjWnoJJ3mg4oZfMV4erh33NZVQ/6tIuAL
+VWqS6qcTZw48z3nDrKb2BEvVZ1UccMYLozBXu8Xu9+E4ccC2I6e8qZ8I0cAaIFrY
+8JbHIbABxw==
+=nIwm
+END SIGNATURE
+2014-07-13 14:36:54,268 : [ERROR] - Error Message  : Try after one hour
+2014-07-13 14:36:58,231 : [WARN ] - cyber-plate error : Validation Error- Try after one hour
+2014-07-13 14:37:11,652 : [INFO ] - Inside GetDataSet Method
+2014-07-13 14:37:11,654 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 14:37:11,655 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 14:37:11,665 : [INFO ] - Params : @UserType value :4
+2014-07-13 14:37:11,666 : [INFO ] - Params : @Number value :7506260128
+2014-07-13 14:37:11,667 : [INFO ] - Params : @Amount value :50
+2014-07-13 14:37:11,668 : [INFO ] - Params : @ServiceCharge value :
+2014-07-13 14:37:11,670 : [INFO ] - Params : @TransactionType value :postpaid
+2014-07-13 14:37:11,672 : [INFO ] - Params : @InsuranceDob value :
+2014-07-13 14:37:11,673 : [INFO ] - Params : @TransactionId value :-1
+2014-07-13 14:37:11,674 : [INFO ] - Params : @OperaterId value :234
+2014-07-13 14:37:11,675 : [INFO ] - Params : @Status value :0
+2014-07-13 14:37:11,678 : [INFO ] - Params : @Source value :android
+2014-07-13 14:37:11,680 : [INFO ] - Params : @ApiId value :CyberPate
+2014-07-13 14:37:11,685 : [INFO ] - Params : @BillRecieptId value :
+2014-07-13 14:37:11,687 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 14:37:12,038 : [INFO ] - Return Ds
+2014-07-13 14:49:38,784 : [INFO ] - Got Login req.
+2014-07-13 14:49:38,785 : [INFO ] - Ready to Process the request.| UserName :ret23 UserType: 4 Version: 1.0 Password: 1234
+2014-07-13 14:49:38,788 : [INFO ] - Inside the CheckLogin method.
+2014-07-13 14:49:38,791 : [INFO ] - Inside GetDataSet Method
+2014-07-13 14:49:38,792 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 14:49:38,793 : [INFO ] - Params : @UserName value :ret23
+2014-07-13 14:49:38,793 : [INFO ] - Params : @Password value :1234
+2014-07-13 14:49:38,794 : [INFO ] - Params : @Version value :1.0
+2014-07-13 14:49:38,794 : [INFO ] - Params : @UserType value :4
+2014-07-13 14:49:38,795 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 14:49:40,349 : [INFO ] - Return Ds
+2014-07-13 14:49:40,350 : [INFO ] - Got Data from Db.
+2014-07-13 14:49:40,516 : [INFO ] - [{"IsUpdated":true,"IsSupported":true,"UserId":"0","AvailableBalance":0,"Margin":0,"IsActive":0}]
+2014-07-13 14:50:00,988 : [INFO ] - Got Login req.
+2014-07-13 14:50:04,427 : [INFO ] - Ready to Process the request.| UserName :ret23 UserType: 4 Version: 1.0 Password: 1234
+2014-07-13 14:50:09,460 : [INFO ] - Inside the CheckLogin method.
+2014-07-13 14:50:21,742 : [INFO ] - Inside GetDataSet Method
+2014-07-13 14:50:21,746 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 14:50:21,747 : [INFO ] - Params : @UserName value :ret23
+2014-07-13 14:50:21,748 : [INFO ] - Params : @Password value :1234
+2014-07-13 14:50:21,748 : [INFO ] - Params : @Version value :1.0
+2014-07-13 14:50:21,749 : [INFO ] - Params : @UserType value :4
+2014-07-13 14:50:21,750 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 14:50:22,053 : [INFO ] - Return Ds
+2014-07-13 14:50:24,133 : [INFO ] - Got Data from Db.
+2014-07-13 15:21:13,818 : [INFO ] - [{"IsUpdated":true,"IsSupported":true,"UserId":"0","AvailableBalance":0,"Margin":0,"IsActive":0}]
+2014-07-13 15:21:21,745 : [INFO ] - Got Login req.
+2014-07-13 15:21:23,444 : [INFO ] - Ready to Process the request.| UserName :ret23 UserType: 4 Version: 1.0 Password: 1234
+2014-07-13 15:21:23,445 : [INFO ] - Inside the CheckLogin method.
+2014-07-13 15:21:23,446 : [INFO ] - Inside GetDataSet Method
+2014-07-13 15:21:23,446 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 15:21:23,447 : [INFO ] - Params : @UserName value :ret23
+2014-07-13 15:21:23,448 : [INFO ] - Params : @Password value :1234
+2014-07-13 15:21:23,448 : [INFO ] - Params : @Version value :1.0
+2014-07-13 15:21:23,449 : [INFO ] - Params : @UserType value :4
+2014-07-13 15:21:23,450 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 15:21:23,755 : [INFO ] - Return Ds
+2014-07-13 15:21:23,756 : [INFO ] - Got Data from Db.
+2014-07-13 15:21:23,761 : [INFO ] - [{"IsUpdated":true,"IsSupported":true,"UserId":"0","AvailableBalance":null,"Margin":0,"IsActive":0}]
+2014-07-13 15:21:47,847 : [INFO ] - Got Login req.
+2014-07-13 15:21:49,403 : [INFO ] - Ready to Process the request.| UserName :ret23 UserType: 4 Version: 1.0 Password: 12345
+2014-07-13 15:21:49,405 : [INFO ] - Inside the CheckLogin method.
+2014-07-13 15:21:49,406 : [INFO ] - Inside GetDataSet Method
+2014-07-13 15:21:49,407 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 15:21:49,409 : [INFO ] - Params : @UserName value :ret23
+2014-07-13 15:21:49,410 : [INFO ] - Params : @Password value :12345
+2014-07-13 15:21:49,412 : [INFO ] - Params : @Version value :1.0
+2014-07-13 15:21:49,414 : [INFO ] - Params : @UserType value :4
+2014-07-13 15:21:49,415 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 15:21:49,722 : [INFO ] - Return Ds
+2014-07-13 15:21:49,723 : [INFO ] - Got Data from Db.
+2014-07-13 15:21:49,732 : [INFO ] - [{"IsUpdated":true,"IsSupported":true,"UserId":"ret23","AvailableBalance":8382.34,"Margin":0,"IsActive":0}]
+2014-07-13 15:26:37,153 : [INFO ] - Got Login req.
+2014-07-13 15:26:38,746 : [INFO ] - Ready to Process the request.| UserName :ret23 UserType: 4 Version: 1.0 Password: 12345
+2014-07-13 15:26:38,747 : [INFO ] - Inside the CheckLogin method.
+2014-07-13 15:26:38,748 : [INFO ] - Inside GetDataSet Method
+2014-07-13 15:26:38,749 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 15:26:38,750 : [INFO ] - Params : @UserName value :ret23
+2014-07-13 15:26:38,750 : [INFO ] - Params : @Password value :12345
+2014-07-13 15:26:38,751 : [INFO ] - Params : @Version value :1.0
+2014-07-13 15:26:38,752 : [INFO ] - Params : @UserType value :4
+2014-07-13 15:26:38,752 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 15:26:39,061 : [INFO ] - Return Ds
+2014-07-13 15:26:39,250 : [INFO ] - Got Data from Db.
+2014-07-13 15:26:39,260 : [INFO ] - [{"IsUpdated":true,"IsSupported":true,"UserId":"ret23","AvailableBalance":8382.34,"Margin":0,"IsActive":0}]
+2014-07-13 15:27:38,705 : [INFO ] - Got Login req.
+2014-07-13 15:27:40,136 : [INFO ] - Ready to Process the request.| UserName :ret23 UserType: 4 Version: 1.0 Password: 12345
+2014-07-13 15:27:40,137 : [INFO ] - Inside the CheckLogin method.
+2014-07-13 15:27:40,138 : [INFO ] - Inside GetDataSet Method
+2014-07-13 15:27:40,139 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 15:27:40,139 : [INFO ] - Params : @UserName value :ret23
+2014-07-13 15:27:40,140 : [INFO ] - Params : @Password value :12345
+2014-07-13 15:27:40,141 : [INFO ] - Params : @Version value :1.0
+2014-07-13 15:27:40,142 : [INFO ] - Params : @UserType value :4
+2014-07-13 15:27:40,142 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 15:27:40,455 : [INFO ] - Return Ds
+2014-07-13 15:27:40,456 : [INFO ] - Got Data from Db.
+2014-07-13 15:27:40,456 : [INFO ] - [{"IsUpdated":true,"IsSupported":true,"UserId":"ret23","AvailableBalance":8382.34,"Margin":1.0,"IsActive":true}]
+2014-07-13 15:36:52,305 : [ERROR] - Got ProfitSummary req.
+2014-07-13 15:36:56,431 : [ERROR] - Process request |  UserId : ret23 UserType : 4
+2014-07-13 15:36:57,089 : [INFO ] - Inside GetDataSet Method
+2014-07-13 15:36:57,091 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 15:36:57,092 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 15:36:57,093 : [INFO ] - Params : @UserType value :4
+2014-07-13 15:36:57,094 : [INFO ] - Params : @FromDate value :01/09/2000
+2014-07-13 15:36:57,095 : [INFO ] - Params : @ToDate value :01/08/2014
+2014-07-13 15:36:57,096 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 15:37:33,866 : [ERROR] - DL_ProfitSummaryReturn | Exception : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2014-07-13 15:37:53,321 : [ERROR] - Got ProfitSummary req.
+2014-07-13 15:37:56,921 : [ERROR] - Process request |  UserId : ret23 UserType : 4
+2014-07-13 15:38:05,027 : [INFO ] - Inside GetDataSet Method
+2014-07-13 15:38:05,028 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 15:38:05,030 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 15:38:05,031 : [INFO ] - Params : @UserType value :4
+2014-07-13 15:38:05,033 : [INFO ] - Params : @FromDate value :01/09/2000
+2014-07-13 15:38:05,033 : [INFO ] - Params : @ToDate value :01/08/2014
+2014-07-13 15:38:05,034 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 15:38:08,707 : [INFO ] - Return Ds
+2014-07-13 15:47:24,062 : [ERROR] - Got ProfitSummary req.
+2014-07-13 15:47:28,644 : [ERROR] - Process request |  UserId : ret23 UserType : 4
+2014-07-13 15:47:33,903 : [INFO ] - Inside GetDataSet Method
+2014-07-13 15:47:33,906 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 15:47:33,909 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 15:47:33,924 : [INFO ] - Params : @UserType value :4
+2014-07-13 15:47:33,924 : [INFO ] - Params : @FromDate value :01/09/2000
+2014-07-13 15:47:33,927 : [INFO ] - Params : @ToDate value :01/08/2014
+2014-07-13 15:47:33,928 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 15:47:35,805 : [INFO ] - Return Ds
+2014-07-13 15:47:58,221 : [ERROR] - Got ProfitSummary req.
+2014-07-13 15:48:11,822 : [ERROR] - Process request |  UserId : ret23 UserType : 4
+2014-07-13 15:48:11,824 : [INFO ] - Inside GetDataSet Method
+2014-07-13 15:48:11,825 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 15:48:11,826 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 15:48:11,827 : [INFO ] - Params : @UserType value :4
+2014-07-13 15:48:11,828 : [INFO ] - Params : @FromDate value :01/09/2000
+2014-07-13 15:48:11,829 : [INFO ] - Params : @ToDate value :01/08/2014
+2014-07-13 15:48:11,830 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 15:48:12,138 : [INFO ] - Return Ds
+2014-07-13 15:48:28,534 : [ERROR] - Got ProfitSummary req.
+2014-07-13 15:48:32,436 : [ERROR] - Process request |  UserId : ret23 UserType : 4
+2014-07-13 15:48:37,252 : [INFO ] - Inside GetDataSet Method
+2014-07-13 15:48:37,253 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 15:48:37,255 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 15:48:37,256 : [INFO ] - Params : @UserType value :4
+2014-07-13 15:48:37,257 : [INFO ] - Params : @FromDate value :01/09/2000
+2014-07-13 15:48:37,258 : [INFO ] - Params : @ToDate value :09/09/2014
+2014-07-13 15:48:37,259 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 15:48:37,568 : [INFO ] - Return Ds
+2014-07-13 17:09:41,849 : [INFO ] - CalledService api
+2014-07-13 17:09:41,880 : [INFO ] - Params | UserId : ret23UserType :4 TransactionType : postpaid Source :androidOperatorId : 238 Number: 7506260128 InsuranceDob : Amount :50
+2014-07-13 17:09:41,894 : [INFO ] - Going to Process
+2014-07-13 17:09:41,904 : [INFO ] - Inside Service method.
+2014-07-13 17:09:41,907 : [INFO ] - Check Balance in the account 
+2014-07-13 17:09:41,908 : [INFO ] - Param => userId : ret23 UserType : 4
+2014-07-13 17:09:41,915 : [INFO ] - Inside GetDataSet Method
+2014-07-13 17:09:41,917 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 17:09:41,947 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 17:09:41,947 : [INFO ] - Params : @UserType value :4
+2014-07-13 17:09:41,948 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 17:09:48,305 : [INFO ] - Return Ds
+2014-07-13 17:09:48,310 : [INFO ] - Got Data from Db
+2014-07-13 17:09:48,316 : [INFO ] - Avaialable balance : 8323 Service Status : true
+2014-07-13 17:09:48,319 : [INFO ] - Going to process the Transaction.
+2014-07-13 17:09:55,304 : [INFO ] - Inside Process request Method.
+2014-07-13 17:09:56,471 : [INFO ] - Session : Bn90K5aBdhPXa3XkMamr
+2014-07-13 17:09:59,430 : [INFO ] - SD : 105539 |AP : 175413 |OP : 175447 |Mobile : 7506260128
+2014-07-13 17:10:05,167 : [INFO ] - reqStr : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3dBn90K5aBdhPXa3XkMamr%0d%0aNUMBER%3d7506260128%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCcBQBAdWnA%2f96XceFsr89N53zMK7V%2bnLz3Gdx3zQD2oeugSPb%0d%0aiRYLl8T2qd8xp3dxIzp2IY1hSdlUOKsY2sqgP71uPOCgSjmIhcSWXT9o3%2fQFdCzA%0d%0aLNx6SxnXFrySR1aF7cNdU6gr61Fxx0FhexqrYsrQnJm3lJ%2fFJ8q1vkfQjMyxyIYt%0d%0atkiEKbABxw%3d%3d%0d%0a%3dSqz7%0d%0aEND+SIGNATURE
+2014-07-13 17:10:06,697 : [INFO ] - Done
+2014-07-13 17:10:08,428 : [INFO ] - inputMessageforValidateNumber : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3dBn90K5aBdhPXa3XkMamr%0d%0aNUMBER%3d7506260128%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCcBQBAdWnA%2f96XceFsr89N53zMK7V%2bnLz3Gdx3zQD2oeugSPb%0d%0aiRYLl8T2qd8xp3dxIzp2IY1hSdlUOKsY2sqgP71uPOCgSjmIhcSWXT9o3%2fQFdCzA%0d%0aLNx6SxnXFrySR1aF7cNdU6gr61Fxx0FhexqrYsrQnJm3lJ%2fFJ8q1vkfQjMyxyIYt%0d%0atkiEKbABxw%3d%3d%0d%0a%3dSqz7%0d%0aEND+SIGNATURE
+2014-07-13 17:10:10,044 : [INFO ] - Inside the Process Method.
+2014-07-13 17:10:10,615 : [INFO ] -  URL : 
+2014-07-13 17:10:18,376 : [ERROR] - Exception : Invalid URI: The URI is empty.
+2014-07-13 17:10:30,627 : [INFO ] - ValidateResponse : 
+2014-07-13 17:15:49,143 : [INFO ] - CalledService api
+2014-07-13 17:15:49,176 : [INFO ] - Params | UserId : ret23UserType :4 TransactionType : postpaid Source :androidOperatorId : 238 Number: 7506260128 InsuranceDob : Amount :50
+2014-07-13 17:15:49,177 : [INFO ] - Going to Process
+2014-07-13 17:15:49,189 : [INFO ] - Inside Service method.
+2014-07-13 17:15:49,194 : [INFO ] - Check Balance in the account 
+2014-07-13 17:15:49,195 : [INFO ] - Param => userId : ret23 UserType : 4
+2014-07-13 17:15:49,200 : [INFO ] - Inside GetDataSet Method
+2014-07-13 17:15:49,201 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 17:15:49,216 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 17:15:49,218 : [INFO ] - Params : @UserType value :4
+2014-07-13 17:15:49,219 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 17:15:51,615 : [INFO ] - Return Ds
+2014-07-13 17:15:51,616 : [INFO ] - Got Data from Db
+2014-07-13 17:15:51,617 : [INFO ] - Avaialable balance : 8323 Service Status : true
+2014-07-13 17:15:51,617 : [INFO ] - Going to process the Transaction.
+2014-07-13 17:15:57,793 : [INFO ] - Inside Process request Method.
+2014-07-13 17:15:58,803 : [INFO ] - Session : dKHwfLjRhkmFWrYLcrQd
+2014-07-13 17:16:01,712 : [INFO ] - SD : 105539 |AP : 175413 |OP : 175447 |Mobile : 7506260128
+2014-07-13 17:16:08,938 : [INFO ] - reqStr : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3ddKHwfLjRhkmFWrYLcrQd%0d%0aNUMBER%3d7506260128%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCcYABAUK3A%2f94JO%2bOFMxhXIRLEi8xKP4mget1EMmMhx5%2fLi9t%0d%0abXyoBPZ%2fQQFOBbgF8c%2f2SqEvsnt4248sjp%2bmqrFDkgj9p%2bImehMbPCWeqotppp6z%0d%0aGlzqyq%2f7nVo19wQKhNYVnfQfnyQcdFekgU3N407XYZvsHiRmaWwzJa%2bgW0RdJo%2fW%0d%0aejeOZLABxw%3d%3d%0d%0a%3dYYMp%0d%0aEND+SIGNATURE
+2014-07-13 17:16:10,595 : [INFO ] - Done
+2014-07-13 17:16:12,080 : [INFO ] - inputMessageforValidateNumber : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3ddKHwfLjRhkmFWrYLcrQd%0d%0aNUMBER%3d7506260128%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCcYABAUK3A%2f94JO%2bOFMxhXIRLEi8xKP4mget1EMmMhx5%2fLi9t%0d%0abXyoBPZ%2fQQFOBbgF8c%2f2SqEvsnt4248sjp%2bmqrFDkgj9p%2bImehMbPCWeqotppp6z%0d%0aGlzqyq%2f7nVo19wQKhNYVnfQfnyQcdFekgU3N407XYZvsHiRmaWwzJa%2bgW0RdJo%2fW%0d%0aejeOZLABxw%3d%3d%0d%0a%3dYYMp%0d%0aEND+SIGNATURE
+2014-07-13 17:16:14,198 : [INFO ] - Inside the Process Method.
+2014-07-13 17:16:14,940 : [INFO ] -  URL : 
+2014-07-13 17:16:22,191 : [ERROR] - Exception : Invalid URI: The URI is empty.
+2014-07-13 17:16:24,951 : [INFO ] - ValidateResponse : 
+2014-07-13 17:18:37,492 : [INFO ] - ValidateResponse : ERROR=0 RESULT=0
+2014-07-13 17:18:40,176 : [INFO ] - Go for payment
+2014-07-13 17:18:43,935 : [INFO ] - stringInputMsgPayment : inputmessage=0000045601SM000001030000010300000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3ddKHwfLjRhkmFWrYLcrQd%0d%0aNUMBER%3d7506260128%0d%0aACCOUNT%3d%0d%0aAMOUNT%3d50%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCchsBAXoNA%2fwOGWAzW5PebcqzGUnkpUifF0TyL8jalThesrCt%0d%0aujFbwvTt0sc%2f4Q3XxE9dLrh3sTAEpFvSiz3A9ahmeHESrn1%2fb%2fYsPCYWgR6vt7hW%0d%0aDtAJyVqFYWeoeopsP3b3jSQmti60pwNAr%2f92xY7mDZJNZwsbOJ9C47TQk293t%2bM6%0d%0aodDA2bABxw%3d%3d%0d%0a%3dMgMQ%0d%0aEND+SIGNATURE
+2014-07-13 17:18:45,441 : [INFO ] - Inside the Process Method.
+2014-07-13 17:18:45,949 : [INFO ] -  URL : 
+2014-07-13 17:18:48,779 : [ERROR] - Exception : Invalid URI: The URI is empty.
+2014-07-13 17:19:18,879 : [INFO ] - PaymentResponse : ERROR=0 RESULT=0
+2014-07-13 17:23:27,662 : [INFO ] - Success : Check Transaction status
+2014-07-13 17:28:24,949 : [INFO ] - CalledService api
+2014-07-13 17:28:24,976 : [INFO ] - Params | UserId : ret23UserType :4 TransactionType : postpaid Source :androidOperatorId : 234 Number: 7506260128 InsuranceDob : Amount :50
+2014-07-13 17:28:24,977 : [INFO ] - Going to Process
+2014-07-13 17:28:24,987 : [INFO ] - Inside Service method.
+2014-07-13 17:28:24,989 : [INFO ] - Check Balance in the account 
+2014-07-13 17:28:24,989 : [INFO ] - Param => userId : ret23 UserType : 4
+2014-07-13 17:28:24,993 : [INFO ] - Inside GetDataSet Method
+2014-07-13 17:28:24,994 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 17:28:25,008 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 17:28:25,009 : [INFO ] - Params : @UserType value :4
+2014-07-13 17:28:25,010 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 17:28:26,914 : [INFO ] - Return Ds
+2014-07-13 17:28:26,915 : [INFO ] - Got Data from Db
+2014-07-13 17:28:26,916 : [INFO ] - Avaialable balance : 8323 Service Status : true
+2014-07-13 17:28:26,917 : [INFO ] - Going to process the Transaction.
+2014-07-13 17:28:31,350 : [INFO ] - Inside Process request Method.
+2014-07-13 17:28:32,716 : [INFO ] - Session : AIhO3s4cdy6M6Tfroqxi
+2014-07-13 17:28:36,107 : [INFO ] - SD : 105539 |AP : 175413 |OP : 175447 |Mobile : 7506260128
+2014-07-13 17:28:44,921 : [INFO ] - reqStr : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3dAIhO3s4cdy6M6Tfroqxi%0d%0aNUMBER%3d7506260128%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCdHQBAbHvA%2f9xcwff0Hfb38QtGMkRvevg%2fqlwDHdTWAS%2bFeAL%0d%0aTWNzL3xmlQ1jtWqNXM5BnZBxjap%2bktvcyTNq1uPH6GAQJq7crdPT%2fvV9EWZIDwcw%0d%0aAQKwqOWExXEbkCQzXlwItQ1uH7ezCQRP%2fZjueNU6e2aqEZP4l9yA9zYrBajDAdAX%0d%0aQKbAKLABxw%3d%3d%0d%0a%3dqFF3%0d%0aEND+SIGNATURE
+2014-07-13 17:28:46,287 : [INFO ] - Done
+2014-07-13 17:28:48,286 : [INFO ] - inputMessageforValidateNumber : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3dAIhO3s4cdy6M6Tfroqxi%0d%0aNUMBER%3d7506260128%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCdHQBAbHvA%2f9xcwff0Hfb38QtGMkRvevg%2fqlwDHdTWAS%2bFeAL%0d%0aTWNzL3xmlQ1jtWqNXM5BnZBxjap%2bktvcyTNq1uPH6GAQJq7crdPT%2fvV9EWZIDwcw%0d%0aAQKwqOWExXEbkCQzXlwItQ1uH7ezCQRP%2fZjueNU6e2aqEZP4l9yA9zYrBajDAdAX%0d%0aQKbAKLABxw%3d%3d%0d%0a%3dqFF3%0d%0aEND+SIGNATURE
+2014-07-13 17:28:48,982 : [INFO ] - Inside the Process Method.
+2014-07-13 17:28:49,647 : [INFO ] -  URL : https://in.cyberplat.com/cgi-bin/bu/bu_pay_check.cgi/234
+2014-07-13 17:28:51,422 : [INFO ] - Response str : 0000041901SM000000660000006600000217
+inist_in            00000040
+                    00000000
+BEGIN
+DATE=13.07.2014 17:28:52
+SESSION=
+ERROR=32
+RESULT=1
+TRANSID=
+
+END
+BEGIN SIGNATURE
+iQCRAwkBAAAAKFPCdHwBAQ67A/9gZ8L1VKqIuid91Ruu9Mx30HzwpcSINfQvKlQc
+Xsw1yZDCs0qOQhCja+bFQl4DzFVv2qj2n6CMh+NAhNJc3zzQrL23gNjffLDkihoY
+7XnlnobOddtnX2EEpTWklG/5ihUob+p/6JR+/PZXN/PdZCLm+ML85hyNXYr9rUc4
+bVCC4LABxw==
+=Sct+
+END SIGNATURE
+2014-07-13 17:28:51,423 : [INFO ] - ValidateResponse : 0000041901SM000000660000006600000217
+inist_in            00000040
+                    00000000
+BEGIN
+DATE=13.07.2014 17:28:52
+SESSION=
+ERROR=32
+RESULT=1
+TRANSID=
+
+END
+BEGIN SIGNATURE
+iQCRAwkBAAAAKFPCdHwBAQ67A/9gZ8L1VKqIuid91Ruu9Mx30HzwpcSINfQvKlQc
+Xsw1yZDCs0qOQhCja+bFQl4DzFVv2qj2n6CMh+NAhNJc3zzQrL23gNjffLDkihoY
+7XnlnobOddtnX2EEpTWklG/5ihUob+p/6JR+/PZXN/PdZCLm+ML85hyNXYr9rUc4
+bVCC4LABxw==
+=Sct+
+END SIGNATURE
+2014-07-13 17:28:51,427 : [ERROR] - Error Message  : Try after one hour
+2014-07-13 17:28:51,429 : [WARN ] - cyber-plate error : Validation Error- Try after one hour
+2014-07-13 17:28:51,431 : [INFO ] - Inside GetDataSet Method
+2014-07-13 17:28:51,433 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 17:28:51,433 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 17:28:51,434 : [INFO ] - Params : @UserType value :4
+2014-07-13 17:28:51,434 : [INFO ] - Params : @Number value :7506260128
+2014-07-13 17:28:51,435 : [INFO ] - Params : @Amount value :50
+2014-07-13 17:28:51,436 : [INFO ] - Params : @ServiceCharge value :
+2014-07-13 17:28:51,436 : [INFO ] - Params : @TransactionType value :postpaid
+2014-07-13 17:28:51,437 : [INFO ] - Params : @InsuranceDob value :
+2014-07-13 17:28:51,437 : [INFO ] - Params : @TransactionId value :-1
+2014-07-13 17:28:51,438 : [INFO ] - Params : @OperaterId value :234
+2014-07-13 17:28:51,438 : [INFO ] - Params : @Status value :0
+2014-07-13 17:28:51,438 : [INFO ] - Params : @Source value :android
+2014-07-13 17:28:51,439 : [INFO ] - Params : @ApiId value :CyberPate
+2014-07-13 17:28:51,439 : [INFO ] - Params : @BillRecieptId value :
+2014-07-13 17:28:51,440 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 17:28:51,793 : [INFO ] - Return Ds
+2014-07-13 17:46:09,497 : [INFO ] - CalledService api
+2014-07-13 17:46:09,546 : [INFO ] - Params | UserId : ret23UserType :4 TransactionType : postpaid Source :androidOperatorId : 1 Number: 8446349153 InsuranceDob : Amount :50
+2014-07-13 17:46:09,547 : [INFO ] - Going to Process
+2014-07-13 17:46:09,561 : [INFO ] - Inside Service method.
+2014-07-13 17:46:09,564 : [INFO ] - Check Balance in the account 
+2014-07-13 17:46:09,565 : [INFO ] - Param => userId : ret23 UserType : 4
+2014-07-13 17:46:09,570 : [INFO ] - Inside GetDataSet Method
+2014-07-13 17:46:09,572 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 17:46:09,598 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 17:46:09,599 : [INFO ] - Params : @UserType value :4
+2014-07-13 17:46:09,602 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 17:46:20,167 : [INFO ] - Return Ds
+2014-07-13 17:46:20,168 : [INFO ] - Got Data from Db
+2014-07-13 17:46:20,169 : [INFO ] - Avaialable balance : 8214 Service Status : true
+2014-07-13 17:46:20,170 : [INFO ] - Going to process the Transaction.
+2014-07-13 17:50:28,022 : [INFO ] - CalledService api
+2014-07-13 17:50:28,062 : [INFO ] - Params | UserId : ret23UserType :4 TransactionType : postpaid Source :androidOperatorId : 1 Number: 8446349153 InsuranceDob : Amount :50
+2014-07-13 17:50:28,063 : [INFO ] - Going to Process
+2014-07-13 17:50:28,077 : [INFO ] - Inside Service method.
+2014-07-13 17:50:28,080 : [INFO ] - Check Balance in the account 
+2014-07-13 17:50:28,081 : [INFO ] - Param => userId : ret23 UserType : 4
+2014-07-13 17:50:28,085 : [INFO ] - Inside GetDataSet Method
+2014-07-13 17:50:28,086 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 17:50:28,100 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 17:50:28,101 : [INFO ] - Params : @UserType value :4
+2014-07-13 17:50:28,102 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 17:50:30,223 : [INFO ] - Return Ds
+2014-07-13 17:50:30,224 : [INFO ] - Got Data from Db
+2014-07-13 17:50:30,224 : [INFO ] - Avaialable balance : 8214 Service Status : true
+2014-07-13 17:50:30,225 : [INFO ] - Going to process the Transaction.
+2014-07-13 17:50:35,892 : [INFO ] - Inside Process request Method.
+2014-07-13 17:50:41,608 : [INFO ] - Session : z0PjkvfdCigkOz4mpEj8
+2014-07-13 17:50:45,554 : [INFO ] - SD : 105539 |AP : 175413 |OP : 175447 |Mobile : 8446349153
+2014-07-13 17:51:00,636 : [INFO ] - reqStr : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3dz0PjkvfdCigkOz4mpEj8%0d%0aNUMBER%3d8446349153%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCeawBAaGwA%2f0a2em13YQXzcgu6GZL59Mp%2f8tkqxz%2fVGrM3VGK%0d%0aFbg7O2tdS7FooExXb4fh9htD6rmbU9%2bQmB8sUP7pdDjn8r%2fr28xSqrUXmzY5CW8A%0d%0att76BZUhp9oMdPaY9u7X%2bnjBA67GLuisb4SR96ofeQCedTK6kkBt%2byKWomh3PGqe%0d%0aWeAtdLABxw%3d%3d%0d%0a%3dfLMW%0d%0aEND+SIGNATURE
+2014-07-13 17:51:02,275 : [INFO ] - Done
+2014-07-13 17:51:04,627 : [INFO ] - inputMessageforValidateNumber : inputmessage=0000047101SM000001180000011800000217%0d%0aapi175413+++++++++++00039311%0d%0a++++++++++++++++++++00000000%0d%0aBEGIN%0d%0aSD%3d105539%0d%0aAP%3d175413%0d%0aOP%3d175447%0d%0aSESSION%3dz0PjkvfdCigkOz4mpEj8%0d%0aNUMBER%3d8446349153%0d%0aAMOUNT%3d50%0d%0aAMOUNT_ALL%3d50%0d%0aCOMMENT%3d%0d%0a%0d%0aEND%0d%0aBEGIN+SIGNATURE%0d%0aiQCRAwkBAACZj1PCeawBAaGwA%2f0a2em13YQXzcgu6GZL59Mp%2f8tkqxz%2fVGrM3VGK%0d%0aFbg7O2tdS7FooExXb4fh9htD6rmbU9%2bQmB8sUP7pdDjn8r%2fr28xSqrUXmzY5CW8A%0d%0att76BZUhp9oMdPaY9u7X%2bnjBA67GLuisb4SR96ofeQCedTK6kkBt%2byKWomh3PGqe%0d%0aWeAtdLABxw%3d%3d%0d%0a%3dfLMW%0d%0aEND+SIGNATURE
+2014-07-13 17:51:06,069 : [INFO ] - Inside the Process Method.
+2014-07-13 17:51:20,498 : [INFO ] -  URL : https://in.cyberplat.com/cgi-bin/ac/ac_pay_check.cgi/1
+2014-07-13 17:51:53,345 : [INFO ] - Inside the Process Method.
+2014-07-13 17:51:54,451 : [INFO ] -  URL : https://in.cyberplat.com/cgi-bin/ac/ac_pay_check.cgi/1
+2014-07-13 17:52:45,393 : [INFO ] - Response str : 0000044001SM000000870000008700000217
+inist_in            00000040
+                    00000000
+BEGIN
+DATE=13.07.2014 17:51:59
+SESSION=z0PjkvfdCigkOz4mpEj8
+ERROR=224
+RESULT=1
+TRANSID=
+
+END
+BEGIN SIGNATURE
+iQCRAwkBAAAAKFPCeecBAYqUBACXqAu+AIVlq7c6yubjiNPV6bKo/a40Pv48kIB5
+AsDax8m1Dygd4yRGJaSMRQsiOWlbXVDzaiyEyEaLGES4nImEZ82qabDYmcXP/S8J
+z0gYLaWo2pR2da06kPlV4BApM392tpkrRM5p4lZ73bpFRleDyAvuKY4E4wlBu/MV
+koH0JbABxw==
+=EDO5
+END SIGNATURE
+2014-07-13 17:52:45,413 : [INFO ] - ValidateResponse : 0000044001SM000000870000008700000217
+inist_in            00000040
+                    00000000
+BEGIN
+DATE=13.07.2014 17:51:59
+SESSION=z0PjkvfdCigkOz4mpEj8
+ERROR=224
+RESULT=1
+TRANSID=
+
+END
+BEGIN SIGNATURE
+iQCRAwkBAAAAKFPCeecBAYqUBACXqAu+AIVlq7c6yubjiNPV6bKo/a40Pv48kIB5
+AsDax8m1Dygd4yRGJaSMRQsiOWlbXVDzaiyEyEaLGES4nImEZ82qabDYmcXP/S8J
+z0gYLaWo2pR2da06kPlV4BApM392tpkrRM5p4lZ73bpFRleDyAvuKY4E4wlBu/MV
+koH0JbABxw==
+=EDO5
+END SIGNATURE
+2014-07-13 17:52:45,460 : [ERROR] - Error Message  : UnKnown Error
+2014-07-13 17:52:45,464 : [WARN ] - cyber-plate error : Validation Error- UnKnown Error
+2014-07-13 17:52:45,466 : [INFO ] - Inside GetDataSet Method
+2014-07-13 17:52:45,468 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-13 17:52:45,472 : [INFO ] - Params : @UserId value :ret23
+2014-07-13 17:52:45,475 : [INFO ] - Params : @UserType value :4
+2014-07-13 17:52:45,477 : [INFO ] - Params : @Number value :8446349153
+2014-07-13 17:52:45,497 : [INFO ] - Params : @Amount value :50
+2014-07-13 17:52:45,499 : [INFO ] - Params : @ServiceCharge value :
+2014-07-13 17:52:45,501 : [INFO ] - Params : @TransactionType value :postpaid
+2014-07-13 17:52:45,502 : [INFO ] - Params : @InsuranceDob value :
+2014-07-13 17:52:45,504 : [INFO ] - Params : @TransactionId value :-1
+2014-07-13 17:52:45,505 : [INFO ] - Params : @OperaterId value :1
+2014-07-13 17:52:45,506 : [INFO ] - Params : @Status value :0
+2014-07-13 17:52:45,507 : [INFO ] - Params : @Source value :android
+2014-07-13 17:52:45,508 : [INFO ] - Params : @ApiId value :CyberPate
+2014-07-13 17:52:45,509 : [INFO ] - Params : @BillRecieptId value :
+2014-07-13 17:52:45,511 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-13 17:52:45,827 : [INFO ] - Return Ds

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="connString-Web.config Connection String" description="connString Connection String used in web.config by the application to access the database." defaultValue="Data Source=P3NWDSH12SQL-v01.shr.prod.phx3.secureserver.net; Initial Catalog=Blue014; User ID=Blue014; Password=Crebit9#" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\StackOverflow\\Desktop\\dhs\.retailer\\retailer\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='connString']/@connectionString" />
+  </parameter>
+</parameters>

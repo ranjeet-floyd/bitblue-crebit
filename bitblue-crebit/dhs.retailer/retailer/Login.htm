@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crebit Wallet login">
+    <meta name="author" content="Ranjeet">
+    <meta name="keyword" content="Crebit, Wallet, Recharge, crebit store, mobile , Postpaid, dth, prepaid">
+    <title>Crebit Store - Online recharge Service</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/newstyle.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+      <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        @media (min-width: 768px) {
+            .ForgotPassword-dialog {
+                width: 400px !important;
+            }
+
+            /*.ForgotPassword-content {
+                height: 218px !important;
+            }*/
+
+            .signUp-Dialog {
+                width: 372px !important;
+            }
+        }
+
+        .margin-bottom10 {
+            margin-bottom: 10px;
+        }
+
+        .modal-footer .btn {
+            margin: 7px !important;
+        }
+        /*#dvLoading {
+            background: #fff url(img/crebit_Img/spiffygif_30x30.gif) no-repeat center center;
+            height: 100px;
+            width: 200px;
+            z-index: 1000;
+            margin: 45% auto;
+            border: 1px solid #0094ff;
+            max-width: 330px;
+        }*/
+
+        .logotext {
+            text-align: center;
+            font-variant: small-caps;
+        }
+    </style>
+</head>
+<body>
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <div id="login-page">
+        <div class="container">
+            <div>
+
+                <form class="form-login modal-content">
+                    <div class="logotext">
+
+                        <!--<img src="img/crebit_Img/crebt_logo_new.png" class="img-circle" height="85" style="background-color:#e2e2e2" />-->
+                    </div>
+                    <h2 class="form-login-heading logotext">
+                        Crebit Wallet
+                    </h2>
+                    <div class="login-wrap">
+                        <input id="user_mobile" type="number" class="form-control" placeholder="Mobile Number" autocomplete="on" maxlength="10" required />
+                        <br>
+                        <input id="user_key" type="password" class="form-control" placeholder="Password" autocomplete="on" maxlength="20" required />
+                        <span id="login_msg" class="hidden"></span>
+                        <label class="checkbox">
+                            <button id="user_login" class="btn  btn btn-primary btn-block btn-lg " type="submit"><i class="fa fa-lock"></i>&nbsp;SIGN IN</button>
+                        </label>
+                        <label class="checkbox">
+                            <span class="pull-right">
+                                <a data-toggle="modal" href="/login.html#myModal">Forgot Password?</a>
+                            </span>
+                        </label>
+                        <hr>
+
+                        <div class="login-social-link centered alert alert-danger fade in" id="userlogin_msg">
+                            <p></p>
+                        </div>
+                        <div class="registration">
+                            Don't have an account yet?<br>
+                            <a data-toggle="modal" href="/login.html#model_signUp">Create an account</a>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <!--loading image-->
+        <div aria-hidden="true" role="progressbar" tabindex="-1" id="loding_Model" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content" id="dvLoading"></div>
+            </div>
+        </div>
+        <!--end loading image-->
+        <!-- Modal -->
+        <!--forgot Password-->
+        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+            <div class="modal-dialog ForgotPassword-dialog">
+                <form class="modal-content ForgotPassword-content" onsubmit=" return forgotPass_Submit()">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Forgot Password ?</h4>
+                    </div>
+                    <div id="model_bodyForgotPass" class="modal-body">
+                        <p>Enter your mobile number below to reset your password.</p>
+                        <input id="forgot_mobile" type="number" name="mobile" placeholder="Mobile" max="9999999999" min="6666666666" required class="form-control placeholder-no-fix">
+                    </div>
+                    <div id="forgot_button" class="modal-footer">
+                        <input id="btnForgot" class="btn btn-primary" type="submit" value="Submit" />
+                        <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--signUp-->
+        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="model_signUp" class="modal fade">
+            <div class="modal-dialog signUp-Dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Sign Up / Register</h4>
+                    </div>
+                    <form onsubmit="return signUp_Submit()">
+
+                        <div id="model_bodySignUp" class="modal-body">
+                            <strong>
+                                <label>Account Type : </label>
+                                <select id="drpUserType" class="margin-bottom10 form-control placeholder-no-fix">
+                                    <!--  <option value="0">--select Account type --</option>-->
+                                    <option value="1">Enterprise</option>
+                                    <option value="2">Personal</option>
+                                </select>
+                            </strong>
+                            <input id="signup_name" type="text" name="name" placeholder="Enter your name" maxlength="50" required class="margin-bottom10 form-control placeholder-no-fix">
+                            <input id="signup_mobile" type="number" name="mobile" placeholder="Enter your mobile number" min="1111111111" max="9999999999" required class="margin-bottom10 form-control placeholder-no-fix">
+                            <input id="signup_password" type="password" name="password" placeholder="Enter your password" maxlength="10" required class="form-control placeholder-no-fix">
+                            <div id="msg_signUp" class="msg"></div>
+                        </div>
+                        <div id="SignUp_button" class="modal-footer">
+                            <input id="btnSignUp" class="btn btn-primary" type="submit" value="Submit" />
+                            <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--message-->
+        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="model_msg" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div id="msgmodel_body" class="modal-body">
+                    </div>
+                    <div id="msg_button" class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--End Modal -->
+    </div>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+</body>
+</html>
+<script>
+    var MOBILE = "";
+    $(document).ready(function () {
+
+        $('#userlogin_msg').hide();
+        eraseCookie("_crbt");//erase cookies
+        //login
+        $("#user_login").click(function () {
+            var mobile = $("#user_mobile").val();
+            MOBILE = mobile;
+            var key = $("#user_key").val();
+            //add remomber me also
+            if (mobile != "" && mobile.length == 10 && key != "") {
+                checkUser(mobile, key);//validate user
+            }
+            else {
+                $('#userlogin_msg').show();
+                $("#loding_Model").hide();//hide loading image
+                var html = "Please enter valid Data.!!";
+                if (mobile.trim().length != 10 || !validate(mobile))
+                    html = "Please enter valid 10 digits Mobile Number.!!";
+
+                else
+                    if (key == "" || key.length >= 50)
+                        html = "Please enter valid Password.!!";
+
+                $("#userlogin_msg").html(html);
+            }
+            return false;
+        });
+    });
+
+    //on signup
+    function signUp_Submit() {
+        //alert("sign up");
+        signUp($("#signup_name").val(), $("#signup_mobile").val(), $("#signup_password").val());
+        return false;
+    }
+    //forgor passowrd
+    function forgotPass_Submit() {
+        MOBILE = $("#forgot_mobile").val();
+        forgotPass(MOBILE);
+        return false;
+    }
+
+    function forgotPass(mobile) {
+        //Status://    0 - Some Error //1- Mobile not resgister  //2- success || SMS sent successfully
+        var dataJSON = {};
+        dataJSON.mobile = mobile;
+        AjaxCall("POST", "dhs/forgotpassword", dataJSON, forgotPassCallBack);//call api
+
+    }
+    //Call back function for ajax call for forgot password.
+    function forgotPassCallBack(resObj) {
+        try {
+            var html = "";
+            if (parseInt(resObj.status) == 1) {//  //Success
+                html = '<div class="alert alert-danger">Mobile not resgister..Please Sign-up for Registration.</div>';
+            }
+            else {
+                if (parseInt(resObj.status) == 2) {
+                    html = '<div class="alert alert-success">Check SMS for Password ';
+                    html += ' @mobile number : ' + MOBILE + ' </div>'
+                }
+                else {
+                    html = '<div class="alert alert-danger">Some Error..Please try again later.</div>';
+                }
+            }
+        }
+        catch (ex) {
+            console.log(ex.message);
+            html = '<div class="alert alert-danger fade in">Invalid data ! Check Input data.</div>';
+        }
+        $('#myModal').modal('hide');
+        $("#msgmodel_body").html(html);
+        $('#model_msg').modal('show');
+    }
+
+    function signUp(name, mobile, pass) {
+        var userType = $("#drpUserType").val();
+        var dataJSON = {};
+        dataJSON.name = name; dataJSON.mobile = mobile; dataJSON.pass = pass; dataJSON.userType = userType;
+        AjaxCall("POST", "dhs/signUp", dataJSON, signUpCallBack);//call api
+    }
+
+    function signUpCallBack(jsonString) {
+        try {
+            $("#msg_signUp").fadeIn();
+            // var jsonString = eval('(' + response + ')');
+            var resObj = jsonString;//eval('(' + eval('(' + jsonString.value + ')') + ')');
+            var html = "";
+            //Success
+            if (parseInt(resObj[0].status) == 1) {//
+                html = '<div class="alert  alert-success">Account has been Successfully created...Please login .</div>';
+            }
+            else {
+                if (parseInt(resObj[0].status) == 2) {
+                    html = '<div class="alert alert-success">Account already exist with ';
+                    html += ' mobile number ' + $("#signup_mobile").val() + ' </div>'
+                }
+                else {
+                    html = '<div class="alert alert-danger">Some Error..Please try again later.</div>';
+                }
+            }
+        }
+        catch (ex) {
+            console.log(ex.message);
+            html = '<div class="alert alert-danger fade in">Invalid data ! Check Input data.</div>';
+        }
+        // $("#model_bodySignUp").html(html);
+        $("#msg_signUp").html(html).fadeOut(30000);
+        //$("#msg_signUp").empty().fadeIn();
+        $('#model_signUp').modal('show');
+    }
+
+    //on sign click || validate user
+    function checkUser(mobile, pass) {
+        $("#loding_Model").show();//show loading image
+        var status = false;
+        var dataJSON = {};
+        dataJSON.mobile = mobile; dataJSON.pass = pass; dataJSON.version = "1.0";
+        AjaxCall("POST", "dhs/login", dataJSON, checkUserCallBack);//call api
+    }
+
+    function checkUserCallBack(jsonString) {
+        try {
+            $('#userlogin_msg').show();
+            var html = "";
+            //var jsonString = eval('(' + response + ')');
+            if (jsonString != "") {
+                var resObj = jsonString[0];
+
+                if (resObj.userId > 0) {//Success//availableBalance
+                    var avBal = resObj.availableBalance;
+                    var name = resObj.name;
+                    var userId = resObj.userId;
+                    var key = resObj.userKey;
+                    var uType = resObj.uType;
+                    var cr_notify = 1;
+                    //User cookies
+                    createCookie("_crbt", userId + "~" + key + "~" + avBal + "~" + name + "~" + uType + "~" + cr_notify, 30);
+                    //createCookie("cr_Id_key", userId + "~" + key, 30);
+                    //createCookie("cr_nm_bal", avBal + "~" + name, 30);
+                    //createCookie("cr_notify", "1", 60);
+                    status = true;
+                    window.location.replace("/default.htm");//dashboad page
+                }
+                else {
+                    //  $('#userlogin_msg').show();
+                    if (resObj.UserId == 0) { //wrong user |
+                        $("#userlogin_msg").html("Wrong Mobile number or Password.");
+                    }
+                    else
+                        $("#userlogin_msg").html("Some thing is Wrong..Pls contact Crebit.")
+                }
+            }
+            else {
+                html = 'Wrong Mobile number or Password.';
+                $("#userlogin_msg").html(html);
+                $("#loding_Model").hide();
+                status = false;
+            }
+        }
+        catch (ex) {
+            console.log(ex.message);
+            html = 'Invalid data ! Check Input data.';
+            $("#userlogin_msg").html(html);
+            status = false;
+            $("#loding_Model").hide();
+        }
+
+        $("#loding_Model").hide();//show loading image
+
+    }
+
+    function validate(mobile) {
+        //  alert(mobile.length);
+        if (/^\d{10}$/.test(mobile))
+            return true;
+        return false;
+    }
+
+</script>

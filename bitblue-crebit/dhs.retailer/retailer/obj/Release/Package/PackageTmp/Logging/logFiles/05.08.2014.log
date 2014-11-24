@@ -1,0 +1,24 @@
+2014-08-05 02:42:30,852 : [INFO ] - Got transactionDetails req.
+2014-08-05 02:42:35,722 : [INFO ] - Params | UserId : 7506260128UserType :4 FromDate :  ToDate :
+2014-08-05 02:42:43,602 : [INFO ] - Going to Process
+2014-08-05 02:42:45,551 : [INFO ] - Inside TransactionSummary method
+2014-08-05 02:42:46,751 : [INFO ] - process request
+2014-08-05 02:42:48,291 : [INFO ] - Inside GetDataSet Method
+2014-08-05 02:42:48,293 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-08-05 02:42:48,300 : [INFO ] - Params : @UserId value :7506260128
+2014-08-05 02:42:48,301 : [INFO ] - Params : @UserType value :4
+2014-08-05 02:42:48,301 : [INFO ] - Params : @FromDate value :
+2014-08-05 02:42:48,301 : [INFO ] - Params : @ToDate value :
+2014-08-05 02:42:48,302 : [INFO ] - Now Fill SqlDataAdapter
+2014-08-05 02:42:50,229 : [INFO ] - Return Ds
+2014-08-05 02:44:17,124 : [INFO ] - Get the data from db
+2014-08-05 02:47:33,376 : [INFO ] - process request
+2014-08-05 02:47:34,924 : [INFO ] - Inside GetDataSet Method
+2014-08-05 02:47:34,926 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-08-05 02:47:34,927 : [INFO ] - Params : @UserId value :7506260128
+2014-08-05 02:47:34,927 : [INFO ] - Params : @UserType value :4
+2014-08-05 02:47:34,928 : [INFO ] - Params : @FromDate value :
+2014-08-05 02:47:34,928 : [INFO ] - Params : @ToDate value :
+2014-08-05 02:47:34,928 : [INFO ] - Now Fill SqlDataAdapter
+2014-08-05 02:47:35,240 : [INFO ] - Return Ds
+2014-08-05 02:49:27,090 : [INFO ] - Get the data from db

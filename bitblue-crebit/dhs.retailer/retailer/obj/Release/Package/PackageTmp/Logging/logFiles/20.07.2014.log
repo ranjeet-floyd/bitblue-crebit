@@ -1,0 +1,119 @@
+2014-07-20 12:37:12,940 : [INFO ] - Called GetOperatorMargin api
+2014-07-20 12:37:13,970 : [INFO ] - Request : http://localhost:52811/dhs/adminUpdate
+2014-07-20 12:37:21,008 : [INFO ] - Inside AdminUpdate Method
+2014-07-20 12:37:23,774 : [INFO ] - SpName :DHS_API_AdminUpdate
+2014-07-20 12:37:28,143 : [INFO ] - Inside GetDataSet Method
+2014-07-20 12:37:28,590 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-20 12:37:31,882 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-20 12:37:36,696 : [INFO ] - Return Ds
+2014-07-20 12:37:46,197 : [INFO ] - table count : 1
+2014-07-20 12:37:55,547 : [INFO ] - Json Data : []
+2014-07-20 12:44:33,944 : [ERROR] - Exception : Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'api.dhs.Models.DL.Common.DL_AdminUpdate' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.
+2014-07-20 12:44:53,158 : [INFO ] - Called GetOperatorMargin api
+2014-07-20 12:44:53,763 : [INFO ] - Request : http://localhost:52811/dhs/adminUpdate
+2014-07-20 12:44:57,759 : [INFO ] - Inside AdminUpdate Method
+2014-07-20 12:44:59,427 : [INFO ] - SpName :DHS_API_AdminUpdate
+2014-07-20 12:45:00,177 : [INFO ] - Inside GetDataSet Method
+2014-07-20 12:45:00,178 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-20 12:45:00,179 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-20 12:45:00,574 : [INFO ] - Return Ds
+2014-07-20 12:45:03,319 : [INFO ] - table count : 1
+2014-07-20 12:45:44,458 : [INFO ] - Json Data : [{"Text":"This is Test Admin  Message.","FDate":"2014-07-20T00:12:26.443","TDate":"2014-07-21T00:12:26.443"}]
+2014-07-20 12:45:44,773 : [ERROR] - Exception : Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'api.dhs.Models.DL.Common.DL_AdminUpdate' because the type requires a JSON object (e.g. {"name":"value"}) to deserialize correctly.
+To fix this error either change the JSON to a JSON object (e.g. {"name":"value"}) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path '', line 1, position 1.
+2014-07-20 12:49:22,399 : [INFO ] - Called GetOperatorMargin api
+2014-07-20 12:49:23,784 : [INFO ] - Request : http://localhost:52811/dhs/adminUpdate
+2014-07-20 12:49:26,962 : [INFO ] - Inside AdminUpdate Method
+2014-07-20 12:49:28,616 : [INFO ] - SpName :DHS_API_AdminUpdate
+2014-07-20 12:49:29,361 : [INFO ] - Inside GetDataSet Method
+2014-07-20 12:49:29,362 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-20 12:49:29,372 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-20 12:49:32,050 : [INFO ] - Return Ds
+2014-07-20 12:49:33,389 : [INFO ] - table count : 1
+2014-07-20 12:49:35,041 : [INFO ] - Json Data : [{"Text":"This is Test Admin  Message.","FDate":"2014-07-20T00:12:26.443","TDate":"2014-07-21T00:12:26.443"}]
+2014-07-20 12:50:17,574 : [INFO ] - Called GetOperatorMargin api
+2014-07-20 12:50:18,882 : [INFO ] - Request : http://localhost:52811/dhs/adminpopup
+2014-07-20 12:50:22,890 : [INFO ] - Inside PopUpMessage Method
+2014-07-20 12:50:24,387 : [INFO ] - SpName :DHS_API_AdminUpdate
+2014-07-20 12:50:25,230 : [INFO ] - Inside GetDataSet Method
+2014-07-20 12:50:25,231 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-20 12:50:25,232 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-20 12:50:25,651 : [INFO ] - Return Ds
+2014-07-20 12:50:28,413 : [INFO ] - table count : 1
+2014-07-20 12:50:29,807 : [INFO ] - Json Data : [{"Text":"This is Test Admin  Message.","FDate":"2014-07-20T00:12:26.443","TDate":"2014-07-21T00:12:26.443"}]
+2014-07-20 13:05:08,291 : [INFO ] - Got Login req.
+2014-07-20 13:05:08,323 : [INFO ] - Ready to Process the request.| UserName :ret23 UserType: 4 Version: 1.0 Password: 12345
+2014-07-20 13:05:08,330 : [INFO ] - Inside the CheckLogin method.
+2014-07-20 13:05:08,578 : [INFO ] - Inside GetDataSet Method
+2014-07-20 13:05:08,581 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-20 13:05:08,590 : [INFO ] - Params : @UserName value :ret23
+2014-07-20 13:05:08,591 : [INFO ] - Params : @Password value :12345
+2014-07-20 13:05:08,593 : [INFO ] - Params : @Version value :1.0
+2014-07-20 13:05:08,633 : [INFO ] - Params : @UserType value :4
+2014-07-20 13:05:08,634 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-20 13:05:12,444 : [INFO ] - Return Ds
+2014-07-20 13:05:12,445 : [INFO ] - Got Data from Db.
+2014-07-20 13:05:12,610 : [INFO ] - [{"IsUpdated":true,"IsSupported":true,"UserId":"ret23","AvailableBalance":null,"Margin":1.0,"IsActive":true,"IsDataUpdated":1,"Name":"ret"}]
+2014-07-20 13:23:36,716 : [ERROR] - Got  MobileRegistration req. 
+2014-07-20 13:23:36,747 : [ERROR] - Process request | Mobile :3453489 UserId : R UserType : 4
+2014-07-20 13:23:36,758 : [INFO ] - Inside GetDataSet Method
+2014-07-20 13:23:36,761 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-20 13:23:36,779 : [INFO ] - Params : @Name value :test
+2014-07-20 13:23:36,780 : [INFO ] - Params : @UserType value :4
+2014-07-20 13:23:36,781 : [INFO ] - Params : @MobileNo value :3453489
+2014-07-20 13:23:36,782 : [INFO ] - Params : @UserId value :R
+2014-07-20 13:23:36,786 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-20 13:23:39,754 : [INFO ] - Return Ds
+2014-07-20 13:23:49,847 : [ERROR] - Got  MobileRegistration req. 
+2014-07-20 13:23:49,848 : [ERROR] - Process request | Mobile :345344489 UserId : R UserType : 4
+2014-07-20 13:23:49,848 : [INFO ] - Inside GetDataSet Method
+2014-07-20 13:23:49,850 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-20 13:23:49,850 : [INFO ] - Params : @Name value :test
+2014-07-20 13:23:49,851 : [INFO ] - Params : @UserType value :4
+2014-07-20 13:23:49,852 : [INFO ] - Params : @MobileNo value :345344489
+2014-07-20 13:23:49,853 : [INFO ] - Params : @UserId value :R
+2014-07-20 13:23:49,853 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-20 13:23:52,604 : [INFO ] - Return Ds
+2014-07-20 13:25:33,067 : [ERROR] - Got  MobileRegistration req. 
+2014-07-20 13:25:33,067 : [ERROR] - Process request | Mobile :345344489 UserId : R UserType : 4
+2014-07-20 13:25:55,913 : [INFO ] - Inside GetDataSet Method
+2014-07-20 13:25:56,388 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-20 13:26:00,124 : [INFO ] - Params : @Name value :test
+2014-07-20 13:26:02,396 : [INFO ] - Params : @UserType value :4
+2014-07-20 13:26:04,597 : [INFO ] - Params : @MobileNo value :345344489
+2014-07-20 13:26:06,705 : [INFO ] - Params : @UserId value :R
+2014-07-20 13:26:10,039 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-20 13:26:11,596 : [INFO ] - Return Ds
+2014-07-20 13:29:17,520 : [ERROR] - Got  MobileRegistration req. 
+2014-07-20 13:29:17,520 : [ERROR] - Process request | Mobile :34534448889 UserId : ret23 UserType : 4
+2014-07-20 13:29:22,977 : [INFO ] - Inside GetDataSet Method
+2014-07-20 13:29:22,979 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-20 13:29:22,980 : [INFO ] - Params : @Name value :test
+2014-07-20 13:29:22,981 : [INFO ] - Params : @UserType value :4
+2014-07-20 13:29:22,981 : [INFO ] - Params : @MobileNo value :34534448889
+2014-07-20 13:29:22,982 : [INFO ] - Params : @UserId value :ret23
+2014-07-20 13:29:22,983 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-20 13:29:23,389 : [INFO ] - Return Ds
+2014-07-20 13:30:26,764 : [ERROR] - Got  MobileRegistration req. 
+2014-07-20 13:30:26,765 : [ERROR] - Process request | Mobile :34534448889 UserId : ret23 UserType : 4
+2014-07-20 13:30:30,074 : [INFO ] - Inside GetDataSet Method
+2014-07-20 13:30:30,111 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-20 13:30:30,112 : [INFO ] - Params : @Name value :test
+2014-07-20 13:30:30,112 : [INFO ] - Params : @UserType value :4
+2014-07-20 13:30:30,114 : [INFO ] - Params : @MobileNo value :34534448889
+2014-07-20 13:30:30,115 : [INFO ] - Params : @UserId value :ret23
+2014-07-20 13:30:30,115 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-20 13:30:30,506 : [INFO ] - Return Ds
+2014-07-20 13:42:01,905 : [INFO ] - Called GetOperatorMargin api
+2014-07-20 13:42:01,942 : [INFO ] - Request : http://localhost:52811/dhs/operatorMargin
+2014-07-20 13:42:15,838 : [INFO ] - Inside GetOperatorMargin Method
+2014-07-20 13:42:17,466 : [INFO ] - SpName :GetOperaterMargin
+2014-07-20 13:42:18,209 : [INFO ] - Inside GetDataSet Method
+2014-07-20 13:42:18,210 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-20 13:42:18,224 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-20 13:42:23,350 : [INFO ] - Return Ds
+2014-07-20 13:42:26,235 : [INFO ] - table count : 1
+2014-07-20 13:42:28,072 : [INFO ] - Json Data : [{"Name":"Airtel Prepaid","Type":2,"Margin":0.5},{"Name":"Idea Prepaid","Type":2,"Margin":3.0},{"Name":"Aircel Prepaid","Type":2,"Margin":1.0}]
