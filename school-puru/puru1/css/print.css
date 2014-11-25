@@ -1,0 +1,5 @@
+
+@media print {
+    .nav-bar,.span-left,.no-print  { display: none; }
+	.hidden-name{ display:inherit}
+}
