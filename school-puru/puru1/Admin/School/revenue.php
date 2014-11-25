@@ -72,10 +72,10 @@
 	<div id="revenue_filter" class='hide'>
 	
   <div class="filter-div"><span>Sec :</span>
-			<select id="div-update-show" ></select> 
+			<select id="div-update-show" class="filter-reset" ></select> 
    </div>
   <div class="filter-div"><span>Std :</span>
-  	<select id="drpStand" name="sch_ads_std" onchange="getdiv_count()" disabled>
+  	<select id="drpStand" class="filter-reset" name="sch_ads_std" onchange="getdiv_count()" disabled>
 							<option value="default">Select One</option>
 							 <option value="Mr.dextro">Mr.dextro</option>
 							 <option value="nursery">Nursery</option>
@@ -95,7 +95,7 @@
 </div>
 
 <div class="filter-div"><span>Med :</span>
-		<select id="drpMedium" name="sch_ads_mdm" onchange="enable_std()">
+		<select id="drpMedium" class="filter-data" name="sch_ads_mdm" onchange="enable_std()">
 							 <option value="default">Select One</option>
 							 <option value="English">English</option>
 							 <option value="Hindi">Hindi</option>
@@ -103,7 +103,7 @@
  		 </select>
 </div>
 <div  style="width:185px;float:right;"><span>To Month :</span>
-		<select id="drpTMonth" name="sch_ads_tMonth" >
+		<select id="drpTMonth" class="filter-data" name="sch_ads_tMonth" >
 							 <option value="0">Select One</option>
 							 <option value="1">Jul</option>
 							 <option value="2">Aug</option>
@@ -120,7 +120,7 @@
  		 </select>
 </div>
 <div style="width:185px;float:right;"><span>From Month :</span>
-		<select id="drpFMonth" name="sch_ads_fMonth" >
+		<select id="drpFMonth" class="filter-data" name="sch_ads_fMonth" >
 							 <option value="0">Select One</option>
 							 <option value="1">Jul</option>
 							 <option value="2">Aug</option>

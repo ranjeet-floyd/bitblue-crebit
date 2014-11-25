@@ -438,37 +438,63 @@ $(document).on('click','.rev-revenue',function(){
 			$('.rev-div-main').html(e);
 		}
 	});
+
 });
 /*Modified By Ranjeet || Addded Filter values as params in below fumction */
 $(document).on('click','.rev-recieve',function(){
 	//alert("2")
-	var drpMedium="-1";
-	var drpStd="-1";
-	var drpSec="-1";
-	$("#div-update-show").removeClass("rev-pendFilter").addClass("rev-recieveFilter");
-	$.ajax({
-		url:'db/rev-recieve.php',
-		method:'POST',
-		datatype:'json',
-		data:{
-			drpMedium:drpMedium,
-			drpStd:drpStd,
-			drpSec:drpSec
-		},
-		success:function(e){
-			//Added By Ranjeet || To show Filter
-			$("#revenue_filter").addClass("show").removeClass("hide");
-			$('.rev-div-main').html(e);
-		}
-	});
+	// var drpMedium="-1";
+	// var drpStd="-1";
+	// var drpSec="-1";
+	// $("#div-update-show").removeClass("rev-pendFilter").addClass("rev-recieveFilter");
+	// $.ajax({
+	// 	url:'db/rev-recieve.php',
+	// 	method:'POST',
+	// 	datatype:'json',
+	// 	data:{
+	// 		drpMedium:drpMedium,
+	// 		drpStd:drpStd,
+	// 		drpSec:drpSec
+	// 	},
+	// 	success:function(e){
+	// 		//Added By Ranjeet || To show Filter
+	// 		$("#revenue_filter").addClass("show").removeClass("hide");
+	// 		$('.rev-div-main').html(e);
+	// 	
+	// });
+		 $("#revenue_filter").addClass("show").removeClass("hide");
+		 $("#div-update-show").removeClass("rev-pendFilter").addClass("rev-recieveFilter");
+		 $('div.rev-div-main').html("Please Select Filters ......");
 }); 
+//added By Ranjeet || Reset Filters
+$(document).on('change','.filter-data', function () {
+	// $(".filter-reset").selectedIndex  = 0 ;
+	$(".filter-reset").each(function() { this.selectedIndex = 0 });
+});
+
+
 /*Added By Ranjeet || Addded Filter values as params in below fumction */
 $(document).on('change','.rev-recieveFilter',function(){
-	var drpMedium=$('#drpMedium').val();
+		var drpMedium=$('#drpMedium').val();
 	var drpStd=$('#drpStand').val();
-	var drpSec=$('#div-update-show').val();
+	var drpSec=$('#div-update-show').val(); 
+	//added By Ranjeet || 24 Nov || For month filter
+	var tMonth = $('#drpTMonth').val();
+	var fMonth = $('#drpFMonth').val();
+	if(parseInt(tMonth) >= parseInt(fMonth)){
+	var $monArray=new Array('Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May','Jun');
+	var selectedMonths = "'Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May','Jun'";
+	if(parseInt(tMonth) > 0 && parseInt(fMonth) > 0){
+		selectedMonths = "";
+		for (var i = parseInt(fMonth -1) ; i < parseInt(tMonth) ; i++) {
+				selectedMonths += "'" + $monArray[i] + "',"; 
+			}
+			selectedMonths = selectedMonths.substring(0, selectedMonths.length-1);
+	}
+
 	if(drpSec != "" || drpSec != undefined){
 	//alert("2")
+	$('.rev-div-main').html("Loading ..........");
 	$.ajax({
 		url:'db/rev-recieve.php',
 		method:'POST',
@@ -476,14 +502,19 @@ $(document).on('change','.rev-recieveFilter',function(){
 		data:{
 			drpMedium:drpMedium,
 			drpStd:drpStd,
-			drpSec:drpSec
+			drpSec:drpSec,
+			selectedMonths:selectedMonths
 		},
 		success:function(e){
 			//Added By Ranjeet || To show Filter
 			$("#revenue_filter").addClass("show").removeClass("hide");
 			$('.rev-div-main').html(e);
 		}
-	});}
+	});}}
+
+	else
+		alert("From Month should be less than To Month");
+
 });
 /* main LOGIN page*/
 
