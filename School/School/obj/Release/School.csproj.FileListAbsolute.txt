@@ -1,0 +1,6 @@
+C:\Users\StackOverflow\Dropbox\CarWale_Project\RnD\School\School\bin\School.dll.config
+C:\Users\StackOverflow\Dropbox\CarWale_Project\RnD\School\School\bin\School.dll
+C:\Users\StackOverflow\Dropbox\CarWale_Project\RnD\School\School\bin\School.pdb
+C:\Users\StackOverflow\Dropbox\CarWale_Project\RnD\School\School\obj\Release\School.dll
+C:\Users\StackOverflow\Dropbox\CarWale_Project\RnD\School\School\obj\Release\School.pdb
+C:\Users\StackOverflow\Dropbox\CarWale_Project\RnD\School\School\obj\Release\School.csprojResolveAssemblyReference.cache
