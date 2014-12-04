@@ -51,14 +51,28 @@ $(document).ready(function () {
             if ($("#drpElectricityBillOp").val() == "41") //Reliance
             {
                 $(".mseb").addClass('hidden');
+                $(".cusAccountNo").removeClass('hidden').show();
                 $(".reliance").removeClass('hidden').show();
+                $(".torrentPower").addClass('hidden');
 
             }
             else if ($("#drpElectricityBillOp").val() == "40") //MSEB
             {
-                $(".mseb").removeClass('hidden').show();;
+                $(".torrentPower").addClass('hidden');
+                $(".mseb").removeClass('hidden').show();
+                $(".cusAccountNo").removeClass('hidden').show();
                 $(".reliance").addClass('hidden');
                 $(".paybill").addClass('hidden');
+
+            }
+            else if ($("#drpElectricityBillOp").val() == "42")//TorrentPower
+            {
+                $(".cusAccountNo").addClass('hidden');
+                $(".mseb").addClass('hidden');
+                $(".paybill").addClass('hidden');
+                $(".reliance").addClass('hidden');
+                $(".payAmount").removeClass('hidden').show();
+                $(".torrentPower").removeClass('hidden').show();
             }
         });
 
@@ -230,6 +244,71 @@ function MSEBVerificationCallBack(resObj) {
     $("#customerMSEBStatus").show().html(html);
     $("#loding_Model").hide();//hide loading image
 }
+
+//Torrent Power
+function TorrentBillPayment()
+{
+    if ($("#txtMobileNo").val() != "") {
+        TorrentVerification($("#txtMobileNo").val(), $("#drptorrentpwcity").val(), $("#txtServiceNo").val(), $("#txtBillAmount").val());
+        return true;
+    }
+    else
+        //stmt 
+        return false;
+}
+
+function TorrentVerification(cusMob, Bu, cusAcc, amount) {
+    //$("#loding_Model").show();//show loading image
+    var dataJSON = {};
+    dataJSON.userId = USERID; dataJSON.key = KEY; dataJSON.cusMob = cusMob; dataJSON.Bu = Bu; dataJSON.cusAcc = cusAcc; dataJSON.amount = amount;
+    AjaxCall("POST", "/dhs/torrentPower", dataJSON, TorrentVerificationCallBack);//call api  dashboard/electricity
+    return false;
+}
+
+function TorrentVerificationCallBack(torrentObj) {
+    var html = '';
+    var torrentStatus = '';
+            
+    try {
+        if (torrentObj != null & torrentObj != "") {
+            html = "<div class='alert alert-success'><div><span id='txtMsg'> Bill Payment Request Successfully Accepted </span></div>";
+
+            //            html = "<div class='alert alert-success'><div>Avail Amount :<span id='txtCusAvailAmount'>" + torrentObj["AvaiBal"] + "</span></div>";
+            //switch (torrentObj["Status"])
+            //{
+            //    case 1:
+            //        torrentStatus = "Success";
+            //        break;
+            //    case 0:
+            //        torrentStatus = "Failed";
+            //        break;
+            //    case 2:
+            //        torrentStatus = "Pending";
+            //        break;
+            //    case 3:
+            //        torrentStatus = "InProgress";
+            //        break;
+            //}
+           //html = "<div>Status :<span id='txtCusStatus'>" + torrentStatus + " </span></div>";
+          //  html += "<div>Message :" + torrentObj["Message"] + "</div>";
+        
+        }
+    else {
+            html = '<div class="alert alert-danger fade in msg-box"><div>Not valid Entry !!.</div></div>';
+        }
+    }
+catch (ex) {
+        console.log(ex.message);
+        html = '<div class="alert alert-danger fade in msg-box">Invalid data ! Check Input data.</div>';
+    }
+    $("#model_msg_body").html(html);
+    $('#model_msg').modal('show');
+}
+
+
+
+
+
 
 function form_bank() {
     bankTransfer(USERID, KEY, $("#drpBankList").val(), $("#txtBankTransAmount").val());

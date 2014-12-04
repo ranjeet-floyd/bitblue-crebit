@@ -476,11 +476,15 @@
                     <div id="Div2" class="modal-body form-group col-sm-10">
                         
                         <form>
-                            <label>Service  </label>
+                            
+                            <label >Service  </label>
                             <select id="drpElectricityBillOp" class="form-control input-block-level margin-Bottom" required>
                                 <option value="40">MSEB</option>
                                 <option value="41">Reliance(Mumbai)</option>
+                                <option value="42">TorrentPower</option><!--Adding TorrentPower-->
                             </select>
+                            
+                            
                             <label  class="mseb">BU :</label>
                             <select id="drpBuElectricity" class="form-control input-block-level margin-Bottom mseb">
                                 <option value="0">--Select --</option>
@@ -1349,8 +1353,8 @@
 
 
                             </select>
-                            <label>Customer Account No. </label>
-                            <input id="txtCustomerAccNo" class="form-control input-block-level margin-Bottom" type="number" placeholder="Enter Customer Account No." required="required" />
+                            <label class="cusAccountNo ">Customer Account No. </label>
+                            <input id="txtCustomerAccNo" class="form-control input-block-level margin-Bottom cusAccountNo" type="number" placeholder="Enter Customer Account No." required="required" />
                             <label class="reliance hidden">Cycle/Sub Div. Code  </label>
                             <input id="txtElecCycleDivCode" class="form-control input-block-level margin-Bottom reliance hidden" type="number" placeholder="Enter Cycle/Sub Div. Code" />
                             <label  class="reliance hidden">Amount </label>
@@ -1360,6 +1364,24 @@
                             <input id="txtElectCusMobile" class="form-control input-block-level margin-Bottom hidden mseb paybill" type="number" maxlength="10" placeholder="Enter Customer Mobile" required />
                             <button id="btnMSEBVerify" type="submit" name="Verify"  class="btn btn-primary btn-lg largerButton showMe-reset mseb cusdetails" onclick="verifyMSEBCustomer()" >Get Details </button>
                             <button type="submit" id="btnPayElectricity" class="btn btn-primary btn-lg largerButton  mseb paybill  reliance" onclick="electricity_pay()">Pay Bill</button>
+                       <!--Adding TorrentPower City and Service Input Type -->
+                            <label  class="torrentPower payAmount hidden">City:</label>
+                            <select id="drptorrentpwcity" class="form-control input-block-level margin-Bottom torrentPower payAmount hidden">
+                                <option value="0">--Select --</option>
+                                <option value="1">Ahmedabad</option>
+                                <option value="2">Agra</option>
+                                <option value="3">Bhiwandi</option>
+                                <option value="4">Surat</option>
+                            </select>
+                            <label class="torrentPower payAmount hidden">ServiceNo</label>
+                            <input id="txtServiceNo" class="form-control input-block-level margin-Bottom torrentPower payAmount hidden" type="number" placeholder="Enter Service No." />
+                            <!--Added Amount and Customer Mobile Number to TorrentPower Electricity Service Type-->
+                             <div id="customerTorrentPowerStatus" class="torrentPower msg-box cusdetails"></div>
+                            <label class="torrentPower payAmount hidden">Customer Mobile</label>
+                            <input id="txtMobileNo" class="form-control input-block-level margin-Bottom torrentPower payAmount hidden" type="number" placeholder="Enter Customer Mobile Number" />
+                            <label class="torrentPower payAmount hidden">Bill Amount</label>
+                            <input id="txtBillAmount" class="form-control input-block-level margin-Bottom torrentPower payAmount hidden" type="number" placeholder="Enter Bill Amount" />
+                            <button id="btnServiceNoVerify" type="submit" name="Verify"  class="btn btn-primary btn-lg largerButton torrentPower payAmount hidden" onclick="TorrentBillPayment()" >Pay Bill </button>
                         </form>
                     </div>
                     <div class="modal-footer">
