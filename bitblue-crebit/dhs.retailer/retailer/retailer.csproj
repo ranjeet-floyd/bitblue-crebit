@@ -118,6 +118,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DashBoardController.cs" />
     <Compile Include="Controllers\OperatorController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -126,15 +127,6 @@
     <Compile Include="Handler\AjaxShopCrebit.cs" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="Handler\TestHandler.ashx" />
-    <Content Include="App_Data\CyberPlateKeys\pubkeys.key" />
-    <Content Include="App_Data\CyberPlateKeys\Public.iks" />
-    <Content Include="App_Data\CyberPlateKeys\secret.key" />
-    <Content Include="App_Data\newKeys\pubkeys.key" />
-    <Content Include="App_Data\newKeys\Public.iks" />
-    <Content Include="App_Data\newKeys\secret.key" />
-    <Content Include="App_Data\oldCyberPlateKeys\pubkeys.key" />
-    <Content Include="App_Data\oldCyberPlateKeys\Public.iks" />
-    <Content Include="App_Data\oldCyberPlateKeys\secret.key" />
     <Content Include="Common\HeadTag.html" />
     <Content Include="img\64bit\datacard.png" />
     <Content Include="img\64bit\dth.png" />
@@ -160,37 +152,6 @@
     <Content Include="less\spinning.less" />
     <Content Include="less\stacked.less" />
     <Content Include="less\variables.less" />
-    <Content Include="Logging\logFiles\02.08.2014.log" />
-    <Content Include="Logging\logFiles\03.08.2014.log" />
-    <Content Include="Logging\logFiles\04.08.2014.log" />
-    <Content Include="Logging\logFiles\05.08.2014.log" />
-    <Content Include="Logging\logFiles\06.08.2014.log" />
-    <Content Include="Logging\logFiles\07.08.2014.log" />
-    <Content Include="Logging\logFiles\08.08.2014.log" />
-    <Content Include="Logging\logFiles\09.07.2014.log" />
-    <Content Include="Logging\logFiles\10.08.2014.log" />
-    <Content Include="Logging\logFiles\11.07.2014.log" />
-    <Content Include="Logging\logFiles\12.07.2014.log" />
-    <Content Include="Logging\logFiles\13.07.2014.log" />
-    <Content Include="Logging\logFiles\16.09.2014.log" />
-    <Content Include="Logging\logFiles\20.07.2014.log" />
-    <Content Include="Logging\logFiles\20.08.2014.log" />
-    <Content Include="Logging\logFiles\21.07.2014.log" />
-    <Content Include="Logging\logFiles\21.08.2014.log" />
-    <Content Include="Logging\logFiles\22.07.2014.log" />
-    <Content Include="Logging\logFiles\23.07.2014.log" />
-    <Content Include="Logging\logFiles\23.08.2014.log" />
-    <Content Include="Logging\logFiles\24.07.2014.log" />
-    <Content Include="Logging\logFiles\27.07.2014.log" />
-    <Content Include="Logging\logFiles\28.07.2014.log" />
-    <Content Include="Logging\logFiles\28.08.2014.log" />
-    <Content Include="Logging\logFiles\29.08.2014.log" />
-    <Content Include="Logging\logFiles\30.08.2014.log" />
-    <Content Include="obj\Debug\crebit.retailer.dll" />
-    <Content Include="obj\Debug\crebit.retailer.pdb" />
-    <Content Include="obj\Release\crebit.retailer.dll" />
-    <Content Include="obj\Release\crebit.retailer.pdb" />
-    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Properties\PublishProfiles\ranjeetfloyd.pubxml.user" />
     <Content Include="scss\font-awesome.scss" />
     <Content Include="scss\_bordered-pulled.scss" />
@@ -208,8 +169,13 @@
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="bin\crebit.retailer.dll.config" />
+    <Content Include="App_Data\CyberPlateKeys\pubkeys.key" />
+    <Content Include="App_Data\CyberPlateKeys\Public.iks" />
+    <Content Include="App_Data\CyberPlateKeys\secret.key" />
+    <Content Include="App_Data\newKeys\pubkeys.key" />
+    <Content Include="App_Data\newKeys\Public.iks" />
+    <Content Include="App_Data\newKeys\secret.key" />
     <None Include="Properties\PublishProfiles\crebitwallet.pubxml" />
     <None Include="Properties\PublishProfiles\godaddywebs.pubxml" />
     <None Include="Properties\PublishProfiles\ranjeetfloyd %282%29.pubxml" />
@@ -270,8 +236,6 @@
     <Content Include="js\js\modernizr.js" />
     <Content Include="js\modernizr.custom.js" />
     <Content Include="lockScreen.htm" />
-    <Content Include="Logging\logFiles\MyLogg.txt" />
-    <Content Include="obj\Release\retailer.csproj.FileListAbsolute.txt" />
     <Content Include="olddefault.htm" />
     <Content Include="img\gritter.png" />
     <Content Include="img\ie-spacer.gif" />
@@ -383,6 +347,7 @@
     <Compile Include="Models\BL\Common\BL_Operator.cs" />
     <Compile Include="Models\BL\Common\BL_SMS.cs" />
     <Compile Include="Models\BL\Common\IndianTimeZone.cs" />
+    <Compile Include="Models\BL\Service\BL_Service.cs" />
     <Compile Include="Models\BL\User\BL_Login.cs" />
     <Compile Include="Models\BL\User\BL_Password.cs" />
     <Compile Include="Models\BL\User\BL_SignUp.cs" />
@@ -401,19 +366,14 @@
     <Compile Include="Models\DL\Common\DL_SMSMessage.cs" />
     <Compile Include="Models\DL\Common\DL_StoreProcedure.cs" />
     <Compile Include="Models\DL\CyberPlate\DL_Service.cs" />
+    <Compile Include="Models\DL\Service\DL_Service.cs" />
     <Compile Include="Models\DL\User\DL_User.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="obj\Debug\Package\" />
-    <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="obj\Release\TempPE\" />
+    <Folder Include="App_Data\oldCyberPlateKeys\" />
+    <Folder Include="Logging\logFiles\" />
+    <Folder Include="obj\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -2,6 +2,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using api.dhs.Logging;
 
 namespace retailer.Handler
 {
@@ -24,7 +25,7 @@ namespace retailer.Handler
                 }
                 catch (Exception err)
                 {
-                    //log here
+                    Logger.WriteLog(LogLevelL4N.FATAL, err.Message);
                 }
             }
             return dataSet;
@@ -38,16 +39,13 @@ namespace retailer.Handler
             {
                 try
                 {
-                    
-
-
                     cmdParam.Connection = con;
                     adapter.SelectCommand = cmdParam;
                     adapter.Fill(dataSet);
                 }
                 catch (Exception err)
                 {
-                    //log here
+                    Logger.WriteLog(LogLevelL4N.FATAL, err.Message);
                 }
             }
             return dataSet;

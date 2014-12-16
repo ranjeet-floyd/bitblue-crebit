@@ -1,0 +1,136 @@
+﻿<temlplate>
+    <script src="/js/bmi.js" language="javascript"></script>
+    <!--Validate User-->
+    <!--common script for all pages-->
+    <script src="/js/js/jquery.js"></script>
+    <script src="/js/common-scripts.js"></script>
+    <script> if (checkUser != undefined && typeof (checkUser) === "function") checkUser(); </script>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/newstyle.css" rel="stylesheet">
+    <link href="/css/style-responsive.css" rel="stylesheet">
+    <link href="/css/table-responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+        </script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+    <!--Header tag-->
+    <div id="tmtHeader" >
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title=""></div>
+            </div>
+            <a href="/default.htm" class="logo"><b>Crebit Wallet</b></a><div class="nav notify-row" id="top_menu">
+            </div>
+            <div class="top-menu " id="menu_item">
+                <div class="btn-group nav pull-right" style="margin-top: 15px;">
+                    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>
+                        <!--<span id="cr_name" style="margin-right: 10px;">Guest &nbsp;</span>--><span class="fa fa-caret-down"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                         <li><a><i class="fa fa-user fa-fw"></i><span id="cr_name">Guest</span> </a></li>
+                        <li class="divider"></li>
+                        <li><a><i class="fa fa-money fa-fw"></i>&nbsp;Balance : Rs.<span id="cr_availBal">0</span> </a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="logout" href="/login.htm">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <!--End Header elements-->
+
+    <!--Nav Bar-->
+    <div id="tmtNavBar">
+            <div id="sidebar" class="nav-collapse " tabindex="5000" style="overflow: hidden; outline: none;">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+
+                    <li class="sub-menu dcjq-parent-li">
+                        <a href="/default.htm" class="dcjq-parent">
+                            <i class=" fa fa-bar-chart-o"></i>
+                            <span>Services</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+
+                    </li>
+                    <li class="sub-menu dcjq-parent-li ">
+                        <a href="/Services/TransactionSummary.htm" class="dcjq-parent">
+                            <i class="fa fa-desktop"></i>
+                            <span>Transaction Summary</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+                    </li>
+                    <li class="sub-menu dcjq-parent-li">
+                        <a href="/Services/BalanceUseSummary.htm" class="dcjq-parent">
+                            <i class="fa fa-cogs"></i>
+                            <span>Balance User Summary</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+                    </li>
+                    <li class="sub-menu dcjq-parent-li">
+                        <a href="/Services/ProfitSummary.htm" class="dcjq-parent">
+                            <i class="fa fa-book"></i>
+                            <span>Profit Summary</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+
+                    </li>
+                    <li class="sub-menu dcjq-parent-li">
+                        <a href="/Services/AccountRegistration.htm" class="dcjq-parent">
+                            <i class="fa fa-tasks"></i>
+                            <span>Account Registration</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+                    </li>
+                    <li class="sub-menu dcjq-parent-li">
+                        <a href="/Services/MarginList.htm" class="dcjq-parent active">
+                            <i class="fa fa-th"></i>
+                            <span>Margin List</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+
+                    </li>
+                    <li class="sub-menu dcjq-parent-li">
+                        <a href="/Services/ChangePassword.htm" class="dcjq-parent ">
+                            <i class="fa fa-th"></i>
+                            <span>Change Password</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+                    </li>
+                    <li class="sub-menu dcjq-parent-li">
+                        <a href="/Services/Updates.htm" class="dcjq-parent ">
+                            <i class="fa fa-th"></i>
+                            <span>Updates</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+    </div>
+    <!--End Nav Bar-->
+
+    <!--Footer-->
+    <div id="tmtFooter">
+     <!--loading image-->
+        <div aria-hidden="true" role="progressbar" tabindex="-1" id="loding_Model" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content" id="dvLoading"></div>
+            </div>
+        </div>
+        <!--end loading image-->
+        <!--footer start-->
+        <footer class="site-footer">
+            <div class="text-center">
+                2014 - BitBlue Technology
+                <a href="http://bitbluetech.com" class="go-top">
+                    <i class="fa fa-angle-up"></i>
+                </a>
+            </div>
+        </footer>
+     <!--footer end-->
+        </div>
+    <!--End Footer--> 
+
+    </temlplate>

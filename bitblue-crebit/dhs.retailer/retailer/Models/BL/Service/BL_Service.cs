@@ -21,7 +21,7 @@ namespace crebit.retailer.Models.BL.Service
         public DL_TorrentPowerReturn torrentPowerReturn;
         DataSet ds = null;
         DataBase db = new DataBase();
-        BL_Service bL_Service;
+        //BL_Service bL_Service; //Commented| Ranjeet| 15-Dec || Not used
         //Used for return Torrent Power Details
         public DL_TorrentPowerReturn GetTorrentPowerDetails(DL_TorrentPower dL_TorrentPower)
         {
@@ -56,7 +56,7 @@ namespace crebit.retailer.Models.BL.Service
                     //AvaiBal = Convert.ToInt32(dr["AvaiBal"]),Message = "Successfull Transaction" 
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex) { Logger.WriteLog(LogLevelL4N.INFO, "BL_Service |Torrent : "+ ex.Message); }
             
             //WebRequest request = HttpWebRequest.Create("https://bill.torrentpower.com/viewbill.aspx");
             //request.Proxy = null;

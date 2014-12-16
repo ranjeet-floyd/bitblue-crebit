@@ -1,0 +1,452 @@
+2014-07-21 00:38:51,096 : [ERROR] - Got  TransferFund req. 
+2014-07-21 00:38:54,299 : [INFO ] - Process request | MobileTo :9928698407 UserId : ret23 UserType : 4 Amount: 110
+2014-07-21 00:39:02,796 : [INFO ] - Inside GetDataSet Method
+2014-07-21 00:39:03,263 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 00:39:06,080 : [INFO ] - Params : @UserId value :ret23
+2014-07-21 00:39:07,689 : [INFO ] - Params : @UserType value :4
+2014-07-21 00:39:09,420 : [INFO ] - Params : @MobileTo value :9928698407
+2014-07-21 00:39:10,874 : [INFO ] - Params : @Amount value :110
+2014-07-21 00:39:13,217 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 00:40:57,241 : [ERROR] - Error @ TransferFund : Arithmetic overflow error for data type tinyint, value = -1.
+2014-07-21 00:41:06,940 : [ERROR] - Got  TransferFund req. 
+2014-07-21 00:41:09,095 : [INFO ] - Process request | MobileTo :9928698407 UserId : ret23 UserType : 4 Amount: 110
+2014-07-21 00:41:14,045 : [INFO ] - Inside GetDataSet Method
+2014-07-21 00:41:14,046 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 00:41:14,048 : [INFO ] - Params : @UserId value :ret23
+2014-07-21 00:41:14,049 : [INFO ] - Params : @UserType value :4
+2014-07-21 00:41:14,049 : [INFO ] - Params : @MobileTo value :9928698407
+2014-07-21 00:41:14,050 : [INFO ] - Params : @Amount value :110
+2014-07-21 00:41:14,050 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 00:41:14,406 : [INFO ] - Return Ds
+2014-07-21 01:03:25,799 : [ERROR] - Got  TransferFund req. 
+2014-07-21 01:03:26,801 : [INFO ] - Process request | MobileTo :9928698407 UserId : ret23 UserType : 4 Amount: 110
+2014-07-21 01:03:32,472 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:03:32,473 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:03:32,496 : [INFO ] - Params : @UserId value :ret23
+2014-07-21 01:03:32,497 : [INFO ] - Params : @UserType value :4
+2014-07-21 01:03:32,498 : [INFO ] - Params : @MobileTo value :9928698407
+2014-07-21 01:03:32,499 : [INFO ] - Params : @Amount value :110
+2014-07-21 01:03:32,500 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:03:34,570 : [INFO ] - Return Ds
+2014-07-21 01:04:43,713 : [ERROR] - Got  TransferFund req. 
+2014-07-21 01:04:43,750 : [INFO ] - Process request | MobileTo :9928698407 UserId : ret23 UserType : 4 Amount: 110
+2014-07-21 01:04:48,372 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:04:48,373 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:04:48,388 : [INFO ] - Params : @UserId value :ret23
+2014-07-21 01:04:48,389 : [INFO ] - Params : @UserType value :4
+2014-07-21 01:04:48,390 : [INFO ] - Params : @MobileTo value :9928698407
+2014-07-21 01:04:48,392 : [INFO ] - Params : @Amount value :110
+2014-07-21 01:04:48,393 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:04:50,358 : [INFO ] - Return Ds
+2014-07-21 01:05:23,205 : [ERROR] - Got  TransferFund req. 
+2014-07-21 01:05:23,206 : [INFO ] - Process request | MobileTo :9928698407 UserId : ret23 UserType : 4 Amount: 110
+2014-07-21 01:05:27,650 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:05:27,651 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:05:27,652 : [INFO ] - Params : @UserId value :ret23
+2014-07-21 01:05:27,653 : [INFO ] - Params : @UserType value :4
+2014-07-21 01:05:27,654 : [INFO ] - Params : @MobileTo value :9928698407
+2014-07-21 01:05:27,655 : [INFO ] - Params : @Amount value :110
+2014-07-21 01:05:27,655 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:05:27,972 : [INFO ] - Return Ds
+2014-07-21 01:05:44,507 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:05:44,508 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:05:44,510 : [INFO ] - Params : @UserId value :ret23
+2014-07-21 01:05:44,541 : [INFO ] - Params : @UserType value :4
+2014-07-21 01:05:44,542 : [INFO ] - Params : @MobileTo value :9928698407
+2014-07-21 01:05:44,542 : [INFO ] - Params : @Amount value :110
+2014-07-21 01:05:44,543 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:05:44,860 : [INFO ] - Return Ds
+2014-07-21 01:06:58,534 : [ERROR] - Got  TransferFund req. 
+2014-07-21 01:07:00,404 : [INFO ] - Process request | MobileTo :9928698407 UserId : ret23 UserType : 4 Amount: 110
+2014-07-21 01:07:05,752 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:07:05,755 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:07:05,784 : [INFO ] - Params : @UserId value :ret23
+2014-07-21 01:07:05,786 : [INFO ] - Params : @UserType value :4
+2014-07-21 01:07:05,787 : [INFO ] - Params : @MobileTo value :9928698407
+2014-07-21 01:07:05,787 : [INFO ] - Params : @Amount value :110
+2014-07-21 01:07:05,788 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:07:07,870 : [INFO ] - Return Ds
+2014-07-21 01:28:57,497 : [INFO ] - Called GetOperatorMargin api
+2014-07-21 01:28:57,854 : [INFO ] - Request : http://localhost:52811/dhs/adminpopup
+2014-07-21 01:28:58,701 : [INFO ] - Inside PopUpMessage Method
+2014-07-21 01:28:58,703 : [INFO ] - SpName :DHS_API_AdminPopUp
+2014-07-21 01:28:58,707 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:28:58,714 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:28:58,737 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:29:00,662 : [INFO ] - Return Ds
+2014-07-21 01:29:00,663 : [INFO ] - table count : 1
+2014-07-21 01:29:00,716 : [INFO ] - Json Data : [{"Text":"This is Test Pop Up Message.","FDate":"2014-07-20T00:11:17.817","TDate":"2014-07-21T00:14:13.507"}]
+2014-07-21 01:29:24,205 : [INFO ] - Called GetOperatorMargin api
+2014-07-21 01:29:25,237 : [INFO ] - Request : http://localhost:52811/dhs/adminpopup
+2014-07-21 01:29:27,630 : [INFO ] - Inside PopUpMessage Method
+2014-07-21 01:29:28,609 : [INFO ] - SpName :DHS_API_AdminPopUp
+2014-07-21 01:29:29,326 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:29:29,328 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:29:29,329 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:29:29,634 : [INFO ] - Return Ds
+2014-07-21 01:29:31,053 : [INFO ] - table count : 1
+2014-07-21 01:31:09,925 : [INFO ] - Called GetOperatorMargin api
+2014-07-21 01:31:09,972 : [INFO ] - Request : http://localhost:52811/dhs/adminpopup
+2014-07-21 01:31:09,979 : [INFO ] - Inside PopUpMessage Method
+2014-07-21 01:31:10,002 : [INFO ] - SpName :DHS_API_AdminPopUp
+2014-07-21 01:31:10,022 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:31:10,030 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:31:10,044 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:31:12,049 : [INFO ] - Return Ds
+2014-07-21 01:31:12,050 : [INFO ] - table count : 1
+2014-07-21 01:31:12,343 : [INFO ] - Json Data : [{"Text":"This is Test Pop Up Message.","FDate":"2014-07-20T00:11:17.817","TDate":"2014-07-21T00:14:13.507"}]
+2014-07-21 01:31:19,852 : [INFO ] - Called GetOperatorMargin api
+2014-07-21 01:31:20,886 : [INFO ] - Request : http://localhost:52811/dhs/adminpopup
+2014-07-21 01:31:23,254 : [INFO ] - Inside PopUpMessage Method
+2014-07-21 01:31:24,257 : [INFO ] - SpName :DHS_API_AdminPopUp
+2014-07-21 01:31:24,857 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:31:24,859 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:31:24,860 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:31:25,172 : [INFO ] - Return Ds
+2014-07-21 01:31:25,985 : [INFO ] - table count : 1
+2014-07-21 01:32:24,822 : [INFO ] - Json Data : [{"Text":"This is Test Pop Up Message.","FDate":"2014-07-20T00:11:17.817","TDate":"2014-07-21T00:14:13.507"}]
+2014-07-21 01:32:52,952 : [INFO ] - Inside PopUpMessage Method
+2014-07-21 01:32:54,039 : [INFO ] - SpName :DHS_API_AdminPopUp
+2014-07-21 01:32:54,672 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:32:54,672 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:32:54,673 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:32:54,984 : [INFO ] - Return Ds
+2014-07-21 01:32:56,333 : [INFO ] - table count : 1
+2014-07-21 01:32:57,554 : [INFO ] - Json Data : [{"Text":"This is Test Pop Up Message.","FDate":"2014-07-20T00:11:17.817","TDate":"2014-07-21T00:14:13.507"}]
+2014-07-21 01:34:07,501 : [INFO ] - Called GetOperatorMargin api
+2014-07-21 01:34:07,526 : [INFO ] - Request : http://localhost:52811/dhs/adminpopup
+2014-07-21 01:34:07,531 : [INFO ] - Inside PopUpMessage Method
+2014-07-21 01:34:07,533 : [INFO ] - SpName :DHS_API_AdminPopUp
+2014-07-21 01:34:07,535 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:34:07,536 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:34:07,544 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:34:09,579 : [INFO ] - Return Ds
+2014-07-21 01:34:09,581 : [INFO ] - table count : 1
+2014-07-21 01:34:09,914 : [INFO ] - Json Data : [{"Text":"This is Test Pop Up Message.","FDate":"2014-07-20T00:11:17.817","TDate":"2014-07-21T00:14:13.507"}]
+2014-07-21 01:37:16,722 : [INFO ] - Called GetOperatorMargin api
+2014-07-21 01:37:16,724 : [INFO ] - Request : http://localhost:52811/dhs/adminUpdate
+2014-07-21 01:37:16,726 : [INFO ] - Inside AdminUpdate Method
+2014-07-21 01:37:16,726 : [INFO ] - SpName :DHS_API_AdminUpdate
+2014-07-21 01:37:16,727 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:37:16,727 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:37:16,728 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:37:17,037 : [INFO ] - Return Ds
+2014-07-21 01:37:17,040 : [INFO ] - table count : 1
+2014-07-21 01:37:17,041 : [INFO ] - Json Data : [{"Text":"This is Test Admin  Message.","FDate":"2014-07-20T00:12:26.443","TDate":"2014-07-21T00:12:26.443"}]
+2014-07-21 01:59:41,950 : [INFO ] - Got transactionDetails req.
+2014-07-21 01:59:44,542 : [INFO ] - Params | UserId : RUserType :2 FromDate : 01/09/1998 ToDate :01/08/2015
+2014-07-21 01:59:45,842 : [INFO ] - Going to Process
+2014-07-21 01:59:46,437 : [INFO ] - Inside TransactionSummary method
+2014-07-21 01:59:46,450 : [INFO ] - process request
+2014-07-21 01:59:46,453 : [INFO ] - Inside GetDataSet Method
+2014-07-21 01:59:46,455 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 01:59:46,464 : [INFO ] - Params : @UserId value :R
+2014-07-21 01:59:46,465 : [INFO ] - Params : @UserType value :2
+2014-07-21 01:59:46,469 : [INFO ] - Params : @FromDate value :01/09/1998
+2014-07-21 01:59:46,470 : [INFO ] - Params : @ToDate value :01/08/2015
+2014-07-21 01:59:46,471 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 01:59:48,336 : [INFO ] - Return Ds
+2014-07-21 01:59:48,337 : [INFO ] - Get the data from db
+2014-07-21 01:59:48,462 : [INFO ] - JSON Data : []
+2014-07-21 01:59:49,875 : [INFO ] - Inside the transactionDetails api | _IsSuccess : True
+2014-07-21 02:08:13,535 : [INFO ] - Got transactionDetails req.
+2014-07-21 02:08:15,556 : [INFO ] - Params | UserId : RUserType :2 FromDate : 01/09/1998 ToDate :01/08/2015
+2014-07-21 02:08:16,812 : [INFO ] - Going to Process
+2014-07-21 02:08:17,440 : [INFO ] - Inside TransactionSummary method
+2014-07-21 02:08:17,441 : [INFO ] - process request
+2014-07-21 02:08:17,442 : [INFO ] - Inside GetDataSet Method
+2014-07-21 02:08:17,442 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 02:08:17,443 : [INFO ] - Params : @UserId value :R
+2014-07-21 02:08:17,444 : [INFO ] - Params : @UserType value :2
+2014-07-21 02:08:17,444 : [INFO ] - Params : @FromDate value :01/09/1998
+2014-07-21 02:08:17,444 : [INFO ] - Params : @ToDate value :01/08/2015
+2014-07-21 02:08:17,445 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 02:08:19,058 : [INFO ] - Return Ds
+2014-07-21 02:08:19,059 : [INFO ] - Get the data from db
+2014-07-21 02:08:19,060 : [INFO ] - JSON Data : []
+2014-07-21 02:08:27,825 : [INFO ] - Going to Process
+2014-07-21 02:08:29,742 : [INFO ] - Inside TransactionSummary method
+2014-07-21 02:08:30,982 : [INFO ] - process request
+2014-07-21 02:08:32,940 : [INFO ] - Inside GetDataSet Method
+2014-07-21 02:08:32,942 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 02:08:32,944 : [INFO ] - Params : @UserId value :R
+2014-07-21 02:08:32,945 : [INFO ] - Params : @UserType value :2
+2014-07-21 02:08:32,946 : [INFO ] - Params : @FromDate value :01/09/1998
+2014-07-21 02:08:32,946 : [INFO ] - Params : @ToDate value :01/08/2015
+2014-07-21 02:08:32,947 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 02:08:33,265 : [INFO ] - Return Ds
+2014-07-21 02:08:34,679 : [INFO ] - Get the data from db
+2014-07-21 02:09:13,761 : [INFO ] - JSON Data : []
+2014-07-21 02:09:13,770 : [INFO ] - Inside the transactionDetails api | _IsSuccess : True
+2014-07-21 02:09:30,007 : [INFO ] - Got transactionDetails req.
+2014-07-21 02:09:31,761 : [INFO ] - Params | UserId : ret23UserType :4 FromDate : 01/09/1998 ToDate :01/08/2015
+2014-07-21 02:09:31,762 : [INFO ] - Going to Process
+2014-07-21 02:09:31,763 : [INFO ] - Inside TransactionSummary method
+2014-07-21 02:09:31,764 : [INFO ] - process request
+2014-07-21 02:09:31,764 : [INFO ] - Inside GetDataSet Method
+2014-07-21 02:09:31,765 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 02:09:31,766 : [INFO ] - Params : @UserId value :ret23
+2014-07-21 02:09:31,766 : [INFO ] - Params : @UserType value :4
+2014-07-21 02:09:31,767 : [INFO ] - Params : @FromDate value :01/09/1998
+2014-07-21 02:09:31,770 : [INFO ] - Params : @ToDate value :01/08/2015
+2014-07-21 02:09:31,771 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 02:09:32,169 : [INFO ] - Return Ds
+2014-07-21 02:09:32,170 : [INFO ] - Get the data from db
+2014-07-21 02:09:32,255 : [INFO ] - JSON Data : [
+  {
+    "Amount": 1234.0,
+    "Source": "android",
+    "TDate": "2014-07-06T08:35:15.26",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 100.0,
+    "Source": "android",
+    "TDate": "2014-07-06T08:46:39.38",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 100.0,
+    "Source": "android",
+    "TDate": "2014-07-06T08:50:25.42",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 100.0,
+    "Source": "android",
+    "TDate": "2014-07-06T08:51:38.813",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 1234.0,
+    "Source": "android",
+    "TDate": "2014-07-06T13:46:13.09",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 50.0,
+    "Source": "android",
+    "TDate": "2014-07-13T01:41:44.143",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 100.0,
+    "Source": "android",
+    "TDate": "2014-07-06T09:16:20.213",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 50.0,
+    "Source": "android",
+    "TDate": "2014-07-13T04:30:18.08",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 10.0,
+    "Source": "android",
+    "TDate": "2014-07-13T06:00:51.7",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 55.0,
+    "Source": "android",
+    "TDate": "2014-07-14T14:10:51.23",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 55.0,
+    "Source": "android",
+    "TDate": "2014-07-14T21:05:36.48",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 300.0,
+    "Source": "android",
+    "TDate": "2014-07-14T22:10:51.943",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 1234.0,
+    "Source": "android",
+    "TDate": "2014-07-06T03:00:27.933",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 1234.0,
+    "Source": "android",
+    "TDate": "2014-07-06T08:22:11.033",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 100.0,
+    "Source": "android",
+    "TDate": "2014-07-06T09:10:08.663",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 100.0,
+    "Source": "android",
+    "TDate": "2014-07-06T11:59:32.93",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 10.0,
+    "Source": "android",
+    "TDate": "2014-07-14T01:50:25.49",
+    "Status": "1",
+    "OperaterName": null
+  }
+]
+2014-07-21 02:09:32,257 : [INFO ] - Inside the transactionDetails api | _IsSuccess : True
+2014-07-21 02:10:51,631 : [INFO ] - Got transactionDetails req.
+2014-07-21 02:10:54,923 : [INFO ] - Params | UserId : ret23UserType :4 FromDate : 01/09/1998 ToDate :01/08/2015
+2014-07-21 02:10:54,925 : [INFO ] - Going to Process
+2014-07-21 02:10:54,929 : [INFO ] - Inside TransactionSummary method
+2014-07-21 02:10:54,931 : [INFO ] - process request
+2014-07-21 02:10:54,935 : [INFO ] - Inside GetDataSet Method
+2014-07-21 02:10:54,936 : [INFO ] - ConnStr : Data Source=dhsrecharge.db.9223203.hostedresource.com;database=DhsRecharge;uid=dhsrecharge;password=DHS009rch!
+2014-07-21 02:10:54,978 : [INFO ] - Params : @UserId value :ret23
+2014-07-21 02:10:54,981 : [INFO ] - Params : @UserType value :4
+2014-07-21 02:10:54,982 : [INFO ] - Params : @FromDate value :01/09/1998
+2014-07-21 02:10:54,983 : [INFO ] - Params : @ToDate value :01/08/2015
+2014-07-21 02:10:54,984 : [INFO ] - Now Fill SqlDataAdapter
+2014-07-21 02:10:56,998 : [INFO ] - Return Ds
+2014-07-21 02:10:57,000 : [INFO ] - Get the data from db
+2014-07-21 02:10:57,232 : [INFO ] - JSON Data : [
+  {
+    "Amount": 1234.0,
+    "Source": "android",
+    "TDate": "2014-07-06T08:35:15.26",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 100.0,
+    "Source": "android",
+    "TDate": "2014-07-06T08:46:39.38",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 100.0,
+    "Source": "android",
+    "TDate": "2014-07-06T08:50:25.42",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 100.0,
+    "Source": "android",
+    "TDate": "2014-07-06T08:51:38.813",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 1234.0,
+    "Source": "android",
+    "TDate": "2014-07-06T13:46:13.09",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 50.0,
+    "Source": "android",
+    "TDate": "2014-07-13T01:41:44.143",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 100.0,
+    "Source": "android",
+    "TDate": "2014-07-06T09:16:20.213",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 50.0,
+    "Source": "android",
+    "TDate": "2014-07-13T04:30:18.08",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 10.0,
+    "Source": "android",
+    "TDate": "2014-07-13T06:00:51.7",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 55.0,
+    "Source": "android",
+    "TDate": "2014-07-14T14:10:51.23",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 55.0,
+    "Source": "android",
+    "TDate": "2014-07-14T21:05:36.48",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 300.0,
+    "Source": "android",
+    "TDate": "2014-07-14T22:10:51.943",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 1234.0,
+    "Source": "android",
+    "TDate": "2014-07-06T03:00:27.933",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 1234.0,
+    "Source": "android",
+    "TDate": "2014-07-06T08:22:11.033",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 100.0,
+    "Source": "android",
+    "TDate": "2014-07-06T09:10:08.663",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 100.0,
+    "Source": "android",
+    "TDate": "2014-07-06T11:59:32.93",
+    "Status": "1",
+    "OperaterName": null
+  },
+  {
+    "Amount": 10.0,
+    "Source": "android",
+    "TDate": "2014-07-14T01:50:25.49",
+    "Status": "1",
+    "OperaterName": null
+  }
+]
+2014-07-21 02:10:57,234 : [INFO ] - Inside the transactionDetails api | _IsSuccess : True

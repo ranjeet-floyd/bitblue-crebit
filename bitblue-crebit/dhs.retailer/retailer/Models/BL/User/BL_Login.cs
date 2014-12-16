@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using WebApplication1.Models.DL.User;
 using api.dhs.Logging;
 using System.Text;
-using com.dhs.webapi.Model.Common;
 namespace com.dhs.webapi.Model.BL_User
 {
     public class BL_Login

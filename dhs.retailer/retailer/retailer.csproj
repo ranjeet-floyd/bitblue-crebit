@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71B9F8BF-984F-4943-8C01-7F38F54C5021}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>crebit.retailer</RootNamespace>
+    <AssemblyName>crebit.retailer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxPro.2">
+      <HintPath>E:\GitHub\AjaxPro\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\api.com.dhs\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\Desktop\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dropbox\DHS\api.dhs\api.dhs\bin\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dropbox\DHS\api.dhs\api.dhs\bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dropbox\DHS\api.dhs\api.dhs\bin\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\AjaxPro.2.dll" />
+    <Content Include="bin\crebit.retailer.dll" />
+    <Content Include="bin\crebit.retailer.pdb" />
+    <Content Include="bin\libipriv.dll" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\System.Net.Http.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="Common\Common.html" />
+    <Content Include="Common\Header.html" />
+    <Content Include="Common\NavBar.html" />
+    <Content Include="Common\Footer.html" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\css.css" />
+    <Content Include="App_Code\DL_SMSMessage.cs" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jquery.gritter.css" />
+    <Content Include="css\newstyle.css" />
+    <Content Include="css\style-line.css" />
+    <Content Include="css\style-responsive.css" />
+    <Content Include="css\style1.css" />
+    <Content Include="css\table-responsive.css" />
+    <Content Include="css\test_table_responsive.css" />
+    <Content Include="default.htm" />
+    <Content Include="default2.htm" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Handler\WebApiClass.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\DashBoardController.cs" />
+    <Compile Include="Controllers\OperatorController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Database.cs" />
+    <Compile Include="Handler\AjaxShopCrebit.cs" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="Handler\TestHandler.ashx" />
+    <Content Include="App_Data\CyberPlateKeys\pubkeys.key" />
+    <Content Include="App_Data\CyberPlateKeys\Public.iks" />
+    <Content Include="App_Data\CyberPlateKeys\secret.key" />
+    <Content Include="App_Data\newKeys\pubkeys.key" />
+    <Content Include="App_Data\newKeys\Public.iks" />
+    <Content Include="App_Data\newKeys\secret.key" />
+    <Content Include="App_Data\oldCyberPlateKeys\pubkeys.key" />
+    <Content Include="App_Data\oldCyberPlateKeys\Public.iks" />
+    <Content Include="App_Data\oldCyberPlateKeys\secret.key" />
+    <Content Include="Common\HeadTag.html" />
+    <Content Include="img\64bit\datacard.png" />
+    <Content Include="img\64bit\dth.png" />
+    <Content Include="img\64bit\insurance.png" />
+    <Content Include="img\64bit\postpaid.png" />
+    <Content Include="img\64bit\prepaid.png" />
+    <Content Include="img\crebit\prepaid1.png" />
+    <Content Include="js\js\docs.min.js" />
+    <Content Include="js\js\holder.js" />
+    <Content Include="js\navBar.js" />
+    <Content Include="js\Pages\Default.js" />
+    <Content Include="js\Pages\Transaction.js" />
+    <Content Include="less\bordered-pulled.less" />
+    <Content Include="less\core.less" />
+    <Content Include="less\fixed-width.less" />
+    <Content Include="less\font-awesome.less" />
+    <Content Include="less\icons.less" />
+    <Content Include="less\larger.less" />
+    <Content Include="less\list.less" />
+    <Content Include="less\mixins.less" />
+    <Content Include="less\path.less" />
+    <Content Include="less\rotated-flipped.less" />
+    <Content Include="less\spinning.less" />
+    <Content Include="less\stacked.less" />
+    <Content Include="less\variables.less" />
+    <Content Include="Logging\logFiles\02.08.2014.log" />
+    <Content Include="Logging\logFiles\03.08.2014.log" />
+    <Content Include="Logging\logFiles\04.08.2014.log" />
+    <Content Include="Logging\logFiles\05.08.2014.log" />
+    <Content Include="Logging\logFiles\06.08.2014.log" />
+    <Content Include="Logging\logFiles\07.08.2014.log" />
+    <Content Include="Logging\logFiles\08.08.2014.log" />
+    <Content Include="Logging\logFiles\09.07.2014.log" />
+    <Content Include="Logging\logFiles\10.08.2014.log" />
+    <Content Include="Logging\logFiles\11.07.2014.log" />
+    <Content Include="Logging\logFiles\12.07.2014.log" />
+    <Content Include="Logging\logFiles\13.07.2014.log" />
+    <Content Include="Logging\logFiles\16.09.2014.log" />
+    <Content Include="Logging\logFiles\20.07.2014.log" />
+    <Content Include="Logging\logFiles\20.08.2014.log" />
+    <Content Include="Logging\logFiles\21.07.2014.log" />
+    <Content Include="Logging\logFiles\21.08.2014.log" />
+    <Content Include="Logging\logFiles\22.07.2014.log" />
+    <Content Include="Logging\logFiles\23.07.2014.log" />
+    <Content Include="Logging\logFiles\23.08.2014.log" />
+    <Content Include="Logging\logFiles\24.07.2014.log" />
+    <Content Include="Logging\logFiles\27.07.2014.log" />
+    <Content Include="Logging\logFiles\28.07.2014.log" />
+    <Content Include="Logging\logFiles\28.08.2014.log" />
+    <Content Include="Logging\logFiles\29.08.2014.log" />
+    <Content Include="Logging\logFiles\30.08.2014.log" />
+    <Content Include="obj\Debug\crebit.retailer.dll" />
+    <Content Include="obj\Debug\crebit.retailer.pdb" />
+    <Content Include="obj\Release\crebit.retailer.dll" />
+    <Content Include="obj\Release\crebit.retailer.pdb" />
+    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Properties\PublishProfiles\ranjeetfloyd.pubxml.user" />
+    <Content Include="scss\font-awesome.scss" />
+    <Content Include="scss\_bordered-pulled.scss" />
+    <Content Include="scss\_core.scss" />
+    <Content Include="scss\_fixed-width.scss" />
+    <Content Include="scss\_icons.scss" />
+    <Content Include="scss\_larger.scss" />
+    <Content Include="scss\_list.scss" />
+    <Content Include="scss\_mixins.scss" />
+    <Content Include="scss\_path.scss" />
+    <Content Include="scss\_rotated-flipped.scss" />
+    <Content Include="scss\_spinning.scss" />
+    <Content Include="scss\_stacked.scss" />
+    <Content Include="scss\_variables.scss" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="bin\crebit.retailer.dll.config" />
+    <None Include="Properties\PublishProfiles\crebitwallet.pubxml" />
+    <None Include="Properties\PublishProfiles\godaddywebs.pubxml" />
+    <None Include="Properties\PublishProfiles\ranjeetfloyd %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ranjeetfloyd.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\responsive-tabs.css" />
+    <Content Include="css\style.css" />
+    <Content Include="img\crebit\crebit_icon.jpg" />
+    <Content Include="img\crebit\Datacard.png" />
+    <Content Include="img\crebit\DTH.png" />
+    <Content Include="img\crebit\Electricity.png" />
+    <Content Include="img\crebit\Insurance.png" />
+    <Content Include="img\crebit\postpaid.png" />
+    <Content Include="img\crebit\prepaid.png" />
+    <Content Include="img\crebit_Img\BalanceSummery_Blue.png" />
+    <Content Include="img\crebit_Img\BalanceSummery.png" />
+    <Content Include="img\crebit_Img\broadband.png" />
+    <Content Include="img\crebit_Img\crebit_logo.png" />
+    <Content Include="img\crebit_Img\crebt_logo_new.png" />
+    <Content Include="img\crebit_Img\datacard_Blue.png" />
+    <Content Include="img\crebit_Img\datacard.png" />
+    <Content Include="img\crebit_Img\DTH_blue.png" />
+    <Content Include="img\crebit_Img\DTH.png" />
+    <Content Include="img\crebit_Img\Electricity_Blue.png" />
+    <Content Include="img\crebit_Img\Electricity.png" />
+    <Content Include="img\crebit_Img\fundtransfer.png" />
+    <Content Include="img\crebit_Img\gasbill.png" />
+    <Content Include="img\crebit_Img\Insurance_Blue.png" />
+    <Content Include="img\crebit_Img\Insurance.png" />
+    <Content Include="img\crebit_Img\MobileRegistration_Blue.png" />
+    <Content Include="img\crebit_Img\Mobile_Registration.png" />
+    <Content Include="img\crebit_Img\others_blue.png" />
+    <Content Include="img\crebit_Img\others.png" />
+    <Content Include="img\crebit_Img\Postpaid_Blue.png" />
+    <Content Include="img\crebit_Img\Postpaid.png" />
+    <Content Include="img\crebit_Img\Prepaid_Blue.png" />
+    <Content Include="img\crebit_Img\Prepaid.png" />
+    <Content Include="img\crebit_Img\profit_blue.png" />
+    <Content Include="img\crebit_Img\profit.png" />
+    <Content Include="img\crebit_Img\services_Blue.png" />
+    <Content Include="img\crebit_Img\services.png" />
+    <Content Include="img\crebit_Img\spiffygif_30x30.gif" />
+    <Content Include="img\crebit_Img\spiffygif_32x32.gif" />
+    <Content Include="img\crebit_Img\transaction_blue.png" />
+    <Content Include="img\crebit_Img\transaction.png" />
+    <Content Include="img\nav-expand.svg" />
+    <Content Include="js\bmi.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\js\jquery-ui.custom.js" />
+    <Content Include="js\js\jquery.js" />
+    <Content Include="js\js\modernizr.js" />
+    <Content Include="js\modernizr.custom.js" />
+    <Content Include="lockScreen.htm" />
+    <Content Include="Logging\logFiles\MyLogg.txt" />
+    <Content Include="obj\Release\retailer.csproj.FileListAbsolute.txt" />
+    <Content Include="olddefault.htm" />
+    <Content Include="img\gritter.png" />
+    <Content Include="img\ie-spacer.gif" />
+    <Content Include="img\Silver\160x160\Balance Summery.png" />
+    <Content Include="img\Silver\160x160\Datacard.png" />
+    <Content Include="img\Silver\160x160\DTH.png" />
+    <Content Include="img\Silver\160x160\electricity.png" />
+    <Content Include="img\Silver\160x160\insurance.png" />
+    <Content Include="img\Silver\160x160\Mobile Registration.png" />
+    <Content Include="img\Silver\160x160\others.png" />
+    <Content Include="img\Silver\160x160\Postpaid.png" />
+    <Content Include="img\Silver\160x160\PREPAID.png" />
+    <Content Include="img\Silver\160x160\profit.png" />
+    <Content Include="img\Silver\160x160\Services.png" />
+    <Content Include="img\Silver\160x160\transaction.png" />
+    <Content Include="img\Silver\320x320\Balance Summery.png" />
+    <Content Include="img\Silver\320x320\Datacard.png" />
+    <Content Include="img\Silver\320x320\DTH.png" />
+    <Content Include="img\Silver\320x320\electricity.png" />
+    <Content Include="img\Silver\320x320\insurance.png" />
+    <Content Include="img\Silver\320x320\Mobile Registration.png" />
+    <Content Include="img\Silver\320x320\others.png" />
+    <Content Include="img\Silver\320x320\Postpaid.png" />
+    <Content Include="img\Silver\320x320\PREPAID.png" />
+    <Content Include="img\Silver\320x320\profit.png" />
+    <Content Include="img\Silver\320x320\Services.png" />
+    <Content Include="img\Silver\320x320\transaction.png" />
+    <Content Include="img\Transparent\160x160\Balance.png" />
+    <Content Include="img\Transparent\160x160\Datacard.png" />
+    <Content Include="img\Transparent\160x160\DTH.png" />
+    <Content Include="img\Transparent\160x160\electricity.png" />
+    <Content Include="img\Transparent\160x160\insurance.png" />
+    <Content Include="img\Transparent\160x160\Mobile Registration.png" />
+    <Content Include="img\Transparent\160x160\others.png" />
+    <Content Include="img\Transparent\160x160\Postpaid.png" />
+    <Content Include="img\Transparent\160x160\PREPAID.png" />
+    <Content Include="img\Transparent\160x160\profit.png" />
+    <Content Include="img\Transparent\160x160\Services.png" />
+    <Content Include="img\Transparent\160x160\transaction.png" />
+    <Content Include="img\Transparent\320x320\Balance.png" />
+    <Content Include="img\Transparent\320x320\Datacard.png" />
+    <Content Include="img\Transparent\320x320\DTH.png" />
+    <Content Include="img\Transparent\320x320\electricity.png" />
+    <Content Include="img\Transparent\320x320\insurance.png" />
+    <Content Include="img\Transparent\320x320\Mobile Registration.png" />
+    <Content Include="img\Transparent\320x320\others.png" />
+    <Content Include="img\Transparent\320x320\Postpaid.png" />
+    <Content Include="img\Transparent\320x320\PREPAID.png" />
+    <Content Include="img\Transparent\320x320\profit.png" />
+    <Content Include="img\Transparent\320x320\Services.png" />
+    <Content Include="img\Transparent\320x320\transaction.png" />
+    <Content Include="img\ui-sam.jpg" />
+    <Content Include="js\analytics.js" />
+    <Content Include="img\Arrow-right_24x24px.svg" />
+    <Content Include="img\Google_Logo.svg" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\common-scripts.js" />
+    <Content Include="js\cookies.js" />
+    <Content Include="js\greybox.js" />
+    <Content Include="js\gritter-conf.js" />
+    <Content Include="js\html5shiv.js" />
+    <Content Include="js\jquery-1.8.3.min.js" />
+    <Content Include="js\jquery.backstretch.min.js" />
+    <Content Include="js\jquery.dcjqaccordion.2.7.js" />
+    <Content Include="js\jquery.gritter.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.nicescroll.js" />
+    <Content Include="js\jquery.scrollTo.min.js" />
+    <Content Include="js\jquery.sparkline.js" />
+    <Content Include="js\login-bg.jpg" />
+    <Content Include="js\main.js" />
+    <Content Include="img\goals-swirlanddot.png" />
+    <Content Include="img\circleplus_mdpi.png" />
+    <Content Include="js\newCookies.js" />
+    <Content Include="js\picturefill.min.js" />
+    <Content Include="js\respond.min.js" />
+    <Content Include="js\responsiveTabs.js" />
+    <Content Include="js\responsiveTabs.min.js" />
+    <Content Include="Login.htm" />
+    <Content Include="Services\Electri.htm" />
+    <Content Include="Services\Updates.htm" />
+    <Content Include="Services\MarginList.htm" />
+    <Content Include="Services\ChangePassword.htm" />
+    <Content Include="Services\ProfitSummary.htm" />
+    <Content Include="Services\AccountRegistration.htm" />
+    <Content Include="Services\BalanceUseSummary.htm" />
+    <Content Include="Services\TransactionSummary.htm" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Handler\TestHandler.ashx.cs">
+      <DependentUpon>TestHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\IISHandler.cs" />
+    <Compile Include="Handler\StoreProc.cs" />
+    <Compile Include="Handler\Validation.cs" />
+    <Compile Include="Handler\WebApiHelper.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\Log4NetAdapter.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\LoggingFactory.cs" />
+    <Compile Include="Models\AccountBindingModels.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BL\Common\BL_Admin.cs" />
+    <Compile Include="Models\BL\Common\BL_DashBoard.cs" />
+    <Compile Include="Models\BL\Common\BL_Operator.cs" />
+    <Compile Include="Models\BL\Common\BL_SMS.cs" />
+    <Compile Include="Models\BL\Common\IndianTimeZone.cs" />
+    <Compile Include="Models\BL\User\BL_Login.cs" />
+    <Compile Include="Models\BL\User\BL_Password.cs" />
+    <Compile Include="Models\BL\User\BL_SignUp.cs" />
+    <Compile Include="Models\Common\Authentication.cs" />
+    <Compile Include="Models\Common\Authorization.cs" />
+    <Compile Include="Models\Common\Crebit_enum.cs" />
+    <Compile Include="Models\Common\CyberPlate\CyberPlateApi.cs" />
+    <Compile Include="Models\Common\CyberPlate\libipriv.cs" />
+    <Compile Include="Models\Common\SerializeData.cs" />
+    <Compile Include="Models\Common\UserInfo.cs" />
+    <Compile Include="Models\Common\Validation.cs" />
+    <Compile Include="Models\DL\Common\DataBase.cs" />
+    <Compile Include="Models\DL\Common\DL_Admin.cs" />
+    <Compile Include="Models\DL\Common\DL_DashBoard.cs" />
+    <Compile Include="Models\DL\Common\DL_Operator.cs" />
+    <Compile Include="Models\DL\Common\DL_SMSMessage.cs" />
+    <Compile Include="Models\DL\Common\DL_StoreProcedure.cs" />
+    <Compile Include="Models\DL\CyberPlate\DL_Service.cs" />
+    <Compile Include="Models\DL\User\DL_User.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\Package\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62156</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62156/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

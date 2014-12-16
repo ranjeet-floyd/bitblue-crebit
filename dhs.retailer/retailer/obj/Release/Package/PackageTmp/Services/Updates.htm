@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="overflow: auto;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="/js/bmi.js" language="javascript"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Updates for Crebit">
+    <meta name="author" content="Ranjeet">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>Crebit Wallet-Updates</title>
+    <!--Validate User-->
+    <!--common script for all pages-->
+    <script src="/js/js/jquery.js"></script>
+    <script src="/js/common-scripts.js"></script>
+    <script> if (checkUser != undefined && typeof (checkUser) === "function") checkUser(); </script>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/newstyle.css" rel="stylesheet">
+    <link href="/css/style-responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+        </script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+    <style>
+        .msg-box {
+            padding: 5px 8px;
+            margin: 15px;
+            border: 1px solid #adaeaf;
+            border-radius: 5px;
+            background-color: #fff;
+            /*float:left;*/
+            max-width: 300px;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <!--Header-->
+        <header id="container_header" class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title=""></div>
+            </div>
+            <a href="/default.htm" class="logo"><b>Crebit Wallet</b></a><div class="nav notify-row" id="top_menu">
+            </div>
+            <div class="top-menu " id="menu_item">
+                <div class="btn-group nav pull-right" style="margin-top: 15px;">
+                    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>
+                        <span class="fa fa-caret-down"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a><i class="fa fa-user fa-fw"></i><span id="cr_name">Guest</span> </a></li>
+                        <li class="divider"></li>
+                        <li><a><i class="fa fa-money fa-fw"></i>&nbsp;Balance : Rs.<span id="cr_availBal">0</span> </a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="logout" href="/Services/ChangePassword.htm">Change Password</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="logout" href="/login.htm">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--End Header-->
+        <!--MAIN SIDEBAR MENU-->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse " tabindex="5000" style="overflow: hidden; outline: none;">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <li class="sub-menu dcjq-parent-li">
+                        <a href="/default.htm" class="dcjq-parent">
+                            <i class=" fa fa-bar-chart-o"></i>
+                            <span>Services</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+                    </li>
+                    <li class="sub-menu dcjq-parent-li ">
+                        <a href="/Services/TransactionSummary.htm" class="dcjq-parent">
+                            <i class="fa fa-desktop"></i>
+                            <span>Transaction Summary</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+                    </li>
+                    <li class="sub-menu dcjq-parent-li">
+                        <a href="/Services/BalanceUseSummary.htm" class="dcjq-parent">
+                            <i class="fa fa-cogs"></i>
+                            <span>Balance Summary</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+                    </li>
+                    <li class="sub-menu dcjq-parent-li">
+                        <a href="/Services/AccountRegistration.htm" class="dcjq-parent ">
+                            <i class="fa fa-tasks"></i>
+                            <span>Account Registration</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+                    </li>
+                    <li class="sub-menu dcjq-parent-li" id="li_marginNav">
+                        <a href="/Services/MarginList.htm" class="dcjq-parent">
+                            <i class="fa fa-th"></i>
+                            <span>Margin List</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+
+                    </li>
+                    <li class="sub-menu dcjq-parent-li">
+                        <a href="/Services/Updates.htm" class="dcjq-parent active">
+                            <i class="fa fa-th"></i>
+                            <span>Updates</span>
+                            <span class="dcjq-icon"></span>
+                        </a>
+
+                    </li>
+
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+
+        </aside>
+        <!--sidebar end-->
+        <section id="main-content">
+            <section class="wrapper">
+                <h3><i class="fa fa-angle-right"></i>Updates</h3>
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div id="msg_panel" class=" content-panel modal-content">
+                            <!-- Message -->
+                            </div>
+                    </div>
+                </div>
+            </section>
+            <!-- --End Main ---->
+            <!--Loading image-->
+            <div aria-hidden="true" role="progressbar" tabindex="-1" id="loding_Model" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="dvLoading"></div>
+                </div>
+            </div>
+            <!--end loading image-->
+        </section>
+        <!--footer start-->
+        <footer class="site-footer">
+            <div class="text-center">
+                2014 - BitBlue Technology
+                <a href="http://bitbluetech.com" class="go-top">
+                    <i class="fa fa-angle-up"></i>
+                </a>
+            </div>
+        </footer>
+        <!--footer end-->
+    </section>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#input_msg").hide();
+            if (NAME != "" || NAME != undefined)
+                $("#cr_name").text(NAME);
+            if (BALANCE != "" || BALANCE != undefined)
+                $("#cr_availBal").text(BALANCE);
+
+            //Personal | EnterPrise user
+            if (UTYPE == 2)
+                $("#li_marginNav").addClass("hidden");//Hide margin list
+            updates();//Get admin updates
+        });
+
+        //Get updates || Ajax call
+        function updates() {
+            $("#loding_Model").show();//show loading image
+            var dataJSON = {};
+            AjaxCall("GET", "/dhs/adminUpdate", dataJSON, updatesCallBack);//call api
+        }
+
+        //call backfunction for ajax call
+        function updatesCallBack(resObj) {
+            try {
+                var html = "";
+                var indianDate = "";
+                if (resObj != "") {
+                    for (var i in resObj) {
+                        html += "<div class='msg-box '>";
+
+                        var fDate = new Date(resObj[i].fDate);
+                        fDate.setHours(fDate.getHours() - 5);//.setMinutes(fDate.getMinutes() - 30);
+                        fDate.setMinutes(fDate.getMinutes() - 30);
+                        var tDate = new Date(resObj[i].tDate);
+                        tDate.setHours(tDate.getHours() - 5);//.setMinutes(fDate.getMinutes() - 30);
+                        tDate.setMinutes(tDate.getMinutes() - 30);
+                        if (new Date() >= fDate && tDate >= tDate)//check date time constraints
+                            html += resObj[i].text;
+
+                        html += "</div>"
+                    }
+
+                    $("#msg_panel").html(html);
+                }
+                else { $("#msg_panel").html("<div class='msg-box'>No Updates</div>"); }
+            }
+            catch (ex) {
+                console.log(ex.message);
+            }
+
+        }
+
+    </script>
+
+    <script language="javascript">
+<!--
+    bmi_SafeAddOnload(bmi_load, "bmi_orig_img", 0);//-->
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+C:\Users\StackOverflow\Desktop\dhs.retailer\retailer\bin\crebit.retailer.dll.config
+C:\Users\StackOverflow\Desktop\dhs.retailer\retailer\bin\crebit.retailer.dll
+C:\Users\StackOverflow\Desktop\dhs.retailer\retailer\bin\crebit.retailer.pdb
+C:\Users\StackOverflow\Desktop\dhs.retailer\retailer\obj\Release\crebit.retailer.dll
+C:\Users\StackOverflow\Desktop\dhs.retailer\retailer\obj\Release\crebit.retailer.pdb
+C:\Users\StackOverflow\Desktop\dhs.retailer\retailer\obj\Release\retailer.csprojResolveAssemblyReference.cache

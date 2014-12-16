@@ -82,9 +82,26 @@
         /*.modal-footer {
             border-radius:1px 1px 1px 4px;
         }*/
-
-       
     </style>
+    <!--
+    To collect end-user usage analytics about your application,
+    insert the following script into each page you want to track.
+    Place this code immediately before the closing </head> tag,
+    and before any other scripts. Your first data will appear
+    automatically in just a few seconds.
+    -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-57613145-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </head>
 <body style="">
     <section id="container">
@@ -93,7 +110,7 @@
             <div class="sidebar-toggle-box">
                 <div class="fa fa-bars tooltips" data-placement="right" data-original-title=""></div>
             </div>
-            <a href="/default.htm" class="logo"><b>Crebit Wallet</b></a><div class="nav notify-row" id="top_menu">
+            <a href="/default.htm" class="logo">Crebit Wallet</a><div class="nav notify-row" id="top_menu">
             </div>
             <div class="top-menu " id="menu_item">
                 <div class="btn-group nav pull-right" style="margin-top: 15px;">
@@ -118,8 +135,6 @@
             </div>
         </header>
         <!--End Header-->
-
-
         <!--Nav Bar-->
         <aside id="container_navBar">
             <div id="sidebar" class="nav-collapse " tabindex="5000" style="overflow: hidden; outline: none;">
@@ -174,9 +189,7 @@
             </div>
         </aside>
         <!--End Nav Bar-->
-
         <!--Main Content-->
-
         <!--Main content start-->
         <section id="main-content">
             <section class="wrapper">
@@ -186,7 +199,7 @@
                         <div class="content-panel modal-content">
                             <!-- Modal -->
                             <div class="modal-dialog">
-                              
+
                                 <div class="modal-content">
                                     <div id="model_Services" class="modal-body  modal-body-padding" style="width: 90%; margin: 0 auto;">
                                         <div class="pn margin10 pull-left img-responsive  text-center">
@@ -294,7 +307,7 @@
                                                 </button>
                                             </div>
                                         </div>
-                                       
+
                                     </div>
                                     <div class="modal-footer">
                                     </div>
@@ -329,7 +342,6 @@
             <!--Footer End-->
         </section>
         <!--End main content start-->
-
         <!-- Modal operator-->
         <div class="modal fade" id="model_recharge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -340,7 +352,7 @@
                     </div>
                     <form name="recharge" onsubmit="return form_recharge()">
                         <div id="model_body" class="modal-body form-group col-sm-10">
-                            
+
                             <label id="sr_operatorIdLabel">Operator  </label>
                             <!--PostPaid=> 1-->
                             <select class="margin-Bottom select-control select" id="post_operatorId">
@@ -398,24 +410,24 @@
                                 <option value="41">Reliance(Mumbai)</option>
                             </select>-->
                             <!--Gas Bill =>5-->
-                            <select class="margin-Bottom select-control select" id="gasBill_operatorId">
+                            <select class="margin-Bottom select-control select form-control" id="gasBill_operatorId">
                                 <option value="0">--Select Operator --</option>
                                 <option value="50">Mahanagar Gas Limited </option>
                             </select>
                             <!--Insurance=>6-->
-                            <select class="margin-Bottom select-control select" id="insurance_operatorId">
+                            <select class="margin-Bottom select-control select form-control" id="insurance_operatorId">
                                 <option value="0">--Select Operator --</option>
                                 <option value="60">ICICI Pru. Life </option>
                                 <option value="61">Tata AIG Life </option>
                             </select>
                             <!--BroadBand=> 7-->
-                            <select class="margin-Bottom select-control select" id="broadBand_operatorId">
+                            <select class="margin-Bottom select-control select form-control" id="broadBand_operatorId">
                                 <option value="0">--Select Operator --</option>
                                 <option value="70">Tikona Postpaid </option>
 
                             </select>
                             <!--Data Card -=> 8-->
-                            <select class="margin-Bottom select-control select" id="dataCard_operatorId">
+                            <select class="margin-Bottom select-control select form-control" id="dataCard_operatorId">
                                 <option value="0">--Select Operator --</option>
                                 <option value="80">Aircel </option>
                                 <option value="81">Airtel</option>
@@ -439,7 +451,6 @@
             </div>
         </div>
         <!-- End Modal operator-->
-
         <!-- Modal Fund Transafer-->
         <div class="modal fade" id="model_fundTrasfer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -449,7 +460,7 @@
                         <h4 class="modal-title" id="headerLabelfundTrasfer">Fund Trasfer </h4>
                     </div>
                     <div id="model_bodyfundTrasfer" class="modal-body form-group col-sm-10">
-                        
+
                         <form name="fundForm" onsubmit="return form_Fund()">
                             <label>Mobile Number  </label>
                             <input id="ft_number" class="form-control input-block-level margin-Bottom" type="text" placeholder="Enter number" required />
@@ -464,7 +475,6 @@
             </div>
         </div>
         <!--End Modal Fund Transafer-->
-
         <!--Electricity Model-->
         <div class="modal fade" id="modelElectricityBill" tabindex="-1" role="dialog" aria-labelledby="modelElectricityBill" aria-hidden="true">
             <div class="modal-dialog">
@@ -474,18 +484,18 @@
                         <h4 class="modal-title">Pay Electricity Bills </h4>
                     </div>
                     <div id="Div2" class="modal-body form-group col-sm-10">
-                        
+
                         <form>
-                            
-                            <label >Service  </label>
+
+                            <label>Service  </label>
                             <select id="drpElectricityBillOp" class="form-control input-block-level margin-Bottom" required>
                                 <option value="40">MSEB</option>
                                 <option value="41">Reliance(Mumbai)</option>
                                 <option value="42">TorrentPower</option><!--Adding TorrentPower-->
                             </select>
-                            
-                            
-                            <label  class="mseb">BU :</label>
+
+
+                            <label class="mseb">BU :</label>
                             <select id="drpBuElectricity" class="form-control input-block-level margin-Bottom mseb">
                                 <option value="0">--Select --</option>
                                 <option value="0019">0019 VASAI RD. URBAN S/DN</option>
@@ -1357,15 +1367,15 @@
                             <input id="txtCustomerAccNo" class="form-control input-block-level margin-Bottom cusAccountNo" type="number" placeholder="Enter Customer Account No." required="required" />
                             <label class="reliance hidden">Cycle/Sub Div. Code  </label>
                             <input id="txtElecCycleDivCode" class="form-control input-block-level margin-Bottom reliance hidden" type="number" placeholder="Enter Cycle/Sub Div. Code" />
-                            <label  class="reliance hidden">Amount </label>
+                            <label class="reliance hidden">Amount </label>
                             <input id="txtElectAmount" class="form-control input-block-level margin-Bottom reliance hidden" type="number" min="100" placeholder="Enter amount" required />
                             <div id="customerMSEBStatus" class="mseb msg-box cusdetails"></div>
                             <label class=" hidden mesb paybill ">Customer Mobile  </label>
                             <input id="txtElectCusMobile" class="form-control input-block-level margin-Bottom hidden mseb paybill" type="number" maxlength="10" placeholder="Enter Customer Mobile" required />
-                            <button id="btnMSEBVerify" type="submit" name="Verify"  class="btn btn-primary btn-lg largerButton showMe-reset mseb cusdetails" onclick="verifyMSEBCustomer()" >Get Details </button>
+                            <button id="btnMSEBVerify" type="submit" name="Verify" class="btn btn-primary btn-lg largerButton showMe-reset mseb cusdetails" onclick="verifyMSEBCustomer()">Get Details </button>
                             <button type="submit" id="btnPayElectricity" class="btn btn-primary btn-lg largerButton  mseb paybill  reliance" onclick="electricity_pay()">Pay Bill</button>
-                       <!--Adding TorrentPower City and Service Input Type -->
-                            <label  class="torrentPower payAmount hidden">City:</label>
+                            <!--Adding TorrentPower City and Service Input Type -->
+                            <label class="torrentPower payAmount hidden">City:</label>
                             <select id="drptorrentpwcity" class="form-control input-block-level margin-Bottom torrentPower payAmount hidden">
                                 <option value="0">--Select --</option>
                                 <option value="1">Ahmedabad</option>
@@ -1376,12 +1386,12 @@
                             <label class="torrentPower payAmount hidden">ServiceNo</label>
                             <input id="txtServiceNo" class="form-control input-block-level margin-Bottom torrentPower payAmount hidden" type="number" placeholder="Enter Service No." />
                             <!--Added Amount and Customer Mobile Number to TorrentPower Electricity Service Type-->
-                             <div id="customerTorrentPowerStatus" class="torrentPower msg-box cusdetails"></div>
+                            <div id="customerTorrentPowerStatus" class="torrentPower msg-box cusdetails"></div>
                             <label class="torrentPower payAmount hidden">Customer Mobile</label>
                             <input id="txtMobileNo" class="form-control input-block-level margin-Bottom torrentPower payAmount hidden" type="number" placeholder="Enter Customer Mobile Number" />
                             <label class="torrentPower payAmount hidden">Bill Amount</label>
                             <input id="txtBillAmount" class="form-control input-block-level margin-Bottom torrentPower payAmount hidden" type="number" placeholder="Enter Bill Amount" />
-                            <button id="btnServiceNoVerify" type="submit" name="Verify"  class="btn btn-primary btn-lg largerButton torrentPower payAmount hidden" onclick="TorrentBillPayment()" >Pay Bill </button>
+                            <button id="btnServiceNoVerify" type="submit" name="Verify" class="btn btn-primary btn-lg largerButton torrentPower payAmount hidden" onclick="TorrentBillPayment()">Pay Bill </button>
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -1407,7 +1417,7 @@
             </div>
         </div>
         <!-- End Modal -->
-      
+
     </section>
 
     <!--Notification || pop up message-->

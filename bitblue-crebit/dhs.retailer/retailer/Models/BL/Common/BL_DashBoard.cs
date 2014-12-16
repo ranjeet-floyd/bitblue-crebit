@@ -71,7 +71,7 @@ namespace com.dhs.webapi.Model.BL.Common
                             totalAmount += Convert.ToDouble(item.Amount);
                     }
                     transReturn.dL_TransactionReturns = transReturns;
-                    transReturn.TotalAmount = totalAmount; transReturn.TotalProfit =  Math.Round( totalProfit,2);
+                    transReturn.TotalAmount = totalAmount; transReturn.TotalProfit = Math.Round(totalProfit, 2);
                 }
 
 
@@ -435,15 +435,23 @@ namespace com.dhs.webapi.Model.BL.Common
                     var Json = JsonConvert.SerializeObject(ds.Tables[0]);
                     fundReturn = JsonConvert.DeserializeObject<List<DL_TransferFundReturn>>(Json);
                     string reMobile = ds.Tables[0].Rows[0]["Mobile"].ToString();
-                    if (ds.Tables[0].Rows[0]["Status"].ToString() == "2")
+                    string status = ds.Tables[0].Rows[0]["Status"].ToString();
+                    if (status == "2" || status == "1")
                     {
-                        string message = "Rs. " + fund.Amount + " has been successfully transfer to Mobile No. " + fund.MobileTo + " User. Crebit Customer Experience Team.";
-                        //string message = "Rs." + fund.Amount + "has been successfully transfer to Mobile No. " + fund.MobileTo + " User. Crebit Customer Experience Team.";
-                        BL_SMS.SendSMS(reMobile, message);
-                        //message = "Rs." + fund.Amount + "has been successfully received from  Mobile No. " + reMobile + " User. Crebit Customer Experience Team.";
-                        //Rs. ##Field## has been successfully received from Mobile No. ##Field## User. Crebit Customer Experience Team.
-                        message = "Rs. " + fund.Amount + " has been successfully received from Mobile No. " + reMobile + " User. Crebit Customer Experience Team.";
-                        BL_SMS.SendSMS(fund.MobileTo, message);
+                        //Added Task for SMS message 
+                        //Modified : SMS template 
+                        //By : Ranjeet | 12-Dec-14
+                        Task t = new Task(() =>
+                        {
+                            //Rs. ##Field## has been successfully transfer to Mobile No. ##Field## User. Crebit Customer Experience Team.
+                            string message = "Rs. " + fund.Amount + " has been successfully transfer to Mobile No. " + fund.MobileTo + " User. Crebit Customer Experience Team.";
+                            //string message = "Rs." + fund.Amount + "has been successfully transfer to Mobile No. " + fund.MobileTo + " User. Crebit Customer Experience Team.";
+                            BL_SMS.SendSMS(reMobile, message);
+                            //Rs. ##Field# #has been successfully received from Mobile No. ##Field## User. Crebit Customer Experience Team.
+                            message = "Rs. " + fund.Amount + " has been successfully received from Mobile No. " + reMobile + " User. Crebit Customer Experience Team.";
+                            BL_SMS.SendSMS(fund.MobileTo, message);
+                        });
+                        t.Start();//Run task
                     }
 
                 }
@@ -467,7 +475,7 @@ namespace com.dhs.webapi.Model.BL.Common
             try
             {
                 #region Check Account available balance and servie status.
-                
+
                 this.SpName = DL_StoreProcedure.SP_DHS_API_AvailableBalanceNServieStatus; //Sp Name || Get the Available balance and Service status.
                 SqlParameter[] p = new SqlParameter[2];
                 p[0] = new SqlParameter("@UserId", electricity.UserId);
@@ -511,7 +519,7 @@ namespace com.dhs.webapi.Model.BL.Common
                     param[7] = new SqlParameter("@CyDiv", electricity.CyDiv);
                     param[8] = new SqlParameter("@DueDate", electricity.DueDate);
                     param[9] = new SqlParameter("@Date", indianTime);
-                   // param[10] = new SqlParameter("@Charge", _fixedCharge);
+                    // param[10] = new SqlParameter("@Charge", _fixedCharge);
 
                     ds = db.GetDataSet(this.SpName, param);
                     if (ds != null && ds.Tables.Count > 0)
@@ -611,7 +619,7 @@ namespace com.dhs.webapi.Model.BL.Common
             }
 
             return bankReqReturn;
-            
+
         }
 
         #endregion

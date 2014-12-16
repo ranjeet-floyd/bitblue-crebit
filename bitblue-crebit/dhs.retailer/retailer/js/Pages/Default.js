@@ -219,7 +219,7 @@ function MSEBVerificationCallBack(resObj) {
                 //$("#btnPayElectricity").removeClass('hidden');
                 $(".reliance").hide();
                 $(".cusdetails").hide();
-                $(".paybill").removeClass('hidden').show().prop('required', true);;
+                $(".paybill").removeClass('hidden').show().prop('required', true);
                 //$(".paybill").removeClass('hidden');
                 //$("#txtElectCusMobile").removeClass('hidden');
                 //$("#btnMSEBVerify").addClass('hidden');
@@ -246,15 +246,17 @@ function MSEBVerificationCallBack(resObj) {
 }
 
 //Torrent Power
-function TorrentBillPayment()
-{
-    if ($("#txtMobileNo").val() != "") {
+function TorrentBillPayment() {
+    $(".torrentPower").prop('required', true);
+    if ($("#txtMobileNo").val() != "" && parseFloat($("#txtBillAmount").val()) > 0) {
         TorrentVerification($("#txtMobileNo").val(), $("#drptorrentpwcity").val(), $("#txtServiceNo").val(), $("#txtBillAmount").val());
         return true;
     }
-    else
+    else {
         //stmt 
+        //alert("Enter Correct values");
         return false;
+    }
 }
 
 function TorrentVerification(cusMob, Bu, cusAcc, amount) {
@@ -268,7 +270,7 @@ function TorrentVerification(cusMob, Bu, cusAcc, amount) {
 function TorrentVerificationCallBack(torrentObj) {
     var html = '';
     var torrentStatus = '';
-            
+
     try {
         if (torrentObj != null & torrentObj != "") {
             html = "<div class='alert alert-success'><div><span id='txtMsg'> Bill Payment Request Successfully Accepted </span></div>";
@@ -289,26 +291,21 @@ function TorrentVerificationCallBack(torrentObj) {
             //        torrentStatus = "InProgress";
             //        break;
             //}
-           //html = "<div>Status :<span id='txtCusStatus'>" + torrentStatus + " </span></div>";
-          //  html += "<div>Message :" + torrentObj["Message"] + "</div>";
-        
+            //html = "<div>Status :<span id='txtCusStatus'>" + torrentStatus + " </span></div>";
+            //  html += "<div>Message :" + torrentObj["Message"] + "</div>";
+
         }
-    else {
+        else {
             html = '<div class="alert alert-danger fade in msg-box"><div>Not valid Entry !!.</div></div>';
         }
     }
-catch (ex) {
+    catch (ex) {
         console.log(ex.message);
         html = '<div class="alert alert-danger fade in msg-box">Invalid data ! Check Input data.</div>';
     }
     $("#model_msg_body").html(html);
     $('#model_msg').modal('show');
 }
-
-
-
-
-
 
 function form_bank() {
     bankTransfer(USERID, KEY, $("#drpBankList").val(), $("#txtBankTransAmount").val());

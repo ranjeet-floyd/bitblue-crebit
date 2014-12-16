@@ -35,12 +35,6 @@ namespace api.dhs.Controllers
                             trans.FromDate = null;
                         }
 
-                        //if (trans.StatusId < 0)
-                        //trans.StatusId = 0;
-                        //if (trans.TypeId < 0)
-                        //trans.StatusId = 0;
-
-
                         DL_TransactionReturn transReturn = dash.TransactionSummary(trans);
                         if (dash._IsSuccess)
                             return req.CreateResponse<DL_TransactionReturn>(HttpStatusCode.OK, transReturn);
@@ -106,25 +100,35 @@ namespace api.dhs.Controllers
             Validation.UserCheck(user);
             if (Validation._IsSuccess)
             {
-                try
+                if (service != null && !string.IsNullOrEmpty(service.Amount.ToString()) && !string.IsNullOrEmpty(service.Number) && service.OperatorId > 0
+                       && !string.IsNullOrEmpty(service.Source) && !string.IsNullOrEmpty(service.UserId) && !string.IsNullOrEmpty(service.Key))
                 {
-                    if (service != null && !string.IsNullOrEmpty(service.Amount.ToString()) && !string.IsNullOrEmpty(service.Number) && service.OperatorId > 0
-                        && !string.IsNullOrEmpty(service.Source) && !string.IsNullOrEmpty(service.UserId) && !string.IsNullOrEmpty(service.Key))
+                    try
                     {
+
+                        //Modify: Ranjeet | 12-Dec|| Moved if condtion above try/catch
+                        //  {
                         DL_ServiceReturn serviceReturn = dash.Service(service);//call to process the transaction.
                         if (dash._IsSuccess)
                             return req.CreateResponse<DL_ServiceReturn>(HttpStatusCode.OK, serviceReturn);
                         else
                             return req.CreateErrorResponse(HttpStatusCode.InternalServerError, "ServerError");
+                        //}
+                        //Logger.WriteLog(LogLevelL4N.FATAL, "Bad Request");
+                        //return req.CreateResponse(HttpStatusCode.BadRequest, "Bad Request");
                     }
+                    catch (Exception ex)
+                    {
+                        Logger.WriteLog(LogLevelL4N.ERROR, "Inside the Service api | Error : " + ex.Message);
+                    }
+                }
+                else
+                {
                     Logger.WriteLog(LogLevelL4N.FATAL, "Bad Request");
                     return req.CreateResponse(HttpStatusCode.BadRequest, "Bad Request");
                 }
-                catch (Exception ex)
-                {
-                    Logger.WriteLog(LogLevelL4N.ERROR, "Inside the Service api | Error : " + ex.Message);
-                }
             }
+
             Logger.WriteLog(LogLevelL4N.FATAL, "Unauthorized Request");
             return req.CreateResponse(HttpStatusCode.Unauthorized, "Unauthorized");
         }
@@ -271,8 +275,7 @@ namespace api.dhs.Controllers
             Logger.WriteLog(LogLevelL4N.FATAL, "Bad Request");
             return req.CreateResponse(HttpStatusCode.BadRequest, "Bad Request");
         }
-
-
+        
         //pay ele bill req.
         [Route("dashboard/electricity")]
         [HttpPost]

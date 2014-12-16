@@ -63,7 +63,7 @@ namespace com.dhs.webapi.Model.DL.Common
                 }
                 catch (Exception err)
                 {
-                    //log here
+                    Logger.WriteLog(LogLevelL4N.ERROR, "SelectAdaptQry1 from Db. : "+ err.Message);
                 }
             }
             return dataSet;
@@ -83,7 +83,7 @@ namespace com.dhs.webapi.Model.DL.Common
                 }
                 catch (Exception err)
                 {
-                    //log here
+                    Logger.WriteLog(LogLevelL4N.ERROR, "SelectAdaptQry2 from Db. : " + err.Message);
                 }
             }
             return dataSet;
