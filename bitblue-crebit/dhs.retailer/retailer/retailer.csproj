@@ -135,8 +135,11 @@
     <Content Include="img\crebit\prepaid1.png" />
     <Content Include="img\crebit\rsz_1datacard.png" />
     <Content Include="img\crebit\rsz_1insurance.png" />
+    <Content Include="img\crebit\rsz_broadband_1.png" />
     <Content Include="img\crebit\rsz_dth.png" />
     <Content Include="img\crebit\rsz_electricity.png" />
+    <Content Include="img\crebit\rsz_fundtransfer.png" />
+    <Content Include="img\crebit\rsz_gasbill_1.png" />
     <Content Include="img\crebit\rsz_postpaid.png" />
     <Content Include="img\crebit\rsz_prepaid.png" />
     <Content Include="js\js\docs.min.js" />
