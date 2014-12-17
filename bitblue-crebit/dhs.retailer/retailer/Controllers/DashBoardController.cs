@@ -96,6 +96,7 @@ namespace api.dhs.Controllers
         [HttpPost]
         public HttpResponseMessage Service(HttpRequestMessage req, DL_Service service)
         {
+            Logger.WriteLog(LogLevelL4N.FATAL, "Recharge");
             User user = new User() { Password = service.Key, UserId = service.UserId };
             Validation.UserCheck(user);
             if (Validation._IsSuccess)

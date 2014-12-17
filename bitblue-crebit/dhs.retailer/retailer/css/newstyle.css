@@ -2420,8 +2420,8 @@ label {
     width: 20%;
 }
 /*select {border-radius:5px;}*/ 
-button img {
-    height: 87px;
+.button-img {
+    height: 77px;
     border-radius: 50px;
 }
 

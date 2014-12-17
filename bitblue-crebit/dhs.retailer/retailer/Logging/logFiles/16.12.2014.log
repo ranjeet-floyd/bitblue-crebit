@@ -1,0 +1,17 @@
+2014-12-16 09:54:21,519 : [INFO ] - Got Data from Db.
+2014-12-16 09:55:44,987 : [FATAL] - Recharge
+2014-12-16 09:55:45,440 : [ERROR] - Exception  : Error while generating input message for cyberplat| Ex Message : Exception of type 'com.dhs.webapi.Model.Common.CyberPlate.IPrivException' was thrown.
+2014-12-16 09:55:46,080 : [ERROR] - Error Message  : Invalid request message format.
+2014-12-16 09:55:46,080 : [WARN ] - cyber-plate error : Validation Error- Invalid request message format.
+2014-12-16 09:55:46,080 : [WARN ] - Validation Error : 
+2014-12-16 09:57:40,591 : [FATAL] - Recharge
+2014-12-16 09:57:40,919 : [ERROR] - Exception  : Error while generating input message for cyberplat| Ex Message : Exception of type 'com.dhs.webapi.Model.Common.CyberPlate.IPrivException' was thrown.
+2014-12-16 09:57:41,326 : [ERROR] - Error Message  : Invalid request message format.
+2014-12-16 09:57:41,341 : [WARN ] - cyber-plate error : Validation Error- Invalid request message format.
+2014-12-16 09:57:41,341 : [WARN ] - Validation Error : 
+2014-12-16 10:32:59,663 : [INFO ] - Got Data from Db.
+2014-12-16 10:33:14,094 : [FATAL] - Recharge
+2014-12-16 10:33:14,500 : [ERROR] - Exception  : Error while generating input message for cyberplat| Ex Message : Exception of type 'com.dhs.webapi.Model.Common.CyberPlate.IPrivException' was thrown.
+2014-12-16 10:33:15,094 : [ERROR] - Error Message  : Invalid request message format.
+2014-12-16 10:33:15,094 : [WARN ] - cyber-plate error : Validation Error- Invalid request message format.
+2014-12-16 10:33:15,109 : [WARN ] - Validation Error : 

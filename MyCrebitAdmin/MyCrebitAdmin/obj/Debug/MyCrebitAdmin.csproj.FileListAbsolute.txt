@@ -4,3 +4,9 @@ C:\Users\StackOverflow\Dropbox\CarWale_Project\RnD\MyCrebitAdmin\MyCrebitAdmin\b
 C:\Users\StackOverflow\Dropbox\CarWale_Project\RnD\MyCrebitAdmin\MyCrebitAdmin\obj\Debug\MyCrebitAdmin.dll
 C:\Users\StackOverflow\Dropbox\CarWale_Project\RnD\MyCrebitAdmin\MyCrebitAdmin\obj\Debug\MyCrebitAdmin.pdb
 C:\Users\StackOverflow\Dropbox\CarWale_Project\RnD\MyCrebitAdmin\MyCrebitAdmin\obj\Debug\MyCrebitAdmin.csprojResolveAssemblyReference.cache
+C:\Users\StackOverflow\Documents\GitHub\bitblue-crebit\MyCrebitAdmin\MyCrebitAdmin\bin\MyCrebitAdmin.dll.config
+C:\Users\StackOverflow\Documents\GitHub\bitblue-crebit\MyCrebitAdmin\MyCrebitAdmin\bin\MyCrebitAdmin.dll
+C:\Users\StackOverflow\Documents\GitHub\bitblue-crebit\MyCrebitAdmin\MyCrebitAdmin\bin\MyCrebitAdmin.pdb
+C:\Users\StackOverflow\Documents\GitHub\bitblue-crebit\MyCrebitAdmin\MyCrebitAdmin\obj\Debug\MyCrebitAdmin.csprojResolveAssemblyReference.cache
+C:\Users\StackOverflow\Documents\GitHub\bitblue-crebit\MyCrebitAdmin\MyCrebitAdmin\obj\Debug\MyCrebitAdmin.dll
+C:\Users\StackOverflow\Documents\GitHub\bitblue-crebit\MyCrebitAdmin\MyCrebitAdmin\obj\Debug\MyCrebitAdmin.pdb

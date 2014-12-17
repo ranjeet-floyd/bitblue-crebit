@@ -3,3 +3,4 @@ C:\Users\StackOverflow\Documents\GitHub\bitblue-crebit\bitblue-crebit\dhs.retail
 C:\Users\StackOverflow\Documents\GitHub\bitblue-crebit\bitblue-crebit\dhs.retailer\retailer\bin\crebit.retailer.pdb
 C:\Users\StackOverflow\Documents\GitHub\bitblue-crebit\bitblue-crebit\dhs.retailer\retailer\obj\Debug\crebit.retailer.dll
 C:\Users\StackOverflow\Documents\GitHub\bitblue-crebit\bitblue-crebit\dhs.retailer\retailer\obj\Debug\crebit.retailer.pdb
+C:\Users\StackOverflow\Documents\GitHub\bitblue-crebit\bitblue-crebit\dhs.retailer\retailer\obj\Debug\retailer.csprojResolveAssemblyReference.cache

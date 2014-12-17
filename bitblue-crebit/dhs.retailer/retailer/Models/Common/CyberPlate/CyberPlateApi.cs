@@ -93,7 +93,9 @@ namespace com.dhs.webapi.Model.Common.CyberPlate
                 {
                     prt.Message = "Validation Error- " + this.GetErrorDescription(validateResponse);
                     prt.StatusCode = -1;
+                    //Added: Ranjeet | 16-Dec || For logging 
                     Logger.WriteLog(LogLevelL4N.WARN, "cyber-plate error : " + prt.Message);
+                    Logger.WriteLog(LogLevelL4N.WARN, "Validation Error : " + inputMessageforValidateNumber);
                     return prt;
                 }
                 //success----go for payment.
@@ -105,7 +107,9 @@ namespace com.dhs.webapi.Model.Common.CyberPlate
                     {
                         prt.Message = "Payment Error- " + this.GetErrorDescription(paymentResponse);
                         prt.StatusCode = -1;
+                        //Added: Ranjeet | 16-Dec || For logging 
                         Logger.WriteLog(LogLevelL4N.WARN, "cyberplate-error  : " + prt.Message);
+                        Logger.WriteLog(LogLevelL4N.WARN, "Payment Error : " + strinputMsgPayment);
                         return prt;
                     }
                     else //success---Check transaction status.
@@ -123,6 +127,8 @@ namespace com.dhs.webapi.Model.Common.CyberPlate
                         }
                         else
                         {
+                            //Added: Ranjeet | 16-Dec || For logging 
+                            Logger.WriteLog(LogLevelL4N.WARN, "Payment Status || Not Success|| : " + strinputMsgStatus);
                             for (int i = 1; i < 7; i++)
                             {
                                 if (statusResponse.IndexOf("ERROR=0") != -1 && statusResponse.IndexOf("RESULT=" + i) != -1)

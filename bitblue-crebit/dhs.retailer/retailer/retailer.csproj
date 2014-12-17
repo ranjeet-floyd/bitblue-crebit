@@ -109,7 +109,6 @@
     <Content Include="css\table-responsive.css" />
     <Content Include="css\test_table_responsive.css" />
     <Content Include="default.htm" />
-    <Content Include="default2.htm" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Handler\WebApiClass.cs" />
@@ -134,6 +133,12 @@
     <Content Include="img\64bit\postpaid.png" />
     <Content Include="img\64bit\prepaid.png" />
     <Content Include="img\crebit\prepaid1.png" />
+    <Content Include="img\crebit\rsz_1datacard.png" />
+    <Content Include="img\crebit\rsz_1insurance.png" />
+    <Content Include="img\crebit\rsz_dth.png" />
+    <Content Include="img\crebit\rsz_electricity.png" />
+    <Content Include="img\crebit\rsz_postpaid.png" />
+    <Content Include="img\crebit\rsz_prepaid.png" />
     <Content Include="js\js\docs.min.js" />
     <Content Include="js\js\holder.js" />
     <Content Include="js\navBar.js" />
@@ -236,7 +241,6 @@
     <Content Include="js\js\modernizr.js" />
     <Content Include="js\modernizr.custom.js" />
     <Content Include="lockScreen.htm" />
-    <Content Include="olddefault.htm" />
     <Content Include="img\gritter.png" />
     <Content Include="img\ie-spacer.gif" />
     <Content Include="img\Silver\160x160\Balance Summery.png" />
