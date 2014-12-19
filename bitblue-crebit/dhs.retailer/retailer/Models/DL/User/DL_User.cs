@@ -85,4 +85,10 @@ namespace WebApplication1.Models.DL.User
         public string Amount { get; set; }
     }
 
+    public class DL_UserBalanceReturn
+    {
+        public string AvailBal { get; set; }
+        public int Status { get; set; }
+    }
+
 }

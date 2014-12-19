@@ -123,6 +123,27 @@ namespace api.dhs.Controllers
 
         }
 
+        //Get User Account Balance
+        [Route("user/balance/{userId}")]
+        [HttpGet]
+        public HttpResponseMessage GetUserBalance(HttpRequestMessage req, int userId)
+        {
 
-    }
+            if (userId > 0)
+            {
+                User user = new User() { UserId = userId.ToString() };
+                BL_Login userBal = new BL_Login();
+                DL_UserBalanceReturn userBalanceReturn = userBal.GetUserBalace(user);
+
+                if (userBal._IsSuccess)
+                    return req.CreateResponse<DL_UserBalanceReturn>(HttpStatusCode.OK, userBalanceReturn);
+                return req.CreateErrorResponse(HttpStatusCode.Unauthorized, "Unauthorized");
+            }
+
+            return req.CreateErrorResponse(HttpStatusCode.BadRequest, "Bad Request");
+
+        }//
+
+
+    }//class
 }

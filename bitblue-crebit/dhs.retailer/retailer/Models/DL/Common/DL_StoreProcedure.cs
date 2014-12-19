@@ -34,5 +34,6 @@ namespace com.dhs.webapi.Model.DL.Common
         public const string SP_DHS_DeleteRegAccount = "DHS_DeleteRegAccount";
         public const string SP_DHS_API_RefundorTransStatus = "DHS_API_RefundorTransStatus";
         public const string SP_DHS_GetSessionId = "GetSessionId";
+        public const string SP_DHS_API_GetUserBalance = "DHS_API_GetUserBalance";//Added : Ranjeet | 19-Dec ||Get User Available Balance
     }
 }

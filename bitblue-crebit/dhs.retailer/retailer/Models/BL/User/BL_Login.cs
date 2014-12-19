@@ -17,6 +17,7 @@ namespace com.dhs.webapi.Model.BL_User
         private string SpName { get; set; }
         public List<DL_LoginReturn> loginReturn = null;
         public List<DL_BankDetailsReturn> bankAccounts = null;
+        public DL_UserBalanceReturn dL_UserBalanceReturn = null;
         DataBase db = new DataBase();
         DataSet ds = null;
 
@@ -32,7 +33,7 @@ namespace com.dhs.webapi.Model.BL_User
                 param[0] = new SqlParameter("@UserName", login.Mobile);
                 param[1] = new SqlParameter("@Password", login.Pass);
                 param[2] = new SqlParameter("@Version", login.Version);
-                param[3] = new SqlParameter("@Key",GenerateRandomSession());
+                param[3] = new SqlParameter("@Key", GenerateRandomSession());
                 ds = db.GetDataSet(this.SpName, param);
                 if (ds != null && ds.Tables.Count > 0)
                 {
@@ -46,7 +47,7 @@ namespace com.dhs.webapi.Model.BL_User
             }
             catch (Exception ex)
             {
-                Logger.WriteLog(LogLevelL4N.ERROR, "Exeception : "+ex.Message);
+                Logger.WriteLog(LogLevelL4N.ERROR, "Exeception : " + ex.Message);
                 _IsSuccess = false;
             }
             return loginReturn;
@@ -90,6 +91,32 @@ namespace com.dhs.webapi.Model.BL_User
                 _IsSuccess = false;
             }
             return bankAccounts;
+        }
+
+        //Added | Ranjeet | 19-dec | Get User Available Balance
+        public DL_UserBalanceReturn GetUserBalace(User user)
+        {
+            this.SpName = DL_StoreProcedure.SP_DHS_API_GetUserBalance; //Sp Name
+            this._IsSuccess = false;
+            try
+            {
+                SqlParameter[] param = new SqlParameter[1];
+                param[0] = new SqlParameter("@UserId", user.UserId);
+                ds = db.GetDataSet(this.SpName, param);
+                if (ds != null && ds.Tables.Count > 0)
+                {
+                    DataRow dr = ds.Tables[0].Rows[0];
+                    this.dL_UserBalanceReturn = new DL_UserBalanceReturn() { AvailBal = dr["AvailBal"].ToString(), Status = Convert.ToInt32(dr["Status"]) };
+                    this._IsSuccess = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Logger.WriteLog(LogLevelL4N.ERROR, "Exeception : " + ex.Message);
+                this._IsSuccess = false;
+            }
+            return this.dL_UserBalanceReturn;
         }
 
     }
