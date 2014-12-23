@@ -47,6 +47,9 @@ namespace com.dhs.webapi.Model.Common.CyberPlate
         private string Key { get; set; }
         // private string SubscriberMobile { get; set; }
         private string Account { get; set; }
+        //Added | Ranjeet | 23-Dec | for docomo spl
+        private string Account_Docomo_Spl { get; set; }
+
         #endregion
 
         public RechargeProcess()
@@ -61,6 +64,8 @@ namespace com.dhs.webapi.Model.Common.CyberPlate
             KeyPath = appSettingColl["keyPath"];
             Key = appSettingColl["key"];
             Account = appSettingColl["Account"];
+            //Added: Ranjeet || 23-Dec | Added Account value 2 for docomo spl.
+            this.Account_Docomo_Spl = appSettingColl["ACCOUNT_DOCOMO_SPL"];
             #endregion
         }
         #region Process Transaction
@@ -658,8 +663,10 @@ namespace com.dhs.webapi.Model.Common.CyberPlate
         }
         #endregion
 
+        // input request
         #region Input Message for different request.
 
+        //validation
         private string GetInputMessage(string number, double amount, string session, int operatorId, string acount)
         {
             //bool _isAccount = false;
@@ -678,8 +685,12 @@ namespace com.dhs.webapi.Model.Common.CyberPlate
                     strRequest.Append("SESSION=" + session + Environment.NewLine);
                     strRequest.Append("NUMBER=" + number + Environment.NewLine);//MobileNo. ||Consumer Number || Policy Number
                     //if (_isAccount)
-                    strRequest.Append("ACCOUNT=" + acount + Environment.NewLine);
-
+                    //Added : Ranjeet | 23-Dec | Condition for docomo spl.
+                    if (operatorId == 204)
+                        strRequest.Append("ACCOUNT=" + this.Account_Docomo_Spl + Environment.NewLine);
+                   // else
+                     //   strRequest.Append("ACCOUNT=" + this.Account + Environment.NewLine);
+                    //.......
                     strRequest.Append("AMOUNT=" + (object)amount + Environment.NewLine);
                     strRequest.Append("AMOUNT_ALL=" + (object)amount + Environment.NewLine);
                     strRequest.Append("COMMENT=" + Environment.NewLine);
@@ -701,7 +712,7 @@ namespace com.dhs.webapi.Model.Common.CyberPlate
             }
         }
 
-
+        //payment
         private string GetInputMessageForPayment(string mobileNo, double amount, string session, int operatorId, string account)
         {
             //bool _isAccount = false;
@@ -723,7 +734,12 @@ namespace com.dhs.webapi.Model.Common.CyberPlate
                     inputMsg.Append("TERM_ID=" + TERM_ID + Environment.NewLine);
 
                     //if (_isAccount)
-                    //inputMsg.Append("ACCOUNT=" + account + Environment.NewLine);
+                    //Added: Ranjeet | 23-Dec |condition for docomo spl
+                    if (operatorId == 204)
+                        inputMsg.Append("ACCOUNT=" + this.Account_Docomo_Spl + Environment.NewLine);
+                    //else
+                    //    inputMsg.Append("ACCOUNT=" + account + Environment.NewLine);
+                    //.....
                     inputMsg.Append("AMOUNT=" + amount + Environment.NewLine);
                     inputMsg.Append("AMOUNT_ALL=" + amount + Environment.NewLine);
 
@@ -746,6 +762,7 @@ namespace com.dhs.webapi.Model.Common.CyberPlate
             return reqStr;
         }
 
+        //status
         public string GetInputMessageForStatus(string session, int productCode, string acount)
         {
             string reqStr = string.Empty;

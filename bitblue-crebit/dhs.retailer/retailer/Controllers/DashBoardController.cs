@@ -101,7 +101,7 @@ namespace api.dhs.Controllers
             Validation.UserCheck(user);
             if (Validation._IsSuccess)
             {
-                if (service != null && !string.IsNullOrEmpty(service.Amount.ToString()) && !string.IsNullOrEmpty(service.Number) && service.OperatorId > 0
+                if (service != null && !string.IsNullOrEmpty(service.Amount.ToString()) && Convert.ToDouble(service.Amount) > 0 && !string.IsNullOrEmpty(service.Number) && service.OperatorId > 0
                        && !string.IsNullOrEmpty(service.Source) && !string.IsNullOrEmpty(service.UserId) && !string.IsNullOrEmpty(service.Key))
                 {
                     try
@@ -276,7 +276,7 @@ namespace api.dhs.Controllers
             Logger.WriteLog(LogLevelL4N.FATAL, "Bad Request");
             return req.CreateResponse(HttpStatusCode.BadRequest, "Bad Request");
         }
-        
+
         //pay ele bill req.
         [Route("dashboard/electricity")]
         [HttpPost]
