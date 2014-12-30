@@ -96,7 +96,7 @@ namespace api.dhs.Controllers
         [HttpPost]
         public HttpResponseMessage Service(HttpRequestMessage req, DL_Service service)
         {
-            Logger.WriteLog(LogLevelL4N.FATAL, "Recharge");
+            //Logger.WriteLog(LogLevelL4N.FATAL, "Recharge");
             User user = new User() { Password = service.Key, UserId = service.UserId };
             Validation.UserCheck(user);
             if (Validation._IsSuccess)
@@ -107,7 +107,7 @@ namespace api.dhs.Controllers
                     try
                     {
 
-                        //Modify: Ranjeet | 12-Dec|| Moved if condtion above try/catch
+                        //Modify: Ranjeet | 12-Dec|| Moved if condition above try/catch
                         //  {
                         DL_ServiceReturn serviceReturn = dash.Service(service);//call to process the transaction.
                         if (dash._IsSuccess)
@@ -315,6 +315,7 @@ namespace api.dhs.Controllers
             return req.CreateResponse(HttpStatusCode.BadRequest, "Bad Request");
         }
 
+        //Money Transfer api
         [Route("dashboard/accountRegistration")] //acting as account pay
         [HttpPost]
         public HttpResponseMessage AccountRegistration(HttpRequestMessage req, DL_AccountRegistration accountReg)

@@ -83,6 +83,8 @@ namespace WebApplication1.Models.DL.User
         public string Mobile { get; set; }
         [JsonProperty("amount")]
         public string Amount { get; set; }
+        [JsonProperty("status")]
+        public string Status { get; set; }
     }
 
     public class DL_UserBalanceReturn

@@ -11,6 +11,7 @@ namespace api.dhs
         public static void Register(HttpConfiguration config)
         {
 
+            config.EnableCors();
             // Web API routes
             // Attribute routing.
             config.MapHttpAttributeRoutes();

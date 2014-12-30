@@ -614,7 +614,7 @@ namespace com.dhs.webapi.Model.BL.Common
             }
             catch (Exception ex)
             {
-                Exception err = ex;
+                Logger.WriteLog(LogLevelL4N.ERROR, "Error @ BankTransferReq : " + ex.Message);
                 _IsSuccess = false;
             }
 
@@ -625,6 +625,8 @@ namespace com.dhs.webapi.Model.BL.Common
         #endregion
 
         #region Refund or Trans Status
+
+        //Modified: Ranjeet | 26-Dec | Fixed recharger status bug
         public DL_RefundOrTransStatusReturn RefundorTransStatus(DL_RefundOrTransStatus dL_RefundOrTransStatus)
         {
             this.SpName = DL_StoreProcedure.SP_DHS_API_RefundorTransStatus; //Sp Name
@@ -632,28 +634,37 @@ namespace com.dhs.webapi.Model.BL.Common
             _IsSuccess = true;
             try
             {
-                SqlParameter[] param = new SqlParameter[5];
-                param[0] = new SqlParameter("@UserId", dL_RefundOrTransStatus.UserId);
-                param[1] = new SqlParameter("@TransId", dL_RefundOrTransStatus.TransId);
-                param[2] = new SqlParameter("@Date", indianTime);
-                param[3] = new SqlParameter("@Comments", dL_RefundOrTransStatus.Comments);
-                param[4] = new SqlParameter("@TypeId", dL_RefundOrTransStatus.TypeId);
-
-                ds = db.GetDataSet(this.SpName, param);
-                if (ds != null && ds.Tables.Count > 0)
+                //For Refund
+                if (dL_RefundOrTransStatus.TypeId == 1) 
                 {
-                    var row = ds.Tables[0].Rows[0];
-                    dL_RefundOrTransStatusReturn = new DL_RefundOrTransStatusReturn
+                    SqlParameter[] param = new SqlParameter[5];
+                    param[0] = new SqlParameter("@UserId", dL_RefundOrTransStatus.UserId);
+                    param[1] = new SqlParameter("@TransId", dL_RefundOrTransStatus.TransId);
+                    param[2] = new SqlParameter("@Date", indianTime);
+                    param[3] = new SqlParameter("@Comments", dL_RefundOrTransStatus.Comments);
+                    param[4] = new SqlParameter("@TypeId", dL_RefundOrTransStatus.TypeId);
+
+                    ds = db.GetDataSet(this.SpName, param);
+                    if (ds != null && ds.Tables.Count > 0)
                     {
-                        Status = Convert.ToInt32(row["Status"]),
-                        CyberTransId = row["CyberTransId"].ToString(),
-                        OperatorId = Convert.ToInt32(row["OperatorId"])
-                    };
+                        var row = ds.Tables[0].Rows[0];
+                        dL_RefundOrTransStatusReturn = new DL_RefundOrTransStatusReturn
+                        {
+                            Status = Convert.ToInt32(row["Status"]),
+                            CyberTransId = row["CyberTransId"].ToString(),
+                            OperatorId = Convert.ToInt32(row["OperatorId"])
+                        };
+                    }
                 }
-                if (dL_RefundOrTransStatus.TypeId == 2) //check cyber status
+                //check cyber status
+                else if (dL_RefundOrTransStatus.TypeId == 2) 
                 {
                     BL_Operator bl = new BL_Operator();
-                    DL_SessionCyberPlateStatusReturn dL_SessionCyberPlateStatusReturn = bl.GetCyberPlateStatus(new DL_SessionCyberPlateStatus() { Session = dL_RefundOrTransStatusReturn.CyberTransId, OperatorId = dL_RefundOrTransStatusReturn.OperatorId });
+                    CyberPlateStatus cyberPlateStatus = bl.GetSessionId(dL_RefundOrTransStatus.TransId); //Added | Ranjeet |26-Dec |Get cyber Session and Opid
+
+                    DL_SessionCyberPlateStatusReturn dL_SessionCyberPlateStatusReturn = bl.GetCyberPlateStatus(
+                        new DL_SessionCyberPlateStatus() { TransactionId = dL_RefundOrTransStatus.TransId });
+
                     dL_RefundOrTransStatusReturn.Message = dL_SessionCyberPlateStatusReturn.CyberCode + " : " + dL_SessionCyberPlateStatusReturn.Message;
                     dL_RefundOrTransStatusReturn.Status = Convert.ToInt32(dL_SessionCyberPlateStatusReturn.Status);
                 }
@@ -661,8 +672,9 @@ namespace com.dhs.webapi.Model.BL.Common
             }
             catch (Exception ex)
             {
-                Exception err = ex;
+                Logger.WriteLog(LogLevelL4N.ERROR, "Error @ RefundorTransStatus : " + ex.Message);
                 _IsSuccess = false;
+
             }
 
             return dL_RefundOrTransStatusReturn;

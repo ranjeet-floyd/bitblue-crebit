@@ -19,6 +19,8 @@ namespace WebApplication1.Models.BL.Common
         private string SpName { get; set; }
         [JsonIgnore]
         public bool _IsSuccess { get; set; }
+        //Added | Ranjeet
+
         DataSet ds = null;
         DataBase db = new DataBase();
         public List<DL_OperatorReturn> operatorReturn;
@@ -97,26 +99,38 @@ namespace WebApplication1.Models.BL.Common
             try
             {
                 RechargeProcess rechargeProcess = new RechargeProcess();
-                string strinputMsgStatus = rechargeProcess.GetInputMessageForStatus(this.GetSessionId(dL_SessionCyberPlateStatus.Session), dL_SessionCyberPlateStatus.OperatorId, string.Empty);
-                string statusResponse = RechargeProcess.Process(rechargeProcess.Status_OperatorRequestUrl(dL_SessionCyberPlateStatus.OperatorId), strinputMsgStatus);
-                int num = statusResponse.LastIndexOf("TRANSID=");
-                TransationId = statusResponse.Substring(num).Split(new char[1] { '\r' })[0].Split('=')[1];
-                if (statusResponse.IndexOf("ERROR=0") != -1 && statusResponse.IndexOf("RESULT=7") != -1)
+                CyberPlateStatus cyberPlateStatus = GetSessionId(dL_SessionCyberPlateStatus.TransactionId); //Added | Ranjeet |26-Dec |Get Session and Opid
+                if (cyberPlateStatus != null)
                 {
-                    dL_SessionCyberPlateStatusReturn.TransId = TransationId;
-                    dL_SessionCyberPlateStatusReturn.Status = "1";
-                    dL_SessionCyberPlateStatusReturn.Message = "Successfully recharged.";
-                    return dL_SessionCyberPlateStatusReturn;
-                }
-                else
-                {
-                    dL_SessionCyberPlateStatusReturn.TransId = TransationId;
-                    dL_SessionCyberPlateStatusReturn.Status = "2";
-                    dL_SessionCyberPlateStatusReturn.Message = rechargeProcess.GetErrorDescription(statusResponse);
-                    return dL_SessionCyberPlateStatusReturn;
+                    string strinputMsgStatus = rechargeProcess.GetInputMessageForStatus(cyberPlateStatus.SessionId,
+                        cyberPlateStatus.OperatorId, string.Empty);
+
+                    string statusResponse = RechargeProcess.Process(rechargeProcess.Status_OperatorRequestUrl(cyberPlateStatus.OperatorId), strinputMsgStatus);
+
+                    int num = statusResponse.LastIndexOf("TRANSID=");
+                    TransationId = statusResponse.Substring(num).Split(new char[1] { '\r' })[0].Split('=')[1];
+                    if (statusResponse.IndexOf("ERROR=0") != -1 && statusResponse.IndexOf("RESULT=7") != -1)
+                    {
+                        dL_SessionCyberPlateStatusReturn.TransId = TransationId;
+                        dL_SessionCyberPlateStatusReturn.Status = "1";
+                        dL_SessionCyberPlateStatusReturn.Message = "Successfully recharged.";
+                        return dL_SessionCyberPlateStatusReturn;
+                    }
+                    else
+                    {
+                        dL_SessionCyberPlateStatusReturn.TransId = TransationId;
+                        dL_SessionCyberPlateStatusReturn.Status = "2";
+                        dL_SessionCyberPlateStatusReturn.Message = rechargeProcess.GetErrorDescription(statusResponse);
+                        return dL_SessionCyberPlateStatusReturn;
+                    }
+
                 }
 
+                else
+                    return null;
             }
+
+
             catch (Exception ex)
             {
                 Logger.WriteLog(LogLevelL4N.ERROR, "Exception : " + ex.Message);
@@ -198,16 +212,23 @@ namespace WebApplication1.Models.BL.Common
             return jsonMessage;
         }
 
-        private string GetSessionId(string transId)
+        //Modified: Ranjeet || 26-Dec || return type CyberPlateStatus
+        public CyberPlateStatus GetSessionId(string transId)
         {
-            string sessionNum = string.Empty;
+            CyberPlateStatus cyberPlateStatus = null;
+            //string sessionNum = string.Empty;
             SqlParameter[] param = new SqlParameter[1];
             param[0] = new SqlParameter("@TransId", transId);
             string spName = DL_StoreProcedure.SP_DHS_GetSessionId; //Sp Name"GetSessionId";
             ds = db.GetDataSet(spName, param);
-            if (ds != null && ds.Tables.Count > 0)
-                sessionNum = "" + ds.Tables[0].Rows[0]["SessionId"];
-            return sessionNum;
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                DataRow dr = ds.Tables[0].Rows[0];
+                //Modified: Ranjeet || Get cyber session id
+                //sessionNum = "" + dr["CSessionId"];
+                cyberPlateStatus = new CyberPlateStatus() { SessionId = "" + dr["CSessionId"], OperatorId = Convert.ToInt32(dr["OpId"]) };
+            }
+            return cyberPlateStatus;
         }
     }
 }

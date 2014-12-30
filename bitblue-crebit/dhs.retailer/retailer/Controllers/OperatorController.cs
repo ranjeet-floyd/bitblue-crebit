@@ -1,10 +1,10 @@
-﻿using api.dhs.Logging;
-using com.dhs.webapi.Model.Common;
+﻿using com.dhs.webapi.Model.Common;
 using com.dhs.webapi.Models.DL.Common;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using WebApplication1.Models.BL.Common;
 
 namespace api.dhs.Controllers
@@ -14,19 +14,6 @@ namespace api.dhs.Controllers
         [Route("dhs/operators")]
         [HttpGet]
         public HttpResponseMessage GetOperators(HttpRequestMessage req)
-        {
-            BL_Operator blopr = new BL_Operator();
-            List<DL_OperatorReturn> oprReturn = blopr.GetOperators(); //Validate Login
-            if (blopr._IsSuccess)
-                return req.CreateResponse<List<DL_OperatorReturn>>(HttpStatusCode.OK, oprReturn);
-            else
-                return req.CreateErrorResponse(HttpStatusCode.InternalServerError, "ServerError");
-        }
-
-        //[Route("dhs/operators")]
-        [HttpGet]
-        [ActionName("t")]
-        public HttpResponseMessage Get(HttpRequestMessage req)
         {
             BL_Operator blopr = new BL_Operator();
             List<DL_OperatorReturn> oprReturn = blopr.GetOperators(); //Validate Login
@@ -48,9 +35,11 @@ namespace api.dhs.Controllers
                 return req.CreateErrorResponse(HttpStatusCode.InternalServerError, "ServerError");
         }
 
-        [Route("dhs/cyberTransStatus")]
-        [HttpPost]
-        public HttpResponseMessage CheckCyberPlateTransStatus(HttpRequestMessage req, DL_SessionCyberPlateStatus dL_SessionCyberPlateStatus)
+        //Modified: Ranjeet | 26-Dec-14 || Changed to HttpGet and Fixed session issue.
+        [EnableCors(origins: "*", headers: "Content-Type: application/json; charset=utf-8", methods: "*")]
+        [Route("dhs/cyberTransStatus/{TransactionId}")]
+        [HttpGet]
+        public HttpResponseMessage CheckCyberPlateTransStatus(HttpRequestMessage req, [FromUri] DL_SessionCyberPlateStatus dL_SessionCyberPlateStatus)
         {
             BL_Operator cyberPlateStatus = new BL_Operator();
             DL_SessionCyberPlateStatusReturn cyberPlateStatusReturn = cyberPlateStatus.GetCyberPlateStatus(dL_SessionCyberPlateStatus); //Validate Login
@@ -64,7 +53,7 @@ namespace api.dhs.Controllers
         [HttpPost]
         public HttpResponseMessage GetMSEBCusDetails(HttpRequestMessage req, MSEBUserDetailsReq mSEBUserDetailsReq)
         {
-            if (mSEBUserDetailsReq != null  && mSEBUserDetailsReq.BuCode > 1 && !string.IsNullOrEmpty(mSEBUserDetailsReq.ConsumerNo)
+            if (mSEBUserDetailsReq != null && mSEBUserDetailsReq.BuCode > 1 && !string.IsNullOrEmpty(mSEBUserDetailsReq.ConsumerNo)
                 && !string.IsNullOrEmpty(mSEBUserDetailsReq.Key) && !string.IsNullOrEmpty(mSEBUserDetailsReq.UserId))
             {
                 User user = new User() { Password = mSEBUserDetailsReq.Key, UserId = mSEBUserDetailsReq.UserId };

@@ -1,5 +1,4 @@
-﻿using api.dhs.Logging;
-using com.dhs.webapi.Model.BL.User;
+﻿using com.dhs.webapi.Model.BL.User;
 using com.dhs.webapi.Model.BL_User;
 using com.dhs.webapi.Model.Common;
 using System;

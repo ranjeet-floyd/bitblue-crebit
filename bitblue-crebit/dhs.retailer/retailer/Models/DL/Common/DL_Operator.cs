@@ -24,9 +24,19 @@ namespace com.dhs.webapi.Models.DL.Common
     }
     public class DL_SessionCyberPlateStatus
     {
-        public int OperatorId { get; set; }
-        public string Session { get; set; }
+        //Commented : Ranjeet | 26-Dec| Not needed
+        //public int OperatorId { get; set; } 
+        public string TransactionId { get; set; }
     }
+
+    //Added | Ranjeet | 26-Dec || Get OpId and session from crebit transaction id
+    public class CyberPlateStatus
+    {
+        public int OperatorId { get; set; }
+        public string SessionId { get; set; }
+    }
+
+
     public class DL_SessionCyberPlateStatusReturn
     {
         [JsonProperty("transId")]
