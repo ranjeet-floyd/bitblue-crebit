@@ -7,7 +7,6 @@ using crebit.retailer.Models.Common;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
@@ -635,7 +634,7 @@ namespace com.dhs.webapi.Model.BL.Common
             try
             {
                 //For Refund
-                if (dL_RefundOrTransStatus.TypeId == 1) 
+                if (dL_RefundOrTransStatus.TypeId == 1)
                 {
                     SqlParameter[] param = new SqlParameter[5];
                     param[0] = new SqlParameter("@UserId", dL_RefundOrTransStatus.UserId);
@@ -657,14 +656,14 @@ namespace com.dhs.webapi.Model.BL.Common
                     }
                 }
                 //check cyber status
-                else if (dL_RefundOrTransStatus.TypeId == 2) 
+                else if (dL_RefundOrTransStatus.TypeId == 2)
                 {
                     BL_Operator bl = new BL_Operator();
                     CyberPlateStatus cyberPlateStatus = bl.GetSessionId(dL_RefundOrTransStatus.TransId); //Added | Ranjeet |26-Dec |Get cyber Session and Opid
 
                     DL_SessionCyberPlateStatusReturn dL_SessionCyberPlateStatusReturn = bl.GetCyberPlateStatus(
                         new DL_SessionCyberPlateStatus() { TransactionId = dL_RefundOrTransStatus.TransId });
-
+                    dL_RefundOrTransStatusReturn = new DL_RefundOrTransStatusReturn(); //Added | Ranjeet | to fix Null Exception 
                     dL_RefundOrTransStatusReturn.Message = dL_SessionCyberPlateStatusReturn.CyberCode + " : " + dL_SessionCyberPlateStatusReturn.Message;
                     dL_RefundOrTransStatusReturn.Status = Convert.ToInt32(dL_SessionCyberPlateStatusReturn.Status);
                 }
