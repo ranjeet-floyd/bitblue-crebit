@@ -664,6 +664,7 @@ namespace com.dhs.webapi.Model.BL.Common
                     DL_SessionCyberPlateStatusReturn dL_SessionCyberPlateStatusReturn = bl.GetCyberPlateStatus(
                         new DL_SessionCyberPlateStatus() { TransactionId = dL_RefundOrTransStatus.TransId });
                     dL_RefundOrTransStatusReturn = new DL_RefundOrTransStatusReturn(); //Added | Ranjeet | to fix Null Exception 
+                    dL_RefundOrTransStatusReturn.CyberTransId = dL_SessionCyberPlateStatusReturn.TransId;
                     dL_RefundOrTransStatusReturn.Message = dL_SessionCyberPlateStatusReturn.CyberCode + " : " + dL_SessionCyberPlateStatusReturn.Message;
                     dL_RefundOrTransStatusReturn.Status = Convert.ToInt32(dL_SessionCyberPlateStatusReturn.Status);
                 }
